@@ -1,0 +1,20 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title HANOS Voordeelmail
+    //for testing only
+    link(rel="stylesheet", href="../css/actiemail.css") 
+
+    <!-- build:style inline actiemail --><!-- /build -->
+  body(style="background-color:#FAFAFA")
+    table.body(width="100%", style="background-color:#FAFAFA")
+      tr
+        td(style='padding: 0;', valign='top', align='center')
+          include ../partials/actiemail/header
+          include ../partials/actiemail/articles
+          include ../partials/actiemail/footer
+
+
+

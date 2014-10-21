@@ -1,0 +1,126 @@
+<% include ../partials/sidebar/header.html %>
+
+<table class="container">
+    <tr>
+        <td>
+
+        <!-- content start -->
+
+            <table class="row">
+                <tr>
+                    <td class="wrapper">
+
+                        <table class="six columns">
+                            <tr>
+                                <td>
+                                    <h2>Hello,<br> <%= data.global.name %></h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet.</p>
+                                </td>
+                                <td class="expander"></td>
+                            </tr>
+                        </table>
+
+                        <table class="six columns">
+                            <tr>
+                                <td class="panel">
+                                    <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#">Click it! »</a></p>
+                                </td>
+
+                                <td class="expander"></td>
+                            </tr>
+                        </table>
+
+                        <table class="six columns">
+                            <tr>
+                                <td>
+                                    <br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet.</p>
+
+                                    <table class="button">
+                                        <tr>
+                                            <td>
+                                                <a href="#">Click Me!</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                                <td class="expander"></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <td class="wrapper last">
+
+                        <table class="six columns">
+                            <tr>
+                                <td class="panel">
+                                    <h6>Header Thing</h6>
+                                    <p>Sub-head or something</p>
+
+                                    <% for(var i = 0; i < data.lists.links.length; i++) { %>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <a href="<%= data.lists.links[i].url %>"><%= data.lists.links[i].text %></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <hr>
+                                    <% } %>
+                                    
+                                </td>
+                                <td class="expander"></td>
+                            </tr>
+                        </table>
+
+                        <br>
+
+                        <table class="six columns">
+                            <tr>
+                                <td class="panel">
+                                    <% include ../partials/social.html %>
+
+                                    <br>
+                                    
+                                    <% include ../partials/contact.html %>
+
+                                </td>
+                                <td class="expander"></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <!-- Legal + Unsubscribe -->
+            <table class="row">
+                <tr>
+                    <td class="wrapper last">
+
+                        <table class="twelve columns">
+                            <tr>
+                                <td align="center">
+                                    <center>
+                                        <p style="text-align:center;"><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Unsubscribe</a></p>
+                                    </center>
+                                </td>
+                                <td class="expander"></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+            </table>
+
+        <!-- container end below -->
+        </td>
+    </tr>
+</table>
+
+<% include ../partials/sidebar/footer.html %>

@@ -1,0 +1,19 @@
+//
+   Start preheader 
+table.preheader.devicewidth
+  tr
+    td.font2(align="center", valign="middle")
+      //
+        <#if snippet?has_content>
+      | ${snippet!}
+      //
+        </#if>
+      //
+        <#noparse><#if !onlineViewer>
+      | | Kunt u deze mail niet lezen? Klik dan 
+      a.online(href='http://td42.tripolis.com/public/preview?contactId=${contact.contactId}&jobId=${contact.jobId}', target='_blank') hier
+      | .
+      //
+        </#if></#noparse>
+//
+   End preheader 

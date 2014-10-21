@@ -1,0 +1,253 @@
+/*------------------------------------*\
+  Structure
+\*------------------------------------*/
+
+//====================================================================
+// Structure styles, should only contain Site structure (header, nav, etc) 
+//====================================================================
+
+/*
+RESET STYLES
+========================================================================================*/
+
+
+body {
+  background-color: $gray;
+}
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: $neutral;
+}
+a {
+  text-decoration: none;
+  color: $neutral;
+  &:link, &:visited {
+    text-decoration: none;
+    color: $neutral;
+  }
+}
+
+/*
+CLIENT SPECIFIC STYLES
+========================================================================================*/
+
+
+/*STYLES*/
+
+table.body {
+  height: 100%;
+  width: 100%;
+}
+table.full {
+  width: 100%;
+  clear: both;
+}
+table.row {
+  padding: 0px;
+  width: 100%;
+  position: relative;
+}
+td.wrapper {
+  padding: 15px 10px;
+  position: relative;
+}
+#editie {
+  height: 20px;
+}
+.font1 {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+.font2 {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+.devicewidth {
+  width: 600px;
+  text-align: left;
+  background-color: $bgcolor;
+}
+.divider {
+  width: 600px;
+  float: left;
+}
+
+.tablethide, .mobilehide {
+    display: block;
+  }
+.tabletshow, .mobileshow {
+    display: none;
+}
+
+.left {
+  float:left;
+}
+.right {
+  float:right;
+}
+
+.overflow, .overflowHalf {
+  min-height: 100px!important;
+  overflow: hidden!important;
+  a {
+    width: 100%!important;
+    display: block!important;
+  }
+}
+
+.text-pad {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.left-text-pad, .text-pad-left {
+  padding-left: 10px;
+}
+.right-text-pad, .text-pad-right {
+  padding-right: 10px;
+}
+
+/*HEADER*/
+
+.preheader {
+  .font2 {
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .online {
+    color: $purple;
+    text-decoration: underline;
+  }
+}
+
+.header {
+  background-color: $purple;
+  .block_logo {
+    width: 45%;
+    float: left;
+    display: block;
+  }
+  .block_right {
+    width: 45%;
+    float: right;
+    display: block;
+    vertical-align: middle;
+    text-align: right;
+  }
+  .font2 {
+    font-size: 15px;
+    line-height: 1.4;
+    color: $white;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  .inner {
+    width:80%;
+    margin:10px auto;
+  }
+  .font2 {text-align:center;}
+  .social {
+    margin:0 auto;
+    .fb, .tw {
+      padding-bottom:10px;
+      width:36px;
+      height:36px;
+      img {
+        width:36px;
+        height:36px;
+      }
+    }
+    .yt {
+      padding-bottom:10px;
+      width:36px;
+      height:36px;
+      img {
+        width:34px;
+        height:34px;
+      }
+    }
+  }
+  .flinks {
+    margin:0 auto;
+    .font2 {
+      font-size:13px;
+      line-height:1.6;
+      padding:0 0 10px;
+      color:$neutral;
+      a {
+        text-decoration:none;
+        padding: 0 5px
+      }
+    }
+  }
+  .subscription {
+    .font2 {
+      font-size:12px;
+      line-height:1.6;
+      color:lighten($neutral, 40%);
+      text-align:center;
+      padding: 0 0 10px;
+      a {
+        color: lighten($neutral, 20%);
+        text-decoration:none;
+        font-weight:normal;
+      }
+    }
+  }
+  .logo_country {
+    margin:0 auto;
+    td {
+      padding:10px 0;
+    }
+    img {
+
+    }
+
+  }
+}
+
+
+/*IPAD STYLES*/
+
+@media only screen and (max-width: 640px) {
+  .devicewidth {
+    width: 440px!important;
+  }
+  .divider {
+    width: 440px!important;
+    float: left!important;
+  }
+  .tablethide {
+    display: none!important;
+  }
+  .tabletshow, .mobilehide {
+    display: block!important;
+  }
+  .mobileshow {
+    display: none!important;
+  }
+}
+
+/*IPHONE STYLES*/
+
+@media only screen and (max-width: 480px) {
+  .devicewidth {
+    width: 338px!important;
+  }
+  .divider {
+    width: 338px!important;
+    float: left!important;
+  }
+
+  .mobilehide {
+    display: none!important;
+  }
+  .mobileshow {
+    display: block!important;
+  }
+}

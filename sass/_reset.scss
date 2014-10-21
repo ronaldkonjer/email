@@ -1,0 +1,89 @@
+@import"compass";
+@import"variables";
+
+/*Reset styles*/
+/* Client-specific Styles */
+
+#outlook a {
+  padding: 0;
+}
+
+/* Force Outlook to provide a "view in browser" menu link. */
+
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $gray;
+}
+
+/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+
+.ExternalClass {
+  width: 100%;
+  line-height: 100%;
+  p, span, font, td, div {
+    line-height: 100%;
+  }
+}
+
+/* Force Hotmail to display emails at full width */
+
+/* Force Hotmail to display normal line spacing.*/
+
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important;
+}
+
+img {
+  outline: none;
+  text-decoration: none;
+  border: none;
+  height: auto;
+  line-height: 100%;
+  -ms-interpolation-mode: bicubic;
+  &[class=colimgfullwidth] {
+    width: 500px!important;
+    height: 250px!important;
+  }
+}
+
+a img {
+  border: none;
+}
+
+.image_fix {
+  display: block;
+}
+
+table {
+  td {
+    border-collapse: collapse;
+  }
+  border-spacing: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: $neutral;
+}
+
+a {
+  text-decoration: none;
+  color: $neutral;
+  &:link, &:visited {
+    text-decoration: none;
+    color: $neutral;
+  }
+}

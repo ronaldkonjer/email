@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANOS Voordeelmail</title>
+    <!--for testing only-->
+    <link rel="stylesheet" href="../css/actiemail.css"><!-- build:style inline actiemail --><!-- /build -->
+  </head>
+  <body style="background:#FAFAFA">
+    <table style="background:#FAFAFA" class="body">
+      <tr>
+        <td style="padding: 0;" valign="top" align="center">
+          <!--Start preheader 
+          -->
+          <table class="preheader devicewidth">
+            <tr>
+              <td align="center" valign="middle" class="font2">
+                <!--<#if snippet?has_content>
+                -->${snippet!}
+                <!--</#if>
+                -->
+                <!--<#noparse><#if !onlineViewer>
+                -->| Kunt u deze mail niet lezen? Klik dan <a href="http://td42.tripolis.com/public/preview?contactId=${contact.contactId}&amp;jobId=${contact.jobId}" target="_blank" class="online">hier</a>.
+                <!--</#if></#noparse>
+                -->
+              </td>
+            </tr>
+          </table>
+          <!--End preheader 
+          -->
+          <!--Start header 
+          -->
+          <table class="header devicewidth">
+            <td align="center" class="wrapper">
+              <table class="row">
+                <tr>
+                  <td align="left" class="block_logo"><a target="_blank" href="${logo_url}" title="${logo_image_alt!}"><img src="${logo_image.url!}" alt="${logo_image_alt!}" border="0" width="${logo_image.width}" height="${logo_image.height}"></a></td>
+                  <td align="right" valign="middle" class="block_right font2 right-text-pad">${editie_datum!} 
+                    <!--Looptijd: 12 t/m 13 oktober 2014 
+                    -->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </table>
+          <!--End header 
+          -->
+          <!--include ../partials/nieuwsbrief/articles-->
+          <!--include ../partials/nieuwsbrief/footer-->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

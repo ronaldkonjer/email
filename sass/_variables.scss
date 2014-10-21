@@ -1,0 +1,47 @@
+/**
+ * Typefaces
+ */
+
+$helvetica: "Helvetica", "Arial", sans-serif;
+$roboto: "Roboto", "Helvetica", "Arial", sans-serif;
+$lato:  "Lato", "Helvetica", "Arial", sans-serif;
+
+$font: $lato;
+$font1: $lato;
+$font2: $roboto;
+
+/**
+ * Colors
+ */
+
+ $bgcolor: #FFFFFF;
+
+$neutral: #333333;
+$purple: #57004E;
+$blue: #59AEFF;
+$dkblue: #2795b6;
+$ltblue: #ECF8FF;
+
+$white: #FFFFFF;
+$gray: #FAFAFA;
+$dkgray: #CCCCCC;
+
+/**
+ * Social Colors
+ */
+
+$facebook: #4466B0;
+$facebook-border: #4466B0;
+$facebook-hover: #4466B0;
+
+$twitter: #6EC1ED;
+$twitter-border: #6EC1ED;
+$twitter-hover: #6EC1ED;
+
+$youtube: #DF4E3B;
+$youtube-border: #DF4E3B;
+$youtube-hover: #DF4E3B;
+
+$gplus: #DB4A39;
+$gplus-border: #CC0000;
+$gplus-hover: #CC0000;

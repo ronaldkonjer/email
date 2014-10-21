@@ -1,0 +1,512 @@
+
+  body
+    table(style='border-collapse: collapse; width: 100%; background-color: #fafafa;')
+      tbody
+        tr
+          td(style='padding: 0;', valign='top', align='center')
+            //
+               Start preheader 
+            table.preheader.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', st-sortable='preheader')
+              tbody
+                tr
+                  td.font2(align='center', valign='middle', style='padding: 10px 0; font: 12px/17px \'Roboto\', Helvetica, Arial, sans-serif; color: #333;')
+                    //
+                      <#if snippet?has_content>
+                    | ${snippet!}
+                    //
+                      </#if>
+                    //
+                      <#noparse><#if !onlineViewer>
+                    | | Kunt u deze mail niet lezen? Klik dan
+                    a(href='http://td42.tripolis.com/public/preview?contactId=${contact.contactId}&jobId=${contact.jobId}', target='_blank', style='text-decoration: underline; color: #57004E;') hier
+                    | .
+                    //
+                      </#if></#noparse>
+            //
+               End preheader 
+            //
+               Start header 
+            table.devicewidth(width='600', align='center', cellpadding='0', cellspacing='0', border='0', style='border-collapse: collapse; background-color: #FFF;')
+              tbody
+                tr
+                  td(style='padding: 14px 10px; background-color: #57004E;', valign='top', align='center')
+                    table(width='100%', style='border-collapse: collapse; width: 100%;')
+                      tr
+                        td.block_logo(style='padding: 0; width: 45%;', align='left', valign='top')
+                          a(target='_blank', href='${logo_url}', title='${logo_image_alt!}')
+                            img(src='${logo_image.url!}', alt='${logo_image_alt!}', border='0', width='${logo_image.width}', height='${logo_image.height}', style='display: block; border: none; outline: none; text-decoration: none;')
+                        td.block_right_header.font2(style='padding: 0 5px; font: 15px/1.4 \'Roboto\', Helvetica, Arial, sans-serif; color: #FFF; width: 45%;', align='right', valign='middle')
+                          | ${editie_datum!}
+                          //
+                             Looptijd: 12 t/m 13 oktober 2014 
+            //
+               End header 
+            //
+               Start main-banner 
+            table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+              tbody
+                tr
+                  td(width='100%')
+                    table.devicewidth(width='600', align='center', cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', st-image='banner-image')
+                            div
+                              a(target='_blank', href='#')
+                                img.banner(width='600', height='250', alt='', border='0', style='display: block; border: none; outline: none; text-decoration: none;', src='img/hero.png')
+            //
+               End of main-banner 
+            //
+               Start col 2 
+            table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+              tbody
+                tr
+                  td(width='600')
+                    table.devicewidth(width='100%', cellpadding='0', cellspacing='0', border='0', align='center')
+                      tbody
+                        tr
+                          td
+                            table.col2(width='296', align='left', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col2inner(width='275', style='padding: 10px;')
+                                    //
+                                       col 1 
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.col2header(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.col2title(valign='top', st-title='2col-title2')
+                                                    p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tr
+                                                  td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
+                                                    p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                        tr
+                                          td.col2(width='100%', align='center')
+                                            table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td.col2(width='100%', align='center')
+                                                    table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
+                                                      tbody
+                                                        tr
+                                                          td
+                                                            img.colimg2(src='img/blok-1-image-260x260.jpg', alt='', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                        tr.mobilehide
+                                                          td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                                        tr.mobileshow
+                                                          td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                                    table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                                      tbody
+                                                        tr.mobileshow(style='display: none;')
+                                                          td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
+                                                            p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                                        tr
+                                                          td.priceinfo(align='left', width='90', st-title='2col-priceinfo1')
+                                                            p.font1(style='width: 90px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                              | per kilo
+                                                              br
+                                                              | van 11.00
+                                                          td.priceaction(align='right', st-title='2col-priceaction1')
+                                                            p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') 217.50
+                            table.col2(width='300', align='right', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col2inner(width='279', style='padding: 10px; border-left: 1px solid #ccc;')
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.col2header(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.col2title(valign='top', st-title='3col-title1')
+                                                    p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tr
+                                                  td.col2subtitle(style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                                    p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                        tr
+                                          td.col2(width='100%', align='center')
+                                            table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td.col2(width='100%', align='center')
+                                                    table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
+                                                      tbody
+                                                        tr
+                                                          td
+                                                            img.colimg2(src='img/blok-1-image-260x260.jpg', alt='', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                        tr.mobilehide
+                                                          td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                                        tr.mobileshow
+                                                          td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                                    table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                                      tbody
+                                                        tr.mobileshow(style='display: none;')
+                                                          td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
+                                                            p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                                        tr
+                                                          td.priceinfo(align='left', width='90', st-title='2col-priceinfo2')
+                                                            p.font1(style='width: 90px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                              | normale zb-
+                                                              br
+                                                              | prijs 11.00
+                                                          td.priceaction(align='right', st-title='2col-priceaction2')
+                                                            p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') 30% korting
+                    table.divider.mobilehide(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+            //
+               end col 2 
+            //
+               start col 3 
+            table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+              tbody
+                tr
+                  td(width='100%')
+                    table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+                      tbody
+                        tr
+                          td
+                            table.col3(width='198', align='left', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col3inner(width='177', style='padding: 10px;')
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.col3header(height='90', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.col3title(valign='top', height='35', st-title='3col-title1')
+                                                    p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tr
+                                                  td.col3subtitle(height='55', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                                    p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving
+                                        tr
+                                          td.col3(width='100%', align='center')
+                                            table(cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td
+                                                    img.colimg3(src='img/blok-1-image-159x159-1.jpg', alt='', border='0', width='159', height='159', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                tr.mobilehide
+                                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                                tr.mobileshow
+                                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                        tr
+                                          td.col3(width='100%', align='center')
+                                            table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                                    p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                      | per kilo
+                                                      br
+                                                  td.priceaction(align='right', st-title='3col-priceaction1')
+                                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') 2+1
+                            table.col3(width='198', align='left', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col3inner(width='176', style='padding: 10px; border-left: 1px solid #ccc;')
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.col3header(height='90', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.col3title(valign='top', height='35', st-title='3col-title2')
+                                                    p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tr
+                                                  td.col3subtitle(height='55', style='text-align: left;', valign='top', st-title='3col-subtitle2')
+                                                    p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Doos 6 flessen
+                                        tr
+                                          td.col3(width='100%', align='center')
+                                            table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td
+                                                    img.colimg3(src='img/blok-1-image-159x159-1.jpg', alt='', border='0', width='159', height='159', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                tr.mobilehide
+                                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                                tr.mobileshow
+                                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                        tr
+                                          td.col3(width='100%', align='center')
+                                            table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.priceinfo(align='left', width='75', st-title='3col-priceinfo2')
+                                                    p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                      | normale zb-
+                                                      br
+                                                      | prijs 11.00
+                                                  td.priceaction(align='right', st-title='3col-priceaction2')
+                                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') -30%
+                            table.col3.tablethide(width='198', align='right', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col3inner(width='176', style='padding: 10px; border-left: 1px solid #ccc;')
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.col3header(height='90', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.col3title(valign='top', height='35', st-title='3col-title3')
+                                                    p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tr
+                                                  td.col3subtitle(height='55', style='text-align: left;', valign='top', st-title='3col-subtitle3')
+                                                    p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                        tr
+                                          td.col3(width='100%', align='center')
+                                            table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td
+                                                    img.colimg3(src='img/blok-1-image-159x159-1.jpg', alt='', border='0', width='159', height='159', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                tr.mobilehide
+                                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                                tr.mobileshow
+                                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                        tr
+                                          td.col3(width='100%', align='center')
+                                            table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.priceinfo(align='left', width='75', st-title='3col-priceinfo3')
+                                                    p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                      | per kilo
+                                                      br
+                                                      | van 11.00
+                                                  td.priceaction(align='right', st-title='3col-priceaction3')
+                                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') 217.50
+                    table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+            //
+               start col 3 
+            //
+               start col 1 
+            table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+              tbody
+                tr
+                  td(width='100%')
+                    table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+                      tbody
+                        tr
+                          td
+                            table.devicewidth(width='600', align='left', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col1inner(width='579', style='padding: 10px;')
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table.col1header(height='20', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td.col1title(valign='top', st-title='1col-title1')
+                                                    p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tbody
+                                        tr
+                                          td.devicewidth(width='100%', align='center')
+                                            table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td(width='50%', align='center')
+                                                    table(width='100%', align='left', cellpadding='0', cellspacing='0', border='0')
+                                                      tbody
+                                                        tr
+                                                          td
+                                                            img.colimg1(src='img/blok-1-image-260x260.jpg', alt='', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                        tr.mobileshow
+                                                          td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                                  td.devicewidth(width='50%', align='center', valign='top')
+                                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                                      tbody
+                                                        tr
+                                                          td.col1subtitle(colspan='2', height='190', style='text-align: left; padding: 10px 0 0;', valign='top', st-title='1col-subtitle1')
+                                                            p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                                        tr
+                                                          td.priceinfo(align='right', width='90', st-title='1col-priceinfo1')
+                                                            p.font1(style='width: 90px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                              | per kilo
+                                                              br
+                                                              | van 11.00
+                                                        tr
+                                                          td.priceaction(align='right', st-title='1col-priceaction1')
+                                                            p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') 217.50
+                    table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+            //
+               end col 1
+            //
+               start col 1 
+            table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+              tbody
+                tr
+                  td(width='100%')
+                    table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+                      tbody
+                        tr
+                          td
+                            table.devicewidth(width='600', align='left', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.col1inner(width='579', style='padding: 10px;')
+                                    //
+                                       col 1 
+                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                      tbody
+                                        tr
+                                          td
+                                            table(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td(valign='top', st-title='1col-title1')
+                                                    p.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;') Boerderij Hertenbiefstuk
+                                                tr
+                                                  td(style='text-align: left;', valign='top', st-title='1col-subtitle1')
+                                                    p.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') Ruimte voor een subomschrijving van maximaal twee regels
+                                        tr
+                                          td.devicewidth(width='100%', align='center')
+                                            table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                              tbody
+                                                tr
+                                                  td.devicewidth(width='100%', align='center')
+                                                    table(cellpadding='0', cellspacing='0', border='0')
+                                                      tbody
+                                                        tr
+                                                          td.devicewidth(width='100%', align='center')
+                                                            img.colimgfullwidth(src='img/blok-1-image-260x260.jpg', alt='', border='0', width='500', height='250', style='display: block; border: none; outline: none; text-decoration: none;')
+                                                        tr.mobilehide
+                                                          td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                                        tr.mobileshow
+                                                          td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                                                    table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                                      tbody
+                                                        tr
+                                                          td.priceinfo(align='left', width='90', st-title='1col-priceinfo1')
+                                                            p.font1(style='width: 90px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                                              | per kilo
+                                                              br
+                                                              | van 11.00
+                                                          td.priceaction(align='right', st-title='1col-priceaction1')
+                                                            p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') 217.50
+                    table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+            //
+               end col 1
+            //
+               groothandels 
+            table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+              tbody
+                tr
+                  td(width='100%')
+                    table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+                      tbody
+                        tr
+                          td
+                            table.devicewidth(width='250', align='left', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.colstoreleftinner(width='229', style='padding: 10px;')
+                                    table.colstoreaddress(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td(align='left')
+                                            p.title(style='font: 17px/1.4 \'Lato\', Helvetica, Arial, sans-serif; font-weight: bold; text-align: left;', st-title='store-title') HANOS Heerenveen
+                                        tr
+                                          td(align='left', style='padding: 10px 0;', st-title='store-address')
+                                            p(style='font: 14px/1.4 \'Lato\', Helvetica, Arial, sans-serif;')
+                                              | Houtdraaier 2
+                                              br
+                                              | 8447 GG Amsterdam / Duivendrecht
+                                              br
+                                              | Tel: +31 513 630303
+                                    table.colstorebutton(width='100%', cellpadding='0', cellspacing='0', border='0', st-title='store-button')
+                                      tbody
+                                        //
+                                           Button 
+                                        tr
+                                          td(width='100%')
+                                            table.storebutton(height='34', align='left', valign='center', border='0', cellpadding='0', cellspacing='0')
+                                              tbody
+                                                tr
+                                                  td(width='auto', align='center', valign='middle', height='34', style='background-color: #59aeff; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background-clip: padding-box; font-size: 13px; line-height: 1.4; font-family: \'Roboto\' Helvetica, arial, sans-serif; text-align: center; color: #ffffff; padding: 0 20px;')
+                                                    span(style='color: #fff;')
+                                                      a.font2(style='color: #fff; text-align: center; text-decoration: none; font-family: \'Roboto\' Helvetica, arial, sans-serif;', href='#')
+                                                        | Route & openingstijden
+                                                        img(src='img/arrow.png', height='7', width='8', style='display: inline-block; padding: 0 0 0 10px; border: 0;', alt='')
+                            table.devicewidth.tablethide(width='346', align='right', border='0', cellpadding='0', cellspacing='0')
+                              tbody
+                                tr
+                                  td.colstorerightinner(width='325', style='padding: 15px 10px 10px;')
+                                    table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                                      tbody
+                                        tr
+                                          td(valign='middle', align='center', style='border: 1px solid #dddddd; display: block; padding: 3px;')
+                                            img.colstoreimg(src='http://ntd42.tripolis.com/public/image_MTkyMjg5MTlcjmwjRKPT6w.jpg', height='122', width='320', style='display: block; border: 0;', alt='')
+                    table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        tr
+                          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+            //
+               Start of footer 
+            table.footer.devicewidth(width='600', align='center', cellspacing='0', cellpadding='0', border='0', style='border-collapse: collapse; background-color: #FFF;')
+              tr
+                td(width='600', align='center', cellspacing='0', cellpadding='0', border='0', style='padding: 20px 0;')
+                  table(align='center', style='border-collapse: collapse; width: 80%;')
+                    tbody
+                      tr
+                        td(style='padding: 0 0 10px;')
+                          table(align='center', style='border-collapse: collapse;')
+                            tbody
+                              tr
+                                td(height='36', width='36', style='padding: 0 10px 0 0;')
+                                  a(href='#')
+                                    img(height='36', width='36', src='img/fb-36x36.jpg', alt='')
+                                td(height='36', width='36', style='padding: 0 10px 0 0;')
+                                  a(href='#')
+                                    img(height='36', width='36', src='img/tw-36x36.jpg', alt='')
+                                td(height='36', width='36')
+                                  a(href='#')
+                                    img(height='34', width='34', src='img/yt-36x36.jpg', alt='')
+                      tr
+                        td(style='padding: 0 0 10px; font: 14px/20px \'Roboto\', Helvetica,arial,sans-serif; color: #333; text-align: center;', valign='top')
+                          a.font2(href='http://ntd42.tripolis.com/public/r/j+vRCgU+ylCtv3B0IefLFg/hWim8WxqCMI1IZF+PdsKKA/TK1ET_mWKYTsfhGMZ8cs5w', target='_blank', title='website', style='text-decoration: none; padding: 0 5px; font: 13px/18px \'Roboto\', Helvetica,arial,sans-serif; color: #333;')
+                            span(style='color: #333;') Hanos.nl
+                          | |
+                          a.font2(href='http://ntd42.tripolis.com/public/r/fFZCtsz5atfirjLtmG7r7Q/hWim8WxqCMI1IZF+PdsKKA/TK1ET_mWKYTsfhGMZ8cs5w', target='_blank', title='contact', style='text-decoration: none; padding: 0 5px; font: 13px/18px \'Roboto\', Helvetica,arial,sans-serif; color: #333;')
+                            span(style='color: #333;') Contact
+                          | |
+                          a.font2(href='#', target='_blank', title='Gegevens wijzigen', style='text-decoration: none; padding: 0 5px; font: 13px/18px \'Roboto\', Helvetica,arial,sans-serif; color: #333;')
+                            span(style='color: #333;') Afmelden
+                      tr
+                        td.font2(style='padding: 0; font: 12px/17px \'Roboto\', Helvetica,arial,sans-serif; color: #999; text-align: center;', valign='top')
+                          | U ontvangt deze nieuwsbrief op
+                          a(href='#', style='color: #666; text-decoration: none;')
+                            span(style='font-weight: normal;')
+                              | ${contact.email!}
+                          | omdat u klant bent van HANOS en ingeschreven staat voor onze
+                          a(href='#', target='_blank', title='Gegevens wijzigen', style='color: #666; font-weight: normal; text-decoration: none;') Vestigingsmail
+                      tr
+                        td(style='padding: 20px 0 0;', valign='top', align='center')
+                          a(target='_blank', href='${logo_url}', title='${logo_image_alt!}')
+                            img(src='${footer_logo_image.url!}', alt='${logo_image_alt!}', border='0', width='${footer_logo_image.width}', height='${footer_logo_image.height}', style='display: block; border: none; outline: none; text-decoration: none; text-align: center;')
+            //
+               End of footer 
