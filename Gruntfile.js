@@ -94,7 +94,8 @@ module.exports = function(grunt) {
             hero: ['<%= paths.css%>/hero.css', '<%= paths.css %>/mq.css'],
             sidebar: ['<%= paths.css%>/sidebar.css', '<%= paths.css %>/mq.css'],
             sidebarHero: ['<%= paths.css%>/sidebar-hero.css', '<%= paths.css %>/mq.css'],
-            actiemail: ['<%= paths.css%>/actiemail.css']
+            actiemail: ['<%= paths.css%>/actiemail.css'],
+            outlookfooter: ['<%= paths.css%>/outlookfooter.css']
           }
         }
       }
@@ -139,14 +140,14 @@ module.exports = function(grunt) {
 
         // A collection of recipients
         recipients: [
-         /* {
+          {
             email: 'ronaldkonjer@gmail.com',
             name: 'Ronald Konjer'
-          },*/
-          {
+          }
+          /*{
             email: 'rkonjer@hanos.nl',
             name: 'Ronald Konjer'
-          }
+          }*/
         ]
       },
 

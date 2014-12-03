@@ -1,0 +1,173 @@
+/**
+ * Basic template stylesheet. Overrides .css.
+ */
+
+@import"compass";
+@import"variables";
+@import"reset";
+
+
+/*Reset styles*/
+/* Client-specific Styles */
+
+#outlook a {
+  padding: 0;
+}
+
+/* Force Outlook to provide a "view in browser" menu link. */
+
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  
+}
+
+/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+
+.ExternalClass {
+  width: 100%;
+  line-height: 100%;
+  p, span, font, td, div {
+    line-height: 100%;
+  }
+}
+
+/* Force Hotmail to display emails at full width */
+
+/* Force Hotmail to display normal line spacing.*/
+
+#backgroundTable {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  line-height: 100% !important;
+}
+
+img {
+  outline: none;
+  text-decoration: none;
+  border: none;
+  height: auto;
+  line-height: 100%;
+  -ms-interpolation-mode: bicubic;
+  &[class=colimgfullwidth] {
+    width: 500px!important;
+    height: 250px!important;
+  }
+}
+
+a img {
+  border: none;
+}
+
+a[href] {
+  color: #A39B9B!important;
+}
+
+.image_fix {
+  display: block;
+}
+
+/* table {
+  td {
+    border-collapse: collapse; 
+    border-spacing: 0;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+  }
+  border-spacing: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  width:100%;
+} */
+
+table {
+  td {
+    border-collapse: collapse;
+  }
+  border-spacing: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  width:100%;
+}
+
+p, span {
+  margin: 0;
+  padding: 0;
+  font-family: Calibri, Lucida Sans Unicode, sans-serif,;
+  font-size: 11px;
+  color: #A39B9B;
+}
+
+p.mailsignature {
+  color:$neutral;
+  span {
+    color:$neutral;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $neutral;
+  &:link, &:visited {
+    text-decoration: none;
+    color: $neutral;
+  }
+}
+
+/*STYLES*/
+
+table[class=full] {
+  width: 100%;
+  clear: both;
+}
+
+.footer {
+  width:915px;
+  height:244px;
+}
+
+.info {
+  height:244px;
+  margin:0;
+  padding:0;
+}
+
+.topbar {
+  height:75px;
+}
+
+.purple {
+  background-color: #3F0039;
+}
+
+.white {
+  background-color: $white;
+}
+
+.middlebar {
+  height:52px;
+  span {
+    font-size:13px;
+    color:#A39B9B;
+  }
+}
+
+.link{
+  display:block; 
+  margin-left:auto!important; 
+  margin-right:auto!important; 
+}
+
+.disclaimerbar p {
+  font-size:10px;
+}
+
+
+

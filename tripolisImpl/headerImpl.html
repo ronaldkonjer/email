@@ -1,0 +1,22 @@
+<table width="600" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; background-color: #FFF;" class="devicewidth">
+  <tr>
+    <td style="padding: 14px 10px; background-color: #57004E;" valign="top" align="center">
+      <table width="100%" style="border-collapse: collapse; width: 100%;">
+        <tr>
+          <td style="padding: 0; width: 45%;" align="left" valign="top" class="block_logo">
+            <a href="${logo_url}" target="_blank" title="${logo_image_alt!}">
+              <#if logo_image?has_content>
+              <img src="${logo_image.url!}" alt="${logo_image_alt!}" border="0" width="${logo_image.width}" height="${logo_image.height}" style="display: block; border:none; outline:none; text-decoration:none;">
+              <#else>
+              <img src="#" height="35" width="135" style="display:block; border:none; outline:none; text-decoration:none;">
+              </#if>
+            </a>
+          </td>
+          <td style="padding: 0 5px; font: 15px/1.4 'Roboto', Helvetica, Arial, sans-serif; color: #FFF; width: 45%;" align="right" valign="middle" class="block_right_header font2">
+            ${editie_datum!}<!--Looptijd: 12 t/m 13 oktober 2014-->
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

@@ -1,99 +1,93 @@
-//
-   groothandels 
-table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
-  tbody
-    tr
-      td(width='100%')
-        table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
-          tbody
-            tr
-              td
-                table.devicewidth(width='250', align='left', border='0', cellpadding='0', cellspacing='0')
-                  tbody
-                    tr
-                      td.colstoreleftinner(width='229', style='padding: 10px;')
-                        table.colstoreaddress(width='100%', cellpadding='0', cellspacing='0', border='0')
-                          tbody
-                            tr
-                              td(align='left')
-                                p.title(style='font: 17px/1.4 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;', st-title='store-title') HANOS Heerenveen
-                            tr
-                              td(align='left', style='padding: 10px 0;', st-title='store-address')
-                                p(style='font: 14px/1.4 \'Lato\', Helvetica, Arial, sans-serif;')
-                                  | Houtdraaier 2
-                                  br
-                                  | 8447 GG Amsterdam / Duivendrecht
-                                  br
-                                  | Tel: +31 513 630303
-                        table.colstorebutton(width='100%', cellpadding='0', cellspacing='0', border='0', st-title='store-button')
-                          tbody
-                            //
-                               Button 
-                            tr
-                              td(width='100%')
-                                table.storebutton(height='34', align='left', valign='center', border='0', cellpadding='0', cellspacing='0')
-                                  tbody
-                                    tr
-                                      td(width='auto', align='center', valign='middle', height='34', style='background-color: #59aeff; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background-clip: padding-box; font-size: 13px; line-height: 1.4; font-family: \'Roboto\' Helvetica, arial, sans-serif; text-align: center; color: #ffffff; padding: 0 20px;')
-                                        span(style='color: #fff;')
-                                          a.font2(style='color: #fff; text-align: center; text-decoration: none; font-family: \'Roboto\' Helvetica, arial, sans-serif;', href='#')
-                                            | Route & openingstijden
-                                            img(src='img/arrow.png', height='7', width='8', style='display: inline-block; padding: 0 0 0 10px; border: 0;', alt='')
-                table.devicewidth.tablethide(width='344', align='right', border='0', cellpadding='0', cellspacing='0')
-                  tbody
-                    tr
-                      td.colstorerightinner(width='323', style='padding: 15px 10px 10px;')
-                        table(width='100%', cellpadding='0', cellspacing='0', border='0')
-                          tbody
-                            tr
-                              td(valign='middle', align='center', style='border: 1px solid #dddddd; display: block; padding: 3px;')
-                                img.colstoreimg(src='http://ntd42.tripolis.com/public/image_MTkyMjg5MTlcjmwjRKPT6w.jpg', height='122', width='320', style='display: block; border: 0;', alt='')
-        table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
-          tbody
-            tr
-              td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+//groothandels 
+//<#noparse><#if contact.vestiging_oorsprong.label?contains("HANOS-Edes Ameland")> 
+include Ameland
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Amsterdam")> 
+include Amsterdam
+//<#elseif contact.vestiging_oorsprong.label?contains("HGC-HANOS Antwerpen")>
+include Antwerpen
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Apeldoorn")> 
+include Apeldoorn
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS-ISPC Breda")>
+include Breda
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Doetinchem")>
+include Doetinchem
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Eindhoven")>
+include Eindhoven
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Groningen")>
+include Groningen
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Haarlem")>
+include Haarlem
+//<#elseif contact.vestiging_oorsprong.label?contains("HGC-HANOS Hasselt")>
+include Hasselt
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Heerenveen")>
+include Heerenveen
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Heerlen")>
+include Heerlen
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Nijmegen")>
+include Nijmegen
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Texel")>
+include Texel
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS-ISPC Utrecht")>
+include Utrecht
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Valkenburg")>
+include Valkenburg
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Venlo")>
+include Venlo
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Zwolle")>
+include Zwolle
+//</#if></#noparse>
+ 
 
-
-//- //
-//-    start of stores 
-//- table.stores.devicewidth
-//-   tr
-//-     td
-//-       table.row
-//-         tr
-//-           td
-//-             table.colstoresleft
-//-               tr
-//-                 td.inner
-//-                   table.address
+//- table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+//-   tbody
+//-     tr
+//-       td(width='100%')
+//-        table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+//-           tbody
+//-             tr
+//-               td
+//-                 table.devicewidth(width='250', align='left', border='0', cellpadding='0', cellspacing='0')
+//-                   tbody
 //-                     tr
-//-                       td.title
-//-                         p.font1 HANOS Heerenveen
+//-                       td.colstoreleftinner(width='229', style='padding: 10px;')
+//-                         table.colstoreaddress(width='100%', cellpadding='0', cellspacing='0', border='0')
+//-                           tbody
+//-                             tr
+//-                               td(align='left')
+//-                                 p.title(style='font: 17px/1.4 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;', st-title='store-title') 
+//-                                 | HANOS-Edes Ameland
+//-                             tr
+//-                               td(align='left', style='padding: 10px 0;', st-title='store-address')
+//-                                 p(style='font: 14px/1.4 \'Lato\', Helvetica, Arial, sans-serif;')
+//-                                   | Achterdijken 22
+//-                                   br
+//-                                   | 9163 JV Nes Ameland
+//-                                   br
+//-                                   | Tel: +31 519 542292
+//-                         table.colstorebutton(width='100%', cellpadding='0', cellspacing='0', border='0', st-title='store-button')
+//-                           tbody
+//-                             //
+//-                                Button 
+//-                             tr
+//-                               td(width='100%')
+//-                                 table.storebutton(height='34', align='left', valign='center', border='0', cellpadding='0', cellspacing='0')
+//-                                   tbody
+//-                                     tr
+//-                                       td(width='auto', align='center', valign='middle', height='34', style='background-color: #59aeff; border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background-clip: padding-box; font-size: 13px; line-height: 1.4; font-family: \'Roboto\' Helvetica, arial, sans-serif; text-align: center; color: #ffffff; padding: 0 20px;')
+//-                                         span(style='color: #fff;')
+//-                                           a.font2(style='color: #fff; text-align: center; text-decoration: none; font-family: \'Roboto\' Helvetica, arial, sans-serif;', href='http://www.hanos.nl/Groothandels/Groothandel/HANOS-Ameland-1.htm')
+//-                                             | Route & openingstijden
+//-                                             img(src='img/arrow.png', height='7', width='8', style='display: inline-block; padding: 0 0 0 10px; border: 0;', alt='')
+//-                 table.devicewidth.tablethide(width='344', align='right', border='0', cellpadding='0', cellspacing='0')
+//-                   tbody
 //-                     tr
-//-                       td.subtitle
-//-                         p.font1
-//-                           | Houtdraaier 2
-//-                           br
-//-                           | 8447 GG Amsterdam / Duivendrecht
-//-                           br
-//-                           | Tel: +31 513 630303
-//-                   table.cta
-//-                     tr
-//-                       td
-//-                         table.small-button.radius
-//-                           tr
-//-                               td
-//-                                 a(href='#') Route &amp; openingstijden
-//-                                   img(src='img/arrow.png', alt='')
-//-             table.colstoresright.tablethide
-//-               tr
-//-                 td.inner
-//-                   table
-//-                       tr
-//-                         td.colstoreimg 
-//-                           img(src='http://ntd42.tripolis.com/public/image_MTkyMjg5MTlcjmwjRKPT6w.jpg', alt='')
-//-             table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
-//-               tr
-//-                 td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
-//- //
-//-    end of stores 
+//-                       td.colstorerightinner(width='323', style='padding: 15px 10px 10px;')
+//-                         table(width='100%', cellpadding='0', cellspacing='0', border='0')
+//-                           tbody
+//-                             tr
+//-                               td(valign='middle', align='center', style='border: 1px solid #dddddd; display: block; padding: 3px;')
+//-                                 img.colstoreimg(src='http://ntd42.tripolis.com/public/image_MTkyMjg5MTlcjmwjRKPT6w.jpg', height='122', width='320', style='display: block; border: 0;', alt='')
+//-         table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+//-           tbody
+//-             tr
+//-               td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
