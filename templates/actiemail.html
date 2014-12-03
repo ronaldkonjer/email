@@ -78,7 +78,7 @@
               <td width="600">
                 <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
                   <tr>
-                    <td>
+                    <td align="center">
                       <table width="294" align="left" border="0" cellpadding="0" cellspacing="0" class="col2">
                         <tr>
                           <td width="274" style="padding: 10px;" class="col2inner">
@@ -88,13 +88,19 @@
                                   <table height="60" align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
                                     <tr>
                                       <td valign="top" st-title="2col-title2" class="col2title">
-                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">Boerderij Hertenbiefstuk</p>
+                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${productinformatie_blok1!}</p>
                                       </td>
                                     </tr>
                                     <tr>
+                                      <!--<#if productinformatie_blok1?has_content>-->
                                       <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
-                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
+                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok1!}</p>
                                       </td>
+                                      <!--<#else>-->
+                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
+                                      </td>
+                                      <!--</#if>-->
                                     </tr>
                                   </table>
                                 </td>
@@ -106,7 +112,12 @@
                                       <td width="100%" align="center" class="col2">
                                         <table cellpadding="0" cellspacing="0" border="0" class="col2halfleft">
                                           <tr>
-                                            <td><img src="img/blok-1-image-260x260.jpg" alt="" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2"></td>
+                                            <td>
+                                              <!--<#if url_blok1?has_content>--><a href="${url_blok1}" target="_blank" title="${titel_blok1!}" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="${image_blok1.url}" alt="${titel_blok1!}" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
+                                                <!--<#if url_blok1?has_content>--></a>
+                                              <!--</#if>-->
+                                            </td>
                                           </tr>
                                           <tr class="mobilehide">
                                             <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
@@ -117,16 +128,28 @@
                                         </table>
                                         <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="col2halfright">
                                           <tr style="display: none;" class="mobileshow">
+                                            <!--<#if productinformatie_blok1?has_content>-->
                                             <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${productinformatie_blok1!}</p>
                                             </td>
+                                            <!--<#else>-->
+                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">&nbsp;</p>
+                                            </td>
+                                            <!--</#if>-->
                                           </tr>
                                           <tr>
+                                            <!--<#if vanprijs_blok1?has_content>-->
                                             <td align="left" st-title="2col-priceinfo1" class="priceinfo">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">per kilo<br>van 11.00</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>van ${vanprijs_blok1}</p>
                                             </td>
+                                            <!--<#else>-->
+                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>voor</p>
+                                            </td>
+                                            <!--</#if>-->
                                             <td align="right" st-title="2col-priceaction1" class="priceaction">
-                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">217.50</p>
+                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok1}</p>
                                             </td>
                                           </tr>
                                         </table>
@@ -139,22 +162,28 @@
                           </td>
                         </tr>
                       </table>
-                      <table width="300" align="right" border="0" cellpadding="0" cellspacing="0" class="col2">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" class="col2">
                         <tr>
-                          <td width="279" style="padding: 10px; border-left: 1px solid #ccc;" class="col2inner">
+                          <td width="274" style="padding: 10px; border-left: 1px solid #ccc;" class="col2inner">
                             <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                               <tr>
                                 <td>
                                   <table height="60" align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
                                     <tr>
-                                      <td valign="top" st-title="3col-title1" class="col2title">
-                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">Boerderij Hertenbiefstuk</p>
+                                      <td valign="top" st-title="2col-title2" class="col2title">
+                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${productinformatie_blok1!}</p>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col2subtitle">
-                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
+                                      <!--<#if productinformatie_blok1?has_content>-->
+                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok1!}</p>
                                       </td>
+                                      <!--<#else>-->
+                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
+                                      </td>
+                                      <!--</#if>-->
                                     </tr>
                                   </table>
                                 </td>
@@ -166,7 +195,12 @@
                                       <td width="100%" align="center" class="col2">
                                         <table cellpadding="0" cellspacing="0" border="0" class="col2halfleft">
                                           <tr>
-                                            <td><img src="img/blok-1-image-260x260.jpg" alt="" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2"></td>
+                                            <td>
+                                              <!--<#if url_blok1?has_content>--><a href="${url_blok1}" target="_blank" title="${titel_blok1!}" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="${image_blok1.url}" alt="${titel_blok1!}" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
+                                                <!--<#if url_blok1?has_content>--></a>
+                                              <!--</#if>-->
+                                            </td>
                                           </tr>
                                           <tr class="mobilehide">
                                             <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
@@ -177,16 +211,28 @@
                                         </table>
                                         <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="col2halfright">
                                           <tr style="display: none;" class="mobileshow">
-                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="mobilesubtitle">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
+                                            <!--<#if productinformatie_blok1?has_content>-->
+                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${productinformatie_blok1!}</p>
                                             </td>
+                                            <!--<#else>-->
+                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">&nbsp;</p>
+                                            </td>
+                                            <!--</#if>-->
                                           </tr>
                                           <tr>
-                                            <td align="left" st-title="2col-priceinfo2" class="priceinfo">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">normale zb-<br>prijs 11.00</p>
+                                            <!--<#if vanprijs_blok1?has_content>-->
+                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>van ${vanprijs_blok1}</p>
                                             </td>
-                                            <td align="right" st-title="2col-priceaction2" class="priceaction">
-                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">30% korting</p>
+                                            <!--<#else>-->
+                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>voor</p>
+                                            </td>
+                                            <!--</#if>-->
+                                            <td align="right" st-title="2col-priceaction1" class="priceaction">
+                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok1}</p>
                                             </td>
                                           </tr>
                                         </table>
@@ -210,9 +256,7 @@
               </td>
             </tr>
           </table>
-          <!--
-          end col 2 
-          
+          <!--end col 2 
           -->
           <!--start col 3 
           -->
@@ -223,11 +267,11 @@
                   <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
                     <tbody>
                       <tr>
-                        <td>
-                          <table width="198" align="left" border="0" cellpadding="0" cellspacing="0" class="col3">
+                        <td align="center">
+                          <table width="196" align="left" border="0" cellpadding="0" cellspacing="0" class="col3">
                             <tbody>
                               <tr>
-                                <td width="177" style="padding: 10px;" class="col3inner">
+                                <td width="175" style="padding: 10px;" class="col3inner">
                                   <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
                                       <tr>
@@ -236,13 +280,19 @@
                                             <tbody>
                                               <tr>
                                                 <td valign="top" height="35" st-title="3col-title1" class="col3title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">Boerderij Hertenbiefstuk</p>
+                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${titel_blok1!}</p>
                                                 </td>
                                               </tr>
                                               <tr>
+                                                <!--<#if productinformatie_blok1?has_content>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
-                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">Ruimte voor een subomschrijving</p>
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok1!}</p>
                                                 </td>
+                                                <!--<#else>-->
+                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
+                                                </td>
+                                                <!--</#if>-->
                                               </tr>
                                             </tbody>
                                           </table>
@@ -253,7 +303,12 @@
                                           <table cellpadding="0" cellspacing="0" border="0">
                                             <tbody>
                                               <tr>
-                                                <td><img src="img/blok-1-image-159x159-1.jpg" alt="" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3"></td>
+                                                <td>
+                                                  <!--<#if url_blok1?has_content>--><a href="${url_blok1}" target="_blank" title="${titel_blok1!}" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                    <!--</#if>--><img src="${image_blok1.url}" alt="${titel_blok1!}" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
+                                                    <!--<#if url_blok1?has_content>--></a>
+                                                  <!--</#if>-->
+                                                </td>
                                               </tr>
                                               <tr class="mobilehide">
                                                 <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
@@ -270,11 +325,17 @@
                                           <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
+                                                <!--<#if vanprijs_blok1?has_content>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">per kilo<br></p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>van ${vanprijs_blok1}</p>
                                                 </td>
+                                                <!--<#else>-->
+                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>voor</p>
+                                                </td>
+                                                <!--</#if>-->
                                                 <td align="right" st-title="3col-priceaction1" class="priceaction">
-                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">2+1</p>
+                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok1}</p>
                                                 </td>
                                               </tr>
                                             </tbody>
@@ -287,70 +348,7 @@
                               </tr>
                             </tbody>
                           </table>
-                          <table width="198" align="left" border="0" cellpadding="0" cellspacing="0" class="col3">
-                            <tbody>
-                              <tr>
-                                <td width="177" style="padding: 10px; border-left: 1px solid #ccc;" class="col3inner">
-                                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <table height="95" align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
-                                            <tbody>
-                                              <tr>
-                                                <td valign="top" height="35" st-title="3col-title2" class="col3title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">Boerderij Hertenbiefstuk</p>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle2" class="col3subtitle">
-                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">Doos 6 flessen</p>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td width="100%" align="center" class="col3">
-                                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                            <tbody>
-                                              <tr>
-                                                <td><img src="img/blok-1-image-159x159-1.jpg" alt="" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3"></td>
-                                              </tr>
-                                              <tr class="mobilehide">
-                                                <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
-                                              </tr>
-                                              <tr class="mobileshow">
-                                                <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;" class="mobileshow"> </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td width="100%" align="center" class="col3">
-                                          <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
-                                            <tbody>
-                                              <tr>
-                                                <td align="left" width="75" st-title="3col-priceinfo2" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">normale zb-<br>prijs 11.00</p>
-                                                </td>
-                                                <td align="right" st-title="3col-priceaction2" class="priceaction">
-                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">-30%</p>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <table width="196" align="right" border="0" cellpadding="0" cellspacing="0" class="col3 tablethide">
+                          <table width="196" align="left" border="0" cellpadding="0" cellspacing="0" class="col3">
                             <tbody>
                               <tr>
                                 <td width="175" style="padding: 10px; border-left: 1px solid #ccc;" class="col3inner">
@@ -361,14 +359,20 @@
                                           <table height="95" align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
                                             <tbody>
                                               <tr>
-                                                <td valign="top" height="35" st-title="3col-title3" class="col3title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font2">Boerderij Hertenbiefstuk</p>
+                                                <td valign="top" height="35" st-title="3col-title1" class="col3title">
+                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${titel_blok2!}</p>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle3" class="col3subtitle">
-                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
+                                                <!--<#if productinformatie_blok2?has_content>-->
+                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok2!}</p>
                                                 </td>
+                                                <!--<#else>-->
+                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
+                                                </td>
+                                                <!--</#if>-->
                                               </tr>
                                             </tbody>
                                           </table>
@@ -376,10 +380,15 @@
                                       </tr>
                                       <tr>
                                         <td width="100%" align="center" class="col3">
-                                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                          <table cellpadding="0" cellspacing="0" border="0">
                                             <tbody>
                                               <tr>
-                                                <td><img src="img/blok-1-image-159x159-1.jpg" alt="" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3"></td>
+                                                <td>
+                                                  <!--<#if url_blok2?has_content>--><a href="${url_blok2}" target="_blank" title="${titel_blok2!}" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                    <!--</#if>--><img src="${image_blok2.url}" alt="${titel_blok2!}" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
+                                                    <!--<#if url_blok2?has_content>--></a>
+                                                  <!--</#if>-->
+                                                </td>
                                               </tr>
                                               <tr class="mobilehide">
                                                 <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
@@ -396,11 +405,97 @@
                                           <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
-                                                <td align="left" width="75" st-title="3col-priceinfo3" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">per kilo<br>van 11.00</p>
+                                                <!--<#if vanprijs_blok2?has_content>-->
+                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok2}<br>van ${vanprijs_blok2}</p>
                                                 </td>
-                                                <td align="right" st-title="3col-priceaction3" class="priceaction">
-                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">217.50</p>
+                                                <!--<#else>-->
+                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok2}<br>voor</p>
+                                                </td>
+                                                <!--</#if>-->
+                                                <td align="right" st-title="3col-priceaction1" class="priceaction">
+                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok2}</p>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table align="right" border="0" cellpadding="0" cellspacing="0" class="col3 tablethide">
+                            <tbody>
+                              <tr>
+                                <td width="170" style="padding: 10px; border-left: 1px solid #ccc;" class="col3inner">
+                                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <table height="95" align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
+                                            <tbody>
+                                              <tr>
+                                                <td valign="top" height="35" st-title="3col-title1" class="col3title">
+                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${titel_blok3!}</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <!--<#if productinformatie_blok3?has_content>-->
+                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok3!}</p>
+                                                </td>
+                                                <!--<#else>-->
+                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
+                                                </td>
+                                                <!--</#if>-->
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td width="100%" align="center" class="col3">
+                                          <table cellpadding="0" cellspacing="0" border="0">
+                                            <tbody>
+                                              <tr>
+                                                <td>
+                                                  <!--<#if url_blok3?has_content>--><a href="${url_blok3}" target="_blank" title="${titel_blok3!}" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                    <!--</#if>--><img src="${image_blok3.url}" alt="${titel_blok3!}" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
+                                                    <!--<#if url_blok3?has_content>--></a>
+                                                  <!--</#if>-->
+                                                </td>
+                                              </tr>
+                                              <tr class="mobilehide">
+                                                <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
+                                              </tr>
+                                              <tr class="mobileshow">
+                                                <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;" class="mobileshow"> </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td width="100%" align="center" class="col3">
+                                          <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                              <tr>
+                                                <!--<#if vanprijs_blok3?has_content>-->
+                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok3}<br>van ${vanprijs_blok3}</p>
+                                                </td>
+                                                <!--<#else>-->
+                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok3}<br>voor</p>
+                                                </td>
+                                                <!--</#if>-->
+                                                <td align="right" st-title="3col-priceaction1" class="priceaction">
+                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok3}</p>
                                                 </td>
                                               </tr>
                                             </tbody>

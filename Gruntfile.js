@@ -140,14 +140,14 @@ module.exports = function(grunt) {
 
         // A collection of recipients
         recipients: [
-          {
+          /*{
             email: 'ronaldkonjer@gmail.com',
             name: 'Ronald Konjer'
-          }
-          /*{
+          }*/
+          {
             email: 'rkonjer@hanos.nl',
             name: 'Ronald Konjer'
-          }*/
+          }
         ]
       },
 
