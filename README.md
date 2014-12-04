@@ -28,6 +28,7 @@ Now, head to the root of your local repository and install the Node dependencies
 To compile your assets during development, run `grunt` in the command line. This will do the following:
 
 * Compile the Sass files within the `/sass/` folder and render them in the `/css/` folder.
+* Compile the Jade files to HTML in the '/temp/' directory
 * Create a `/dist/` directory (or empty it if it's already there).
 * Copy all images in `/img/` to `/dist/img/`.
 * Render each of the files with corresponding EJS templates and partials, if used. The files are placed in `/dist/`.
@@ -51,6 +52,10 @@ Then, copy the HTML within the HTML template you'd like to use (find it in the `
 Remember, your CSS has already been inlined, so you don't need to do that step manually.
 
 You will also need to upload your images from the `/dist/img/` folder to whatever email marketing service you use.
+
+### Tripolis article types field implementation
+
+In the '/Data/' directory there are two subdirectories. Use the '/dev/' directory for plain text Strings to fill the EJB template in the html mail template on Grunt Serve. Use the '/dist/' directory to refer with the same EJB template fields to the Tripolis article types fields. 
 
 ### Email Testing
 

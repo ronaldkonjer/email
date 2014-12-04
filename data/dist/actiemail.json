@@ -1,0 +1,36 @@
+{
+  "tripolis": [{
+    "snippet": "${snippet!}",
+    "editie_datum": "${editie_datum}",
+
+    "titel_blok1": "${titel_blok1!}",
+    "productinformatie_blok1": "${productinformatie_blok1!}",
+    "url_blok1": "${url_blok1!}",
+    "image_blok1": {
+      "url": "${image_blok1.url!}"
+    },
+    "eenheid_blok1": "${eenheid_blok1!}",
+    "vanprijs_blok1": "${vanprijs_blok1!}",
+    "voorprijs_blok1": "${voorprijs_blok1!}",
+
+    "titel_blok2": "${titel_blok2!}",
+    "productinformatie_blok2": "${productinformatie_blok2!}",
+    "url_blok2": "${url_blok2!}",
+    "image_blok2": {
+      "url": "${image_blok2.url!}"
+    },
+    "eenheid_blok2": "${eenheid_blok2!}",
+    "vanprijs_blok2": "${vanprijs_blok2!}",
+    "voorprijs_blok2": "${voorprijs_blok2!}",
+
+    "titel_blok3": "${titel_blok3!}",
+    "productinformatie_blok3": "${productinformatie_blok3!}",
+    "url_blok3": "${url_blok3!}",
+    "image_blok3": {
+      "url": "${image_blok3.url!}"
+    },
+    "eenheid_blok3": "${eenheid_blok3!}",
+    "vanprijs_blok3": "${vanprijs_blok3!}",
+    "voorprijs_blok3": "${voorprijs_blok3!}"
+  }]
+}

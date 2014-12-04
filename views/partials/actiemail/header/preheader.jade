@@ -6,7 +6,7 @@ table.preheader.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cel
       td.font2(align='center', valign='middle', style='padding: 10px 0; font: 12px/17px \'Roboto\', Helvetica, Arial, sans-serif; color: #333;')
         //
           <#if snippet?has_content>
-        | ${snippet!}
+        | <%= data.actiemail.tripolis[0].snippet %>
         //
           </#if>
         //
@@ -19,22 +19,3 @@ table.preheader.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cel
 //
    End preheader 
 
-//- //
-//-    Start preheader 
-//- table.preheader.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0')
-//-   tr
-//-     td.font2(align="center", valign="middle")
-//-       //
-//-         <#if snippet?has_content>
-//-       | ${snippet!}
-//-       //
-//-         </#if>
-//-       //
-//-         <#noparse><#if !onlineViewer>
-//-       | | Kunt u deze mail niet lezen? Klik dan 
-//-       a.online(href='http://td42.tripolis.com/public/preview?contactId=${contact.contactId}&jobId=${contact.jobId}', target='_blank') hier
-//-       | .
-//-       //
-//-         </#if></#noparse>
-//- //
-//-    End preheader 

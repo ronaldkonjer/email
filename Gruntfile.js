@@ -208,12 +208,11 @@ module.exports = function(grunt) {
      * Render EJS templates and data into HTML documents
      */
     render: {
-      options: {
-        data: ['<%= paths.data %>/*.json'],
-        //partialPaths: ['<%= paths.partials %>']
-      },
-
       dev: {
+        options: {
+          data: ['<%= paths.data %>/dev/*.json'],
+        //partialPaths: ['<%= paths.partials %>']
+        },
         files: [{
           expand: true,
           cwd: '<%= paths.templates %>',
@@ -223,6 +222,10 @@ module.exports = function(grunt) {
       },
 
       dist: {
+        options: {
+          data: ['<%= paths.data %>/dist/*.json'],
+        //partialPaths: ['<%= paths.partials %>']
+        },
         files: [{
           expand: true,
           cwd: '<%= paths.templates %>',
@@ -297,7 +300,7 @@ module.exports = function(grunt) {
       dev: [
         'compass',
         'jade',
-        'copy'
+        'copy',
         /*'responsive_images',*/
         /*'copy:styles'*/
         /*'copy:scss'*/
@@ -319,7 +322,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       'clean',
       'concurrent:dev',
-      'render:dev', 
+      'render:dev',
       'htmlbuild',
       'connect:livereload',
       'watch'

@@ -1,23 +1,23 @@
 {
-  "name": "responsive-email-kit",
+  "name": "responsive-mail-kit",
   "description": "A responsive email kit integrating Zurb Ink with Grunt",
   "author": {
-    "name": "Josh Larson",
-    "url": "https://github.com/jplhomer"
+    "name": "Ronald Konjer",
+    "url": "https://github.com/ronaldkonjer"
   },
   "version": "1.2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/happymedium/responsive-email-kit"
+    "url": "https://github.com/ronaldkonjer/email"
   },
-  "homepage": "https://github.com/happymedium/responsive-email-kit",
+  "homepage": "https://github.com/ronaldkonjer/email",
   "bugs": {
-    "url": "https://github.com/happymedium/responsive-email-kit/issues"
+    "url": "https://github.com/ronaldkonjer/email/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/happymedium/responsive-email-kit/blob/master/LICENSE"
+      "url": "https://github.com/ronaldkonjer/email/blob/master/LICENSE"
     }
   ],
   "main": "Gruntfile.js",

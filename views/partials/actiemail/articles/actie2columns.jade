@@ -1,141 +1,142 @@
 //
    Start col 2 
 table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
-   
-    tr
-      td(width='600')
-        table.devicewidth(width='100%', cellpadding='0', cellspacing='0', border='0', align='center')
-           
-            tr
-              td(align="center")
-                table.col2(width='294', align='left', border='0', cellpadding='0', cellspacing='0')
-                   
+  tr
+    td(width='600')
+      table.devicewidth(width='100%', cellpadding='0', cellspacing='0', border='0', align='center')
+        tr
+          td(align="center")
+            table.col2(width='294', align='left', border='0', cellpadding='0', cellspacing='0')
+              tr
+                td.col2inner(width='274', style='padding: 10px;')
+                  table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
                     tr
-                      td.col2inner(width='274', style='padding: 10px;')
-                        table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
-                            tr
-                              td
-                                table.col2header(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
-                                   
-                                    tr
-                                      td.col2title(valign='top', st-title='2col-title2')
-                                        p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')${productinformatie_blok1!}
-                                    tr
-                                      //<#if productinformatie_blok1?has_content>
-                                      td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
-                                        p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')${productinformatie_blok1!}
-                                      //<#else>
-                                      td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
-                                        p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
-                                      //</#if>
-                            tr
-                              td.col2(width='100%', align='center')
-                                table(width='100%', cellpadding='0', cellspacing='0', border='0')
-                                    tr
-                                      td.col2(width='100%', align='center')
-                                        table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
-                                            tr
-                                              td
-                                                //<#if url_blok1?has_content>
-                                                a(href="${url_blok1}", target="_blank", title="${titel_blok1!}", style="display:block; border:none; outline:none; text-decoration:none;")
-                                                  //</#if>
-                                                  img.colimg2(src='${image_blok1.url}', alt='${titel_blok1!}', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
-                                                  //<#if url_blok1?has_content>
-                                                //</#if>
-                                            tr.mobilehide
-                                              td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
-                                            tr.mobileshow
-                                              td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
-                                        table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
-                                            tr.mobileshow(style='display: none;')
-                                              //<#if productinformatie_blok1?has_content>
-                                              td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')${productinformatie_blok1!}
-                                              //<#else>
-                                              td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
-                                              //</#if>
-                                            tr
-                                              //<#if vanprijs_blok1?has_content>
-                                              td.priceinfo(align='left', st-title='2col-priceinfo1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
-                                                  |${eenheid_blok1}
-                                                  br 
-                                                  | van ${vanprijs_blok1}
-                                              //<#else>
-                                              td.priceinfo(align='left', st-title='2col-priceinfo1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
-                                                  |${eenheid_blok1}
-                                                  br 
-                                                  | voor
-                                              //</#if>
-                                              td.priceaction(align='right', st-title='2col-priceaction1')
-                                                p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')${voorprijs_blok1}
-                table.col2(align='left', border='0', cellpadding='0', cellspacing='0')
+                      td
+                        table.col2header(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
+                          tr
+                            td.col2title(valign='top', st-title='2col-title2')
+                              p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
+                                |<%= data.actiemail.tripolis[0].titel_blok1 %>
+                          tr
+                            //<#if productinformatie_blok1?has_content>
+                            td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
+                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                |<%= data.actiemail.tripolis[0].productinformatie_blok1 %>
+                            //<#else>
+                            td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
+                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                            //</#if>
                     tr
-                      td.col2inner(width='274', style='padding: 10px; border-left: 1px solid #ccc;')
-                        table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
-                            tr
-                              td
-                                table.col2header(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
-                                   
-                                    tr
-                                      td.col2title(valign='top', st-title='2col-title2')
-                                        p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')${productinformatie_blok1!}
-                                    tr
-                                      //<#if productinformatie_blok1?has_content>
-                                      td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
-                                        p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')${productinformatie_blok1!}
-                                      //<#else>
-                                      td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
-                                        p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                      td.col2(width='100%', align='center')
+                        table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                          tr
+                            td.col2(width='100%', align='center')
+                              table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
+                                tr
+                                  td
+                                    //<#if url_blok1?has_content>
+                                    a(href!="<%= data.actiemail.tripolis[0].url_blok1 %>", target="_blank", title!="<%= data.actiemail.tripolis[0].titel_blok1 %>", style="display:block; border:none; outline:none; text-decoration:none;")
                                       //</#if>
-                            tr
-                              td.col2(width='100%', align='center')
-                                table(width='100%', cellpadding='0', cellspacing='0', border='0')
-                                    tr
-                                      td.col2(width='100%', align='center')
-                                        table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
-                                            tr
-                                              td
-                                                //<#if url_blok1?has_content>
-                                                a(href="${url_blok1}", target="_blank", title="${titel_blok1!}", style="display:block; border:none; outline:none; text-decoration:none;")
-                                                  //</#if>
-                                                  img.colimg2(src='${image_blok1.url}', alt='${titel_blok1!}', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
-                                                  //<#if url_blok1?has_content>
-                                                //</#if>
-                                            tr.mobilehide
-                                              td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
-                                            tr.mobileshow
-                                              td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
-                                        table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
-                                            tr.mobileshow(style='display: none;')
-                                              //<#if productinformatie_blok1?has_content>
-                                              td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')${productinformatie_blok1!}
-                                              //<#else>
-                                              td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
-                                              //</#if>
-                                            tr
-                                              //<#if vanprijs_blok1?has_content>
-                                              td.priceinfo(align='left', st-title='2col-priceinfo1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
-                                                  |${eenheid_blok1}
-                                                  br 
-                                                  | van ${vanprijs_blok1}
-                                              //<#else>
-                                              td.priceinfo(align='left', st-title='2col-priceinfo1')
-                                                p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
-                                                  |${eenheid_blok1}
-                                                  br 
-                                                  | voor
-                                              //</#if>
-                                              td.priceaction(align='right', st-title='2col-priceaction1')
-                                                p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')${voorprijs_blok1}
-        table.divider.mobilehide(width='100%', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
-           
-            tr
-              td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+                                      img.colimg2(src!="<%= data.actiemail.tripolis[0].image_blok1.url %>", alt!="<%= data.actiemail.tripolis[0].titel_blok1 %>", border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      //<#if url_blok1?has_content>
+                                    //</#if>
+                                tr.mobilehide
+                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                tr.mobileshow
+                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                              table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                tr.mobileshow(style='display: none;')
+                                  //<#if productinformatie_blok1?has_content>
+                                  td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                      |<%= data.actiemail.tripolis[0].productinformatie_blok1 %>
+                                  //<#else>
+                                  td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                                  //</#if>
+                                tr
+                                  //<#if vanprijs_blok1?has_content>
+                                  td.priceinfo(align='left', st-title='2col-priceinfo1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                      |<%= data.actiemail.tripolis[0].eenheid_blok1 %>
+                                      br 
+                                      |<%= data.actiemail.tripolis[0].vanprijs_blok1 %>
+                                  //<#else>
+                                  td.priceinfo(align='left', st-title='2col-priceinfo1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                      |<%= data.actiemail.tripolis[0].eenheid_blok1 %>
+                                      br 
+                                      | voor
+                                  //</#if>
+                                  td.priceaction(align='right', st-title='2col-priceaction1')
+                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')<%= data.actiemail.tripolis[0].voorprijs_blok1 %>
+            table.col2(align='left', border='0', cellpadding='0', cellspacing='0')
+              tr
+                td.col2inner(width='274', style='padding: 10px; border-left: 1px solid #ccc;')
+                  table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                    tr
+                      td
+                       table.col2header(height='60', align='left', border='0', cellpadding='0', cellspacing='0')
+                         
+                          tr
+                            td.col2title(valign='top', st-title='2col-title2')
+                              p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
+                                |<%= data.actiemail.tripolis[0].titel_blok2 %>
+                          tr
+                            //<#if productinformatie_blok1?has_content>
+                            td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
+                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                |<%= data.actiemail.tripolis[0].productinformatie_blok2 %>
+                            //<#else>
+                            td.col2subtitle(style='text-align: left;', valign='top', st-title='2col-subtitle2')
+                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                            //</#if>
+                    tr
+                      td.col2(width='100%', align='center')
+                        table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                          tr
+                            td.col2(width='100%', align='center')
+                              table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
+                                tr
+                                  td
+                                    //<#if url_blok1?has_content>
+                                    a(href!="<%= data.actiemail.tripolis[0].url_blok1 %>", target="_blank", title!="<%= data.actiemail.tripolis[0].titel_blok1 %>", style="display:block; border:none; outline:none; text-decoration:none;")
+                                      //</#if>
+                                      img.colimg2(src!='<%= data.actiemail.tripolis[0].image_blok1.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      //<#if url_blok1?has_content>
+                                    //</#if>
+                                tr.mobilehide
+                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                tr.mobileshow
+                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                              table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                                tr.mobileshow(style='display: none;')
+                                  //<#if productinformatie_blok1?has_content>
+                                  td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                      |<%= data.actiemail.tripolis[0].productinformatie_blok2 %>
+                                  //<#else>
+                                  td.mobilesubtitle(style='text-align: left;', valign='top', st-title='2col-subtitle1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                                  //</#if>
+                                tr
+                                  //<#if vanprijs_blok1?has_content>
+                                  td.priceinfo(align='left', st-title='2col-priceinfo1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                      |<%= data.actiemail.tripolis[0].eenheid_blok2 %>
+                                      br 
+                                      |<%= data.actiemail.tripolis[0].vanprijs_blok2 %>
+                                  //<#else>
+                                  td.priceinfo(align='left', st-title='2col-priceinfo1')
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+                                      |<%= data.actiemail.tripolis[0].eenheid_blok2 %>
+                                      br 
+                                      | voor
+                                  //</#if>
+                                  td.priceaction(align='right', st-title='2col-priceaction1')
+                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')<%= data.actiemail.tripolis[0].voorprijs_blok2 %>
+      table.divider.mobilehide(width='100%', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+        tr
+          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
 //
    end col 2 

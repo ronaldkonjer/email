@@ -18,7 +18,7 @@
               <tr>
                 <td align="center" valign="middle" style="padding: 10px 0; font: 12px/17px 'Roboto', Helvetica, Arial, sans-serif; color: #333;" class="font2">
                   <!--<#if snippet?has_content>
-                  -->${snippet!}
+                  --><%= data.actiemail.tripolis[0].snippet %>
                   <!--</#if>
                   -->
                   <!--<#noparse><#if !onlineViewer>
@@ -42,19 +42,14 @@
                   <table width="100%" style="border-collapse: collapse; width: 100%;">
                     <tr>
                       <td style="padding: 0; width: 45%;" align="left" valign="top" class="block_logo"><a target="_blank" href="${logo_url}" title="${logo_image_alt!}"><img src="${logo_image.url!}" alt="${logo_image_alt!}" border="0" width="${logo_image.width}" height="${logo_image.height}" style="display: block; border: none; outline: none; text-decoration: none;"></a></td>
-                      <td style="padding: 0 5px; font: 15px/1.4 'Roboto', Helvetica, Arial, sans-serif; color: #FFF; width: 45%;" align="right" valign="middle" class="block_right_header font2">${editie_datum!}
-                        <!--Looptijd: 12 t/m 13 oktober 2014 
-                        -->
-                      </td>
+                      <td style="padding: 0 5px; font: 15px/1.4 'Roboto', Helvetica, Arial, sans-serif; color: #FFF; width: 45%;" align="right" valign="middle" class="block_right_header font2"><%= data.actiemail.tripolis[0].editie_datum %></td>
                     </tr>
                   </table>
                 </td>
               </tr>
             </tbody>
           </table>
-          <!--
-          End header 
-          
+          <!--End header 
           -->
           <!--Start main-banner 
           -->
@@ -88,13 +83,13 @@
                                   <table height="60" align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
                                     <tr>
                                       <td valign="top" st-title="2col-title2" class="col2title">
-                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${productinformatie_blok1!}</p>
+                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok1 %></p>
                                       </td>
                                     </tr>
                                     <tr>
                                       <!--<#if productinformatie_blok1?has_content>-->
                                       <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
-                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok1!}</p>
+                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                       </td>
                                       <!--<#else>-->
                                       <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
@@ -113,8 +108,8 @@
                                         <table cellpadding="0" cellspacing="0" border="0" class="col2halfleft">
                                           <tr>
                                             <td>
-                                              <!--<#if url_blok1?has_content>--><a href="${url_blok1}" target="_blank" title="${titel_blok1!}" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                <!--</#if>--><img src="${image_blok1.url}" alt="${titel_blok1!}" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
+                                              <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
                                                 <!--<#if url_blok1?has_content>--></a>
                                               <!--</#if>-->
                                             </td>
@@ -130,7 +125,7 @@
                                           <tr style="display: none;" class="mobileshow">
                                             <!--<#if productinformatie_blok1?has_content>-->
                                             <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${productinformatie_blok1!}</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                             </td>
                                             <!--<#else>-->
                                             <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
@@ -141,15 +136,15 @@
                                           <tr>
                                             <!--<#if vanprijs_blok1?has_content>-->
                                             <td align="left" st-title="2col-priceinfo1" class="priceinfo">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>van ${vanprijs_blok1}</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br><%= data.actiemail.tripolis[0].vanprijs_blok1 %></p>
                                             </td>
                                             <!--<#else>-->
                                             <td align="left" st-title="2col-priceinfo1" class="priceinfo">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>voor</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br>voor</p>
                                             </td>
                                             <!--</#if>-->
                                             <td align="right" st-title="2col-priceaction1" class="priceaction">
-                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok1}</p>
+                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok1 %></p>
                                             </td>
                                           </tr>
                                         </table>
@@ -171,13 +166,13 @@
                                   <table height="60" align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
                                     <tr>
                                       <td valign="top" st-title="2col-title2" class="col2title">
-                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${productinformatie_blok1!}</p>
+                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok2 %></p>
                                       </td>
                                     </tr>
                                     <tr>
                                       <!--<#if productinformatie_blok1?has_content>-->
                                       <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
-                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok1!}</p>
+                                        <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok2 %></p>
                                       </td>
                                       <!--<#else>-->
                                       <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
@@ -196,8 +191,8 @@
                                         <table cellpadding="0" cellspacing="0" border="0" class="col2halfleft">
                                           <tr>
                                             <td>
-                                              <!--<#if url_blok1?has_content>--><a href="${url_blok1}" target="_blank" title="${titel_blok1!}" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                <!--</#if>--><img src="${image_blok1.url}" alt="${titel_blok1!}" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
+                                              <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
                                                 <!--<#if url_blok1?has_content>--></a>
                                               <!--</#if>-->
                                             </td>
@@ -213,7 +208,7 @@
                                           <tr style="display: none;" class="mobileshow">
                                             <!--<#if productinformatie_blok1?has_content>-->
                                             <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${productinformatie_blok1!}</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].productinformatie_blok2 %></p>
                                             </td>
                                             <!--<#else>-->
                                             <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
@@ -224,15 +219,15 @@
                                           <tr>
                                             <!--<#if vanprijs_blok1?has_content>-->
                                             <td align="left" st-title="2col-priceinfo1" class="priceinfo">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>van ${vanprijs_blok1}</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br><%= data.actiemail.tripolis[0].vanprijs_blok2 %></p>
                                             </td>
                                             <!--<#else>-->
                                             <td align="left" st-title="2col-priceinfo1" class="priceinfo">
-                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>voor</p>
+                                              <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br>voor</p>
                                             </td>
                                             <!--</#if>-->
                                             <td align="right" st-title="2col-priceaction1" class="priceaction">
-                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok1}</p>
+                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok2 %></p>
                                             </td>
                                           </tr>
                                         </table>
@@ -280,13 +275,13 @@
                                             <tbody>
                                               <tr>
                                                 <td valign="top" height="35" st-title="3col-title1" class="col3title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${titel_blok1!}</p>
+                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok1 %></p>
                                                 </td>
                                               </tr>
                                               <tr>
                                                 <!--<#if productinformatie_blok1?has_content>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
-                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok1!}</p>
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                                 </td>
                                                 <!--<#else>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
@@ -304,8 +299,8 @@
                                             <tbody>
                                               <tr>
                                                 <td>
-                                                  <!--<#if url_blok1?has_content>--><a href="${url_blok1}" target="_blank" title="${titel_blok1!}" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                    <!--</#if>--><img src="${image_blok1.url}" alt="${titel_blok1!}" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
+                                                  <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                    <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
                                                     <!--<#if url_blok1?has_content>--></a>
                                                   <!--</#if>-->
                                                 </td>
@@ -327,15 +322,15 @@
                                               <tr>
                                                 <!--<#if vanprijs_blok1?has_content>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>van ${vanprijs_blok1}</p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br><%= data.actiemail.tripolis[0].vanprijs_blok1 %></p>
                                                 </td>
                                                 <!--<#else>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok1}<br>voor</p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br>voor</p>
                                                 </td>
                                                 <!--</#if>-->
                                                 <td align="right" st-title="3col-priceaction1" class="priceaction">
-                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok1}</p>
+                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok1 %></p>
                                                 </td>
                                               </tr>
                                             </tbody>
@@ -360,13 +355,13 @@
                                             <tbody>
                                               <tr>
                                                 <td valign="top" height="35" st-title="3col-title1" class="col3title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${titel_blok2!}</p>
+                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok2 %></p>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <!--<#if productinformatie_blok2?has_content>-->
+                                                <!--<#if productinformatie_blok1?has_content>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
-                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok2!}</p>
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok2 %></p>
                                                 </td>
                                                 <!--<#else>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
@@ -384,9 +379,9 @@
                                             <tbody>
                                               <tr>
                                                 <td>
-                                                  <!--<#if url_blok2?has_content>--><a href="${url_blok2}" target="_blank" title="${titel_blok2!}" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                    <!--</#if>--><img src="${image_blok2.url}" alt="${titel_blok2!}" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
-                                                    <!--<#if url_blok2?has_content>--></a>
+                                                  <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok2 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok2 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                    <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok2.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok2 %>" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
+                                                    <!--<#if url_blok1?has_content>--></a>
                                                   <!--</#if>-->
                                                 </td>
                                               </tr>
@@ -405,17 +400,17 @@
                                           <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
-                                                <!--<#if vanprijs_blok2?has_content>-->
+                                                <!--<#if vanprijs_blok1?has_content>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok2}<br>van ${vanprijs_blok2}</p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br><%= data.actiemail.tripolis[0].vanprijs_blok2 %></p>
                                                 </td>
                                                 <!--<#else>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok2}<br>voor</p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br>voor</p>
                                                 </td>
                                                 <!--</#if>-->
                                                 <td align="right" st-title="3col-priceaction1" class="priceaction">
-                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok2}</p>
+                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok2 %></p>
                                                 </td>
                                               </tr>
                                             </tbody>
@@ -440,13 +435,13 @@
                                             <tbody>
                                               <tr>
                                                 <td valign="top" height="35" st-title="3col-title1" class="col3title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">${titel_blok3!}</p>
+                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok3 %></p>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <!--<#if productinformatie_blok3?has_content>-->
+                                                <!--<#if productinformatie_blok1?has_content>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
-                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">${productinformatie_blok3!}</p>
+                                                  <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok3 %></p>
                                                 </td>
                                                 <!--<#else>-->
                                                 <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
@@ -464,9 +459,9 @@
                                             <tbody>
                                               <tr>
                                                 <td>
-                                                  <!--<#if url_blok3?has_content>--><a href="${url_blok3}" target="_blank" title="${titel_blok3!}" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                    <!--</#if>--><img src="${image_blok3.url}" alt="${titel_blok3!}" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
-                                                    <!--<#if url_blok3?has_content>--></a>
+                                                  <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok3 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok3 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                    <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok3.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok3 %>" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
+                                                    <!--<#if url_blok1?has_content>--></a>
                                                   <!--</#if>-->
                                                 </td>
                                               </tr>
@@ -485,17 +480,17 @@
                                           <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
-                                                <!--<#if vanprijs_blok3?has_content>-->
+                                                <!--<#if vanprijs_blok1?has_content>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok3}<br>van ${vanprijs_blok3}</p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok3 %><br><%= data.actiemail.tripolis[0].vanprijs_blok3 %></p>
                                                 </td>
                                                 <!--<#else>-->
                                                 <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
-                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${eenheid_blok3}<br>voor</p>
+                                                  <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok3 %><br>voor</p>
                                                 </td>
                                                 <!--</#if>-->
                                                 <td align="right" st-title="3col-priceaction1" class="priceaction">
-                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">${voorprijs_blok3}</p>
+                                                  <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok3 %></p>
                                                 </td>
                                               </tr>
                                             </tbody>
