@@ -15,20 +15,20 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                         table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
                           tbody
                             tr
-                              td
-                                table.col3header(height='95', align='left', border='0', cellpadding='0', cellspacing='0')
+                              td(height='95')
+                                table.col3header(align='left', border='0', cellpadding='0', cellspacing='0')
                                   tbody
                                     tr
-                                      td.col3title(valign='top', height='35', st-title='3col-title1')
+                                      td.col3title(valign='top', height='35')
                                         p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
                                           |<%= data.actiemail.tripolis[0].titel_blok1 %>
                                     tr
                                       //<#if productinformatie_blok1?has_content>
-                                      td.col3subtitle(height='60', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                      td.col3subtitle(height='60', style='text-align: left;', valign='top')
                                         p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].productinformatie_blok1 %>
                                       //<#else>
-                                      td.col3subtitle(height='60', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                      td.col3subtitle(height='60', style='text-align: left;', valign='top')
                                         p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
                                       //</#if>
                             tr
@@ -53,19 +53,19 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                   tbody
                                     tr
                                       //<#if vanprijs_blok1?has_content>
-                                      td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                      td.priceinfo(align='left', valign='top', width='75')
                                         p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].eenheid_blok1 %>
                                           br 
                                           |<%= data.actiemail.tripolis[0].vanprijs_blok1 %>
                                       //<#else>
-                                      td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                      td.priceinfo(align='left', valign='top', width='75')
                                         p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].eenheid_blok1 %>
                                           br 
                                           | voor
                                       //</#if>
-                                      td.priceaction(align='right', st-title='3col-priceaction1')
+                                      td.priceaction(align='right')
                                         p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].voorprijs_blok1 %>
                 table.col3(width='196', align='left', border='0', cellpadding='0', cellspacing='0')
@@ -75,20 +75,20 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                         table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
                           tbody
                             tr
-                              td
-                                table.col3header(height='95', align='left', border='0', cellpadding='0', cellspacing='0')
+                              td(height='95')
+                                table.col3header(align='left', border='0', cellpadding='0', cellspacing='0')
                                   tbody
                                     tr
-                                      td.col3title(valign='top', height='35', st-title='3col-title1')
+                                      td.col3title(valign='top', height='35')
                                         p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
                                           |<%= data.actiemail.tripolis[0].titel_blok2 %>
                                     tr
                                       //<#if productinformatie_blok1?has_content>
-                                      td.col3subtitle(height='60', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                      td.col3subtitle(height='60', style='text-align: left;', valign='top')
                                         p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].productinformatie_blok2 %>
                                       //<#else>
-                                      td.col3subtitle(height='60', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                      td.col3subtitle(height='60', style='text-align: left;', valign='top')
                                         p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
                                       //</#if>
                             tr
@@ -113,19 +113,19 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                   tbody
                                     tr
                                       //<#if vanprijs_blok1?has_content>
-                                      td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                      td.priceinfo(align='left', valign='top', width='75')
                                         p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].eenheid_blok2 %>
                                           br 
                                           |<%= data.actiemail.tripolis[0].vanprijs_blok2 %>
                                       //<#else>
-                                      td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                      td.priceinfo(align='left', valign='top', width='75')
                                         p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].eenheid_blok2 %>
                                           br 
                                           | voor
                                       //</#if>
-                                      td.priceaction(align='right', st-title='3col-priceaction1')
+                                      td.priceaction(align='right')
                                         p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].voorprijs_blok2 %>
                 table.col3.tablethide(align='right', border='0', cellpadding='0', cellspacing='0')
@@ -135,20 +135,20 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                         table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
                           tbody
                             tr
-                              td
-                                table.col3header(height='95', align='left', border='0', cellpadding='0', cellspacing='0')
+                              td(height='95')
+                                table.col3header(align='left', border='0', cellpadding='0', cellspacing='0')
                                   tbody
                                     tr
-                                      td.col3title(valign='top', height='35', st-title='3col-title1')
+                                      td.col3title(valign='top', height='35')
                                         p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
                                           |<%= data.actiemail.tripolis[0].titel_blok3 %>
                                     tr
                                       //<#if productinformatie_blok1?has_content>
-                                      td.col3subtitle(height='60', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                      td.col3subtitle(height='60', style='text-align: left;', valign='top')
                                         p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].productinformatie_blok3 %>
                                       //<#else>
-                                      td.col3subtitle(height='60', style='text-align: left;', valign='top', st-title='3col-subtitle1')
+                                      td.col3subtitle(height='60', style='text-align: left;', valign='top')
                                         p.subtitle.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
                                       //</#if>
                             tr
@@ -173,19 +173,19 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                   tbody
                                     tr
                                       //<#if vanprijs_blok1?has_content>
-                                      td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                      td.priceinfo(align='left', valign='top', width='75')
                                         p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].eenheid_blok3 %>
                                           br 
                                           |<%= data.actiemail.tripolis[0].vanprijs_blok3 %>
                                       //<#else>
-                                      td.priceinfo(align='left', valign='top', width='75', st-title='3col-priceinfo1')
+                                      td.priceinfo(align='left', valign='top', width='75')
                                         p.font1(style='width: 75px; font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].eenheid_blok3 %>
                                           br 
                                           | voor
                                       //</#if>
-                                      td.priceaction(align='right', st-title='3col-priceaction1')
+                                      td.priceaction(align='right')
                                         p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')
                                           |<%= data.actiemail.tripolis[0].voorprijs_blok3 %>
         table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
