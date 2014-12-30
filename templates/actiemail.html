@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta(name='viewport', content='width=device-width, initial-scale=1.0')-->
+    <meta name="viewport" content="width=600, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HANOS Voordeelmail</title>
     <!--for testing only-->
     <link rel="stylesheet" href="../css/actiemail.css"><!-- build:style inline actiemail --><!-- /build -->
@@ -13,7 +15,7 @@
         <td style="padding: 0;" valign="top" align="center">
           <!--Start preheader 
           -->
-          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" st-sortable="preheader" class="preheader devicewidth">
+          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="preheader devicewidth">
             <tbody>
               <tr>
                 <td align="center" valign="middle" style="padding: 10px 0; font: 12px/17px 'Roboto', Helvetica, Arial, sans-serif; color: #333;" class="font2">
@@ -79,20 +81,20 @@
                           <td width="274" style="padding: 10px;" class="col2inner">
                             <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td>
-                                  <table height="60" align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
+                                <td height="60">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
                                     <tr>
-                                      <td valign="top" st-title="2col-title2" class="col2title">
+                                      <td valign="top" class="col2title">
                                         <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok1 %></p>
                                       </td>
                                     </tr>
                                     <tr>
                                       <!--<#if productinformatie_blok1?has_content>-->
-                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                      <td style="text-align: left;" valign="top" class="col2subtitle">
                                         <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                       </td>
                                       <!--<#else>-->
-                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                      <td style="text-align: left;" valign="top" class="col2subtitle">
                                         <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
                                       </td>
                                       <!--</#if>-->
@@ -124,26 +126,26 @@
                                         <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="col2halfright">
                                           <tr style="display: none;" class="mobileshow">
                                             <!--<#if productinformatie_blok1?has_content>-->
-                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                            <td style="text-align: left;" valign="top" class="mobilesubtitle">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                             </td>
                                             <!--<#else>-->
-                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                            <td style="text-align: left;" valign="top" class="mobilesubtitle">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">&nbsp;</p>
                                             </td>
                                             <!--</#if>-->
                                           </tr>
                                           <tr>
                                             <!--<#if vanprijs_blok1?has_content>-->
-                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                            <td align="left" class="priceinfo">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br><%= data.actiemail.tripolis[0].vanprijs_blok1 %></p>
                                             </td>
                                             <!--<#else>-->
-                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                            <td align="left" class="priceinfo">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br>voor</p>
                                             </td>
                                             <!--</#if>-->
-                                            <td align="right" st-title="2col-priceaction1" class="priceaction">
+                                            <td align="right" class="priceaction">
                                               <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok1 %></p>
                                             </td>
                                           </tr>
@@ -162,20 +164,20 @@
                           <td width="274" style="padding: 10px; border-left: 1px solid #ccc;" class="col2inner">
                             <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td>
-                                  <table height="60" align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
+                                <td height="60">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="col2header">
                                     <tr>
-                                      <td valign="top" st-title="2col-title2" class="col2title">
+                                      <td valign="top" class="col2title">
                                         <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok2 %></p>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <!--<#if productinformatie_blok1?has_content>-->
-                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                      <!--<#if productinformatie_blok2?has_content>-->
+                                      <td style="text-align: left;" valign="top" class="col2subtitle">
                                         <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok2 %></p>
                                       </td>
                                       <!--<#else>-->
-                                      <td style="text-align: left;" valign="top" st-title="2col-subtitle2" class="col2subtitle">
+                                      <td style="text-align: left;" valign="top" class="col2subtitle">
                                         <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
                                       </td>
                                       <!--</#if>-->
@@ -191,9 +193,9 @@
                                         <table cellpadding="0" cellspacing="0" border="0" class="col2halfleft">
                                           <tr>
                                             <td>
-                                              <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
-                                                <!--<#if url_blok1?has_content>--></a>
+                                              <!--<#if url_blok2?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok2 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok2 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok2.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok2 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2">
+                                                <!--<#if url_blok2?has_content>--></a>
                                               <!--</#if>-->
                                             </td>
                                           </tr>
@@ -206,27 +208,27 @@
                                         </table>
                                         <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="col2halfright">
                                           <tr style="display: none;" class="mobileshow">
-                                            <!--<#if productinformatie_blok1?has_content>-->
-                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                            <!--<#if productinformatie_blok2?has_content>-->
+                                            <td style="text-align: left;" valign="top" class="mobilesubtitle">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].productinformatie_blok2 %></p>
                                             </td>
                                             <!--<#else>-->
-                                            <td style="text-align: left;" valign="top" st-title="2col-subtitle1" class="mobilesubtitle">
+                                            <td style="text-align: left;" valign="top" class="mobilesubtitle">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">&nbsp;</p>
                                             </td>
                                             <!--</#if>-->
                                           </tr>
                                           <tr>
-                                            <!--<#if vanprijs_blok1?has_content>-->
-                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                            <!--<#if vanprijs_blok2?has_content>-->
+                                            <td align="left" class="priceinfo">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br><%= data.actiemail.tripolis[0].vanprijs_blok2 %></p>
                                             </td>
                                             <!--<#else>-->
-                                            <td align="left" st-title="2col-priceinfo1" class="priceinfo">
+                                            <td align="left" class="priceinfo">
                                               <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br>voor</p>
                                             </td>
                                             <!--</#if>-->
-                                            <td align="right" st-title="2col-priceaction1" class="priceaction">
+                                            <td align="right" class="priceaction">
                                               <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok2 %></p>
                                             </td>
                                           </tr>
@@ -270,21 +272,21 @@
                                   <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
                                       <tr>
-                                        <td>
-                                          <table height="95" align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
+                                        <td height="95">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
                                             <tbody>
                                               <tr>
-                                                <td valign="top" height="35" st-title="3col-title1" class="col3title">
+                                                <td valign="top" height="35" class="col3title">
                                                   <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok1 %></p>
                                                 </td>
                                               </tr>
                                               <tr>
                                                 <!--<#if productinformatie_blok1?has_content>-->
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                <td height="60" style="text-align: left;" valign="top" class="col3subtitle">
                                                   <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                                 </td>
                                                 <!--<#else>-->
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                <td height="60" style="text-align: left;" valign="top" class="col3subtitle">
                                                   <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
                                                 </td>
                                                 <!--</#if>-->
@@ -321,15 +323,15 @@
                                             <tbody>
                                               <tr>
                                                 <!--<#if vanprijs_blok1?has_content>-->
-                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                <td align="left" valign="top" width="75" class="priceinfo">
                                                   <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br><%= data.actiemail.tripolis[0].vanprijs_blok1 %></p>
                                                 </td>
                                                 <!--<#else>-->
-                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                <td align="left" valign="top" width="75" class="priceinfo">
                                                   <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br>voor</p>
                                                 </td>
                                                 <!--</#if>-->
-                                                <td align="right" st-title="3col-priceaction1" class="priceaction">
+                                                <td align="right" class="priceaction">
                                                   <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok1 %></p>
                                                 </td>
                                               </tr>
@@ -350,21 +352,21 @@
                                   <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
                                       <tr>
-                                        <td>
-                                          <table height="95" align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
+                                        <td height="95">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
                                             <tbody>
                                               <tr>
-                                                <td valign="top" height="35" st-title="3col-title1" class="col3title">
+                                                <td valign="top" height="35" class="col3title">
                                                   <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok2 %></p>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <!--<#if productinformatie_blok1?has_content>-->
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                <!--<#if productinformatie_blok2?has_content>-->
+                                                <td height="60" style="text-align: left;" valign="top" class="col3subtitle">
                                                   <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok2 %></p>
                                                 </td>
                                                 <!--<#else>-->
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                <td height="60" style="text-align: left;" valign="top" class="col3subtitle">
                                                   <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
                                                 </td>
                                                 <!--</#if>-->
@@ -379,9 +381,9 @@
                                             <tbody>
                                               <tr>
                                                 <td>
-                                                  <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok2 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok2 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                  <!--<#if url_blok2?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok2 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok2 %>" style="display:block; border:none; outline:none; text-decoration:none;">
                                                     <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok2.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok2 %>" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
-                                                    <!--<#if url_blok1?has_content>--></a>
+                                                    <!--<#if url_blok2?has_content>--></a>
                                                   <!--</#if>-->
                                                 </td>
                                               </tr>
@@ -400,16 +402,16 @@
                                           <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
-                                                <!--<#if vanprijs_blok1?has_content>-->
-                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                <!--<#if vanprijs_blok2?has_content>-->
+                                                <td align="left" valign="top" width="75" class="priceinfo">
                                                   <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br><%= data.actiemail.tripolis[0].vanprijs_blok2 %></p>
                                                 </td>
                                                 <!--<#else>-->
-                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                <td align="left" valign="top" width="75" class="priceinfo">
                                                   <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok2 %><br>voor</p>
                                                 </td>
                                                 <!--</#if>-->
-                                                <td align="right" st-title="3col-priceaction1" class="priceaction">
+                                                <td align="right" class="priceaction">
                                                   <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok2 %></p>
                                                 </td>
                                               </tr>
@@ -430,21 +432,21 @@
                                   <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
                                       <tr>
-                                        <td>
-                                          <table height="95" align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
+                                        <td height="95">
+                                          <table align="left" border="0" cellpadding="0" cellspacing="0" class="col3header">
                                             <tbody>
                                               <tr>
-                                                <td valign="top" height="35" st-title="3col-title1" class="col3title">
+                                                <td valign="top" height="35" class="col3title">
                                                   <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok3 %></p>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <!--<#if productinformatie_blok1?has_content>-->
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                <!--<#if productinformatie_blok3?has_content>-->
+                                                <td height="60" style="text-align: left;" valign="top" class="col3subtitle">
                                                   <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1"><%= data.actiemail.tripolis[0].productinformatie_blok3 %></p>
                                                 </td>
                                                 <!--<#else>-->
-                                                <td height="60" style="text-align: left;" valign="top" st-title="3col-subtitle1" class="col3subtitle">
+                                                <td height="60" style="text-align: left;" valign="top" class="col3subtitle">
                                                   <p style="font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="subtitle font1">&nbsp;</p>
                                                 </td>
                                                 <!--</#if>-->
@@ -459,7 +461,7 @@
                                             <tbody>
                                               <tr>
                                                 <td>
-                                                  <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok3 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok3 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                  <!--<#if url_blok3?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok3 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok3 %>" style="display:block; border:none; outline:none; text-decoration:none;">
                                                     <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok3.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok3 %>" border="0" width="159" height="159" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg3">
                                                     <!--<#if url_blok1?has_content>--></a>
                                                   <!--</#if>-->
@@ -480,16 +482,16 @@
                                           <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
-                                                <!--<#if vanprijs_blok1?has_content>-->
-                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                <!--<#if vanprijs_blok3?has_content>-->
+                                                <td align="left" valign="top" width="75" class="priceinfo">
                                                   <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok3 %><br><%= data.actiemail.tripolis[0].vanprijs_blok3 %></p>
                                                 </td>
                                                 <!--<#else>-->
-                                                <td align="left" valign="top" width="75" st-title="3col-priceinfo1" class="priceinfo">
+                                                <td align="left" valign="top" width="75" class="priceinfo">
                                                   <p style="width: 75px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok3 %><br>voor</p>
                                                 </td>
                                                 <!--</#if>-->
-                                                <td align="right" st-title="3col-priceaction1" class="priceaction">
+                                                <td align="right" class="priceaction">
                                                   <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok3 %></p>
                                                 </td>
                                               </tr>
@@ -523,102 +525,145 @@
           
           
           -->
-          <!--start col 1 
+          <!--Start banner
           -->
           <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-            <tbody>
-              <tr>
-                <td width="100%">
-                  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <table width="600" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
-                            <tbody>
+            <tr>
+              <td width="600">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tr>
+                    <td>
+                      <!--<#if bannerimageresize = "crop">
+                      -->
+                      <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                        <tr>
+                          <!--
+                          <#if bannerimagereplace?has_content>
+                          should be set on the anchor -- style='background-image:url(${bannerimagereplace.url!}); height:${bannerimagereplace.height}px;'
+                          -->
+                          <td align="center" class="row overflow"><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>" style="" class="overflow"><img src="<%= data.actiemail.tripolis[0].bannerimagereplace.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>" class="mobilehide"></a></td>
+                          <!--
+                          <#else>
+                          should be set on the anchor -- style='background-image:url(${bannerimage.url!}); height:${bannerimage.height}px;'
+                          -->
+                          <td align="center" class="row overflow"><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>" style="" class="overflow"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>" class="mobilehide"></a></td>
+                          <!--</#if>
+                          -->
+                        </tr>
+                      </table>
+                      <!--<#elseif bannerimageresize = "resize">
+                      -->
+                      <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                        <tr>
+                          <td align="center" class="row"><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>"></a></td>
+                        </tr>
+                      </table>
+                      <!--</#if>
+                      -->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!--start col 1- 2
+          -->
+          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tr>
+                    <td>
+                      <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                        <tr>
+                          <td width="579" style="padding:10px;">
+                            <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td width="579" style="padding: 10px;" class="col1inner">
-                                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <table height="20" align="left" border="0" cellpadding="0" cellspacing="0" class="col1header">
-                                            <tbody>
-                                              <tr>
-                                                <td valign="top" st-title="1col-title1" class="col1title">
-                                                  <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1">Boerderij Hertenbiefstuk</p>
-                                                </td>
-                                              </tr>
-                                              <tbody></tbody>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td width="100%" align="center" class="devicewidth">
-                                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                            <tbody>
-                                              <tr>
-                                                <td width="50%" align="center">
-                                                  <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
-                                                    <tbody>
-                                                      <tr>
-                                                        <td><img src="img/blok-1-image-260x260.jpg" alt="" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg1"></td>
-                                                      </tr>
-                                                      <tr class="mobileshow">
-                                                        <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;" class="mobileshow"> </td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </td>
-                                                <td width="50%" align="center" valign="top" class="devicewidth">
-                                                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                      <tr>
-                                                        <td colspan="2" height="190" style="text-align: left; padding: 10px 0 0;" valign="top" st-title="1col-subtitle1" class="col1subtitle">
-                                                          <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
-                                                        </td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td align="right" width="90" st-title="1col-priceinfo1" class="priceinfo">
-                                                          <p style="width: 90px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">per kilo<br>van 11.00</p>
-                                                        </td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td align="right" st-title="1col-priceaction1" class="priceaction">
-                                                          <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">217.50</p>
-                                                        </td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </tbody>
+                                <td>
+                                  <table height="20" align="left" border="0" cellpadding="0" cellspacing="0" class="col1header">
+                                    <tr>
+                                      <td valign="top" class="col1title">
+                                        <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="title font1"><%= data.actiemail.tripolis[0].titel_blok1 %></p>
+                                      </td>
+                                    </tr>
                                   </table>
                                 </td>
                               </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <table width="600" bgcolor="#cccccc" align="center" cellspacing="0" cellpadding="0" border="0" class="divider">
-                    <tbody>
-                      <tr>
-                        <td align="center" height="1" style="font-size: 1px; line-height: 1px;"> </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
+                              <tr>
+                                <td width="100%" align="center" class="devicewidth">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="50%" align="center">
+                                        <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                                          <tr>
+                                            <td>
+                                              <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].image_blok1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg1">
+                                                <!--<#if url_blok1?has_content>--></a>
+                                              <!--</#if>-->
+                                            </td>
+                                          </tr>
+                                          <tr class="mobileshow">
+                                            <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;" class="mobileshow"> </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                      <td width="50%" align="center" valign="top" class="devicewidth">
+                                        <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <!--<#if productinformatie_blok1?has_content>-->
+                                            <td colspan="2" height="190" style="text-align: left; padding: 10px 0 0;" valign="top" class="col1subtitle">
+                                              <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
+                                            </td>
+                                            <!--<#else>-->
+                                            <td colspan="2" height="190" style="text-align: left; padding: 10px 0 0;" valign="top" class="col1subtitle">
+                                              <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">&nbsp;</p>
+                                            </td>
+                                            <!--</#if>-->
+                                          </tr>
+                                          <tr>
+                                            <!--<#if vanprijs_blok1?has_content>-->
+                                            <td align="right" width="90" class="priceinfo">
+                                              <p style="width: 90px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br><%= data.actiemail.tripolis[0].vanprijs_blok1 %></p>
+                                            </td>
+                                            <!--<#else>-->
+                                            <td align="right" width="90" class="priceinfo">
+                                              <p style="width: 90px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].eenheid_blok1 %><br>voor</p>
+                                            </td>
+                                            <!--</#if>-->
+                                          </tr>
+                                          <tr>
+                                            <td align="right" class="priceaction">
+                                              <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].voorprijs_blok1 %></p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" bgcolor="#cccccc" align="center" cellspacing="0" cellpadding="0" border="0" class="divider">
+                  <tr>
+                    <td align="center" height="1" style="font-size: 1px; line-height: 1px;"> </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
           </table>
           <!--
           end col 1
+          
+          
+          
+          
           
           -->
           <!--start col 1 
@@ -644,12 +689,12 @@
                                           <table height="60" align="left" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
-                                                <td valign="top" height="22" st-title="1col-title1" class="col1title">
+                                                <td valign="top" height="22" class="col1title">
                                                   <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="font1">Boerderij Hertenbiefstuk</p>
                                                 </td>
                                               </tr>
                                               <tr>
-                                                <td style="text-align: left;" valign="top" st-title="1col-subtitle1" class="colfullsubtitle">
+                                                <td style="text-align: left;" valign="top" class="colfullsubtitle">
                                                   <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">Ruimte voor een subomschrijving van maximaal twee regels</p>
                                                 </td>
                                               </tr>
@@ -679,10 +724,10 @@
                                                   <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                                     <tbody>
                                                       <tr>
-                                                        <td align="left" width="90" st-title="1col-priceinfo1" class="priceinfo">
+                                                        <td align="left" width="90" class="priceinfo">
                                                           <p style="width: 90px; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">per kilo<br>van 11.00</p>
                                                         </td>
-                                                        <td align="right" st-title="1col-priceaction1" class="priceaction">
+                                                        <td align="right" class="priceaction">
                                                           <p style="font: 32px/1 'Lato', Helvetica, Arial, sans-serif;" class="font1">217.50</p>
                                                         </td>
                                                       </tr>
@@ -738,17 +783,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS-Edes Ameland</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS-Edes Ameland</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Achterdijken 22<br>9163 JV Nes Ameland<br>Tel: +31 519 542292</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -815,17 +860,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Amsterdam</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Amsterdam</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Spaklerweg 51-55<br>1114 AE Amsterdam-Duivendrecht<br>Tel: +31 20 4609999</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -892,17 +937,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HGC-HANOS Antwerpen | Wommelgem</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HGC-HANOS Antwerpen | Wommelgem</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Nijverheidsstraat 54<br>2160 Wommelgem<br>Tel: +32 36 084141</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -969,17 +1014,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Apeldoorn</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Apeldoorn</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Stadhoudersmolenweg 43<br>7317 AW Apeldoorn<br>Tel: +31 55 5294444</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1046,17 +1091,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS-ISPC Breda</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS-ISPC Breda</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Kalshoven 25<br>4825 AL Breda<br>Tel: +31 76 5726726</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1123,17 +1168,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Doetinchem</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Doetinchem</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Wijnbergseweg 37<br>7006 AH Doetinchem<br>Tel: +31 314 344434</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1200,17 +1245,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Eindhoven</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Eindhoven</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Hurksestraat 19-A<br>5652 AH Eindhoven<br>Tel: +31 40 2925200</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1277,17 +1322,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Groningen</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Groningen</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Bornholmstraat 56<br>9723 AZ Groningen<br>Tel: +31 50 5973600</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1354,17 +1399,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Haarlem | Emmer’s Groothandel</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Haarlem | Emmer’s Groothandel</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">2031 CN Haarlem<br>9723 AZ Groningen<br>Tel: +31 23 5344244</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1431,17 +1476,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HGC-HANOS Hasselt</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HGC-HANOS Hasselt</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Herkenrodesingel 81<br>3500 Hasselt<br>Tel: +32 11 246767</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1508,17 +1553,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Heerenveen</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Heerenveen</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Houtdraaier 2<br>8447 GG Heerenveen<br>Tel: +31 513 630303</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1585,17 +1630,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Heerlen</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Heerlen</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Heerlerweg 158<br>6433 HX Hoensbroek<br>Tel: +31 45 5632360</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1662,17 +1707,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Nijmegen</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Nijmegen</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Energieweg 84<br>6541 CZ Nijmegen<br>Tel: +31 24 3717999</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1739,17 +1784,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Texel</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Texel</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Vlamkast 20<br>1792 CR Oudeschild<br>Tel: +31 222 312669</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1816,17 +1861,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS-ISPC Utrecht</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS-ISPC Utrecht</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Ravenswade 94<br>3439 LD Nieuwegein<br>Tel: +31 30 2808500</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1893,17 +1938,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Valkenburg</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Valkenburg</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Beekstraat 13-15<br>6301 HV Valkenburg<br>Tel: +31 43 6040642</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -1970,17 +2015,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Venlo</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Venlo</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Winkelveldstraat 17<br>5916 NX Venlo<br>Tel: +31 77 3551212</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -2047,17 +2092,17 @@
                                     <tbody>
                                       <tr>
                                         <td align="left">
-                                          <p st-title="store-title" style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Zwolle</p>
+                                          <p style="font:17px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif; font-weight:bold; text-align:left;" class="title">HANOS Zwolle</p>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td align="left" st-title="store-address" style="padding:10px 0;">
+                                        <td align="left" style="padding:10px 0;">
                                           <p style="font:14px/1.4 &quot;Lato&quot;, Helvetica, Arial, sans-serif;">Schokkerweg 9<br>8042 PC Zwolle<br>Tel: +31 38 4256825</p>
                                         </td>
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" st-title="store-button" class="colstorebutton">
+                                  <table cellspacing="0" cellpadding="0" border="0" width="100%" class="colstorebutton">
                                     <tbody>
                                       <!-- Button-->
                                       <tr>
@@ -2142,10 +2187,7 @@
               </td>
             </tr>
           </table>
-          <!--
-          End of footer 
-          
-          
+          <!--End of footer 
           -->
         </td>
       </tr>

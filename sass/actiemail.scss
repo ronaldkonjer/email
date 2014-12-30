@@ -13,13 +13,10 @@
 
 /*Reset styles*/
 /* Client-specific Styles */
-
 #outlook a {
   padding: 0;
 }
-
 /* Force Outlook to provide a "view in browser" menu link. */
-
 body {
   width: 100% !important;
   -webkit-text-size-adjust: 100%;
@@ -28,9 +25,7 @@ body {
   padding: 0;
   background-color: $gray;
 }
-
 /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
-
 .ExternalClass {
   width: 100%;
   line-height: 100%;
@@ -38,18 +33,14 @@ body {
     line-height: 100%;
   }
 }
-
 /* Force Hotmail to display emails at full width */
-
 /* Force Hotmail to display normal line spacing.*/
-
 #backgroundTable {
   margin: 0;
   padding: 0;
   width: 100% !important;
   line-height: 100% !important;
 }
-
 img {
   outline: none;
   text-decoration: none;
@@ -62,15 +53,12 @@ img {
     height: 250px!important;
   }
 }
-
 a img {
   border: none;
 }
-
 .image_fix {
   display: block;
 }
-
 table {
   td {
     border-collapse: collapse;
@@ -80,7 +68,6 @@ table {
   mso-table-lspace: 0pt;
   mso-table-rspace: 0pt;
 }
-
 p {
   margin: 0 !important;
   padding: 0 !important;
@@ -88,7 +75,6 @@ p {
   line-height: 1.4em;
   color: $neutral;
 }
-
 a {
   text-decoration: none;
   color: $neutral;
@@ -97,26 +83,20 @@ a {
     color: $neutral;
   }
 }
-
 /*STYLES*/
-
 table[class=full] {
   width: 100%;
   clear: both;
 }
-
 #editie {
   height: 20px !important;
 }
-
 .font1 {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
-
 .font2 {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
-
 /*IPAD STYLES*/
 @media only screen and (max-width: 640px) {
   .devicewidth {
@@ -238,9 +218,7 @@ table[class=full] {
   .subtitle, .col1subtitle p, .colfullsubtitle p {
     font-size: 13px !important;
   }
-
 }
-
 /*IPHONE STYLES*/
 @media only screen and (max-width: 480px) {
   .devicewidth {
@@ -405,7 +383,6 @@ table[class=full] {
 
 
 
-
 /*Articles*/
 /* .hero {
   .banner {
@@ -473,6 +450,7 @@ table[class=full] {
     }
   }
 }
+
 .action_block_1-2 {
   .col1 {
     .inner {

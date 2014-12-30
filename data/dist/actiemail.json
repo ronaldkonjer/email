@@ -31,6 +31,19 @@
     },
     "eenheid_blok3": "${eenheid_blok3!}",
     "vanprijs_blok3": "${vanprijs_blok3!}",
-    "voorprijs_blok3": "${voorprijs_blok3!}"
+    "voorprijs_blok3": "${voorprijs_blok3!}",
+
+    "banneromschrijving": "${banneromschrijving!}",
+    "bannerurl": "${bannerurl!}",
+    "bannerimagereplace": {
+      "url": "${bannerimagereplace.url}",
+      "inlinestyle": "background-image:url(${bannerimagereplace.url!}); height:${bannerimagereplace.height}px;",
+      "height": "${bannerimagereplace.height}"
+    },
+    "bannerimage": {
+      "url": "${bannerimage.url!}",
+      "inlinestyle": "background-image:url(${bannerimage.url!}); height:${bannerimage.height}px;",
+      "height": "${bannerimage.height}"
+    }
   }]
 }

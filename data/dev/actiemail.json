@@ -1,6 +1,5 @@
 {
-  "tripolis": [
-  {
+  "tripolis": [{
     "snippet": "HANOS Amsterdam presenteert u de voordeligste weekdeals ",
     "editie_datum": "12 december 2014",
     
@@ -13,7 +12,7 @@
     },
     "eenheid_blok1": "per kilo",
     "vanprijs_blok1": "van 11,00",
-    "voorprijs_blok1": "217.50", 
+    "voorprijs_blok1": "17.50", 
     
     "titel_blok2": "Boerderij Hertenbiefstuk",
     "productinformatie_blok2": "Ruimte voor een subomschrijving van maximaal twee regels",
@@ -23,7 +22,7 @@
     },
     "eenheid_blok2": "normale zb-",
     "vanprijs_blok2": "prijs",
-    "voorprijs_blok2": "30% korting",
+    "voorprijs_blok2": "-30%",
 
     "titel_blok3": "Boerderij Hertenbiefstuk",
     "productinformatie_blok3": "Ruimte voor een subomschrijving van maximaal twee regels",
@@ -33,7 +32,20 @@
     },
     "eenheid_blok3": "per kilo",
     "vanprijs_blok3": "van 1100,00",
-    "voorprijs_blok3": "3+1" 
-  }
-  ]
+    "voorprijs_blok3": "3+1",
+
+    "banneromschrijving": "banneromschrijving",
+    "bannerurl": "http://www.hanos.nl",
+    "bannerimagereplace": {
+      "url": "img/338.png",
+      "inlinestyle": "background-image:url(img/338.png); height:250px;",
+      "height": "250"
+    },
+    "bannerimage": {
+      "url": "img/600.png",
+      "inlinestyle": "background-image:url(img/600.png); height:250px;",
+      "height": "250"
+    }
+    
+  }]
 }

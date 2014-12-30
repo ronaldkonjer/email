@@ -167,7 +167,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= paths.tmp %>',
           src: ['**/*.html'],
-          dest: '<%= paths.dist %>/'
+          dest: '<%= paths.dist %>'
         }]
       }
     },
@@ -178,7 +178,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= paths.tmp %>',
           src: ['**/*.html'],
-          dest: '<%= paths.dist %>/'
+          dest: '<%= paths.dist %>'
         }]
       }
     },
@@ -341,8 +341,8 @@ module.exports = function(grunt) {
   // To distribute, do the other two steps
   grunt.registerTask('build', [
   	'clean', 
-  	'concurrent:dist', 
-  	'render:dist', 
+  	'concurrent:dist',
+    'render:dist',  
   	'emailBuilder',
     //'premailer', 
   	'htmlbuild'

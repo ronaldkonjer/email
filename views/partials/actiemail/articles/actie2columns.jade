@@ -24,7 +24,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                 |<%= data.actiemail.tripolis[0].productinformatie_blok1 %>
                             //<#else>
                             td.col2subtitle(style='text-align: left;', valign='top')
-                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') &nbsp;
                             //</#if>
                     tr
                       td.col2(width='100%', align='center')
@@ -35,9 +35,9 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                 tr
                                   td
                                     //<#if url_blok1?has_content>
-                                    a(href!="<%= data.actiemail.tripolis[0].url_blok1 %>", target="_blank", title!="<%= data.actiemail.tripolis[0].titel_blok1 %>", style="display:block; border:none; outline:none; text-decoration:none;")
+                                    a(href!='<%= data.actiemail.tripolis[0].url_blok1 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel_blok1 %>', style="display:block; border:none; outline:none; text-decoration:none;")
                                       //</#if>
-                                      img.colimg2(src!="<%= data.actiemail.tripolis[0].image_blok1.url %>", alt!="<%= data.actiemail.tripolis[0].titel_blok1 %>", border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      img.colimg2(src!='<%= data.actiemail.tripolis[0].image_blok1.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
                                       //<#if url_blok1?has_content>
                                     //</#if>
                                 tr.mobilehide
@@ -52,7 +52,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                       |<%= data.actiemail.tripolis[0].productinformatie_blok1 %>
                                   //<#else>
                                   td.mobilesubtitle(style='text-align: left;', valign='top')
-                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') &nbsp;
                                   //</#if>
                                 tr
                                   //<#if vanprijs_blok1?has_content>
@@ -69,7 +69,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                       | voor
                                   //</#if>
                                   td.priceaction(align='right')
-                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;')<%= data.actiemail.tripolis[0].voorprijs_blok1 %>
+                                    p.font1(style='font: 32px/1 \'Lato\', Helvetica, Arial, sans-serif;') <%= data.actiemail.tripolis[0].voorprijs_blok1 %>
             table.col2(align='left', border='0', cellpadding='0', cellspacing='0')
               tr
                 td.col2inner(width='274', style='padding: 10px; border-left: 1px solid #ccc;')
@@ -83,13 +83,13 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                               p.title.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
                                 |<%= data.actiemail.tripolis[0].titel_blok2 %>
                           tr
-                            //<#if productinformatie_blok1?has_content>
+                            //<#if productinformatie_blok2?has_content>
                             td.col2subtitle(style='text-align: left;', valign='top')
                               p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                 |<%= data.actiemail.tripolis[0].productinformatie_blok2 %>
                             //<#else>
                             td.col2subtitle(style='text-align: left;', valign='top')
-                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                              p.subtitle.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') &nbsp;
                             //</#if>
                     tr
                       td.col2(width='100%', align='center')
@@ -99,11 +99,11 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                               table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
                                 tr
                                   td
-                                    //<#if url_blok1?has_content>
-                                    a(href!="<%= data.actiemail.tripolis[0].url_blok1 %>", target="_blank", title!="<%= data.actiemail.tripolis[0].titel_blok1 %>", style="display:block; border:none; outline:none; text-decoration:none;")
+                                    //<#if url_blok2?has_content>
+                                    a(href!='<%= data.actiemail.tripolis[0].url_blok2 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel_blok2 %>', style="display:block; border:none; outline:none; text-decoration:none;")
                                       //</#if>
-                                      img.colimg2(src!='<%= data.actiemail.tripolis[0].image_blok1.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
-                                      //<#if url_blok1?has_content>
+                                      img.colimg2(src!='<%= data.actiemail.tripolis[0].image_blok2.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok2 %>', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      //<#if url_blok2?has_content>
                                     //</#if>
                                 tr.mobilehide
                                   td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
@@ -111,16 +111,16 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                   td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
                               table.col2halfright(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
                                 tr.mobileshow(style='display: none;')
-                                  //<#if productinformatie_blok1?has_content>
+                                  //<#if productinformatie_blok2?has_content>
                                   td.mobilesubtitle(style='text-align: left;', valign='top')
                                     p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                       |<%= data.actiemail.tripolis[0].productinformatie_blok2 %>
                                   //<#else>
                                   td.mobilesubtitle(style='text-align: left;', valign='top')
-                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')&nbsp;
+                                    p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') &nbsp;
                                   //</#if>
                                 tr
-                                  //<#if vanprijs_blok1?has_content>
+                                  //<#if vanprijs_blok2?has_content>
                                   td.priceinfo(align='left')
                                     p.font1(style='font: 14px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                       |<%= data.actiemail.tripolis[0].eenheid_blok2 %>
