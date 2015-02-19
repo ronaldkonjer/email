@@ -1,0 +1,113 @@
+//
+   Start col 2 
+table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+  tr
+    td(width='600')
+      table.devicewidth(width='100%', cellpadding='0', cellspacing='0', border='0', align='center')
+        tr
+          td(align="center")
+            table.col2(width='292', align='left', border='0', cellpadding='0', cellspacing='0')
+              tr
+                td.col2inner(width='272', style='padding:15px 10px;')
+                  table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                    tr
+                      td.col2(width='100%', align='center')
+                        table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                          tr
+                            td.col2(width='100%', align='center')
+                              table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
+                                tr
+                                  td
+                                    //<#if url_blok1?has_content>
+                                    a(href!='<%= data.actiemail.tripolis[0].url_blok1 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel_blok1 %>', style="display:block; border:none; outline:none; text-decoration:none;")
+                                      //</#if>
+                                      img.colimg2text(src!='<%= data.actiemail.tripolis[0].tekstimage_rectangle1.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='272', height='272', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      //<#if url_blok1?has_content>
+                                    //</#if>
+                                tr.mobilehide
+                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                tr.mobileshow
+                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')
+                    tr
+                      td(height='66')
+                        table.col2header(align='left', border='0', cellpadding='0', cellspacing='0', style='padding-bottom:10px;')
+                          tr
+                            td(style='font:17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;' valign='top', height='36')
+                              |<%= data.actiemail.tripolis[0].titel_blok1 %>
+                          tr
+                            //<#if tekstartikel1?has_content>
+                            td.subtitle(style='font:16px/1.5 \'Lato\', Helvetica, Arial, sans-serif; text-align:left; color:#333333; padding:10px 0 10px 0')
+                              p.font1
+                                |<%= data.actiemail.tripolis[0].tekstartikel1 %>
+                            //<#else>
+                            td.subtitle(style='font:16px/1.5 \'Lato\', Helvetica, Arial, sans-serif; text-align:left; color:#333333; padding:10px 0 10px 0')
+                              p.font1
+                                | &nbsp;
+                            //</#if>
+                          //<#if buttonurl1?has_content>
+                          tr
+                            td.devicewidth(width='auto', align='right', valign='middle', height='36', style='background-color:#57004e; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip:padding-box; font-size:13px; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center; color:#ffffff; padding:0 20px;')
+                              span(style='color:#ffffff;')
+                                //<#if buttontext1?has_content>
+                                a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl1 %>', title!='<%= data.actiemail.tripolis[0].buttontext1 %>', target='_blank')
+                                  |<%= data.actiemail.tripolis[0].buttontext1 %>
+                                //<#else>
+                                a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl1 %>', title='Lees verder', target='_blank')
+                                  | Lees verder
+                                //</#if>
+                          //</#if>  
+            table.col2(width='294' align='right', border='0', cellpadding='0', cellspacing='0')
+              tr
+                td.col2inner(width='270', style='padding:15px 10px;')
+                  table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                    tr
+                      td.col2(width='100%', align='center')
+                        table(width='100%', cellpadding='0', cellspacing='0', border='0')
+                          tr
+                            td.col2(width='100%', align='center')
+                              table.col2halfleft(cellpadding='0', cellspacing='0', border='0')
+                                tr
+                                  td
+                                    //<#if url_blok2?has_content>
+                                    a(href!='<%= data.actiemail.tripolis[0].url_blok2 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel_blok2 %>', style="display:block; border:none; outline:none; text-decoration:none;")
+                                      //</#if>
+                                      img.colimg2text(src!='<%= data.actiemail.tripolis[0].tekstimage_rectangle2.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok2 %>', border='0', width='272', height='272', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      //<#if url_blok2?has_content>
+                                    //</#if>
+                                tr.mobilehide
+                                  td(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;')  
+                                tr.mobileshow
+                                  td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+                    tr
+                      td(height='66')
+                       table.col2header(align='left', border='0', cellpadding='0', cellspacing='0', style='padding-bottom:10px;')
+                          tr
+                            td(style='font:17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;' valign='top', height='36')
+                              |<%= data.actiemail.tripolis[0].titel_blok2 %>
+                          tr
+                            //<#if tekstartikel2?has_content>
+                            td.subtitle(style='font:16px/1.5 \'Lato\', Helvetica, Arial, sans-serif; text-align:left; color:#333333; padding:10px 0 10px 0')
+                              p.font1
+                                |<%= data.actiemail.tripolis[0].tekstartikel2 %>
+                            //<#else>
+                            td.subtitle(style='font:16px/1.5 \'Lato\', Helvetica, Arial, sans-serif; text-align:left; color:#333333; padding:10px 0 10px 0')
+                              p.font1
+                                | &nbsp;
+                            //</#if>
+                          //<#if buttonurl2?has_content>
+                          tr
+                            td.devicewidth(width='auto', align='right', valign='middle', height='36', style='background-color:#57004e; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip:padding-box; font-size:13px; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center; color:#ffffff; padding:0 20px;')
+                              span(style='color:#ffffff;')
+                                //<#if buttontext2?has_content>
+                                a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl2 %>', title!='<%= data.actiemail.tripolis[0].buttontext2 %>', target='_blank')
+                                  |<%= data.actiemail.tripolis[0].buttontext2 %>
+                                //<#else>
+                                a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl2 %>', title='Lees verder', target='_blank')
+                                  | Lees verder
+                                //</#if>
+                          //</#if>  
+      table.divider.mobilehide(width='100%', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+        tr
+          td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+//
+   end col 2 

@@ -1,0 +1,61 @@
+//
+	Start tekst
+table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', align='center')
+	tbody
+		tr
+			td(width='100%')
+				table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+					tbody
+						tr
+							td
+								table.devicewidth(width='600', align='left', border='0', cellpadding='0', cellspacing='0')
+									tbody
+										tr
+											td(width='579', style='padding:10px')
+												table(width='50%', align='left', border='0', cellpadding='0', cellspacing='0')
+													tbody
+														tr
+															td
+																//<#if url_blok1?has_content>
+																a(href!='<%= data.actiemail.tripolis[0].url_blok1 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel %>', style="display:block; border:none; outline:none; text-decoration:none;")
+																	//</#if>
+																	img.imgleft-square(src!='<%= data.actiemail.tripolis[0].tekstimage_square.url %>', alt!='<%= data.actiemail.tripolis[0].titel %>', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none; padding-right:30px;')
+																	//<#if url_blok1?has_content>
+																//</#if>
+												table(width='50%', align='left', border='0', cellpadding='0', cellspacing='0')
+													tbody
+														tr
+															td(style='font:17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;')
+																|<%= data.actiemail.tripolis[0].titel %>
+														tr
+															td.subtitle(style='font:16px/1.5 \'Lato\', Helvetica, Arial, sans-serif; text-align:left; color:#333333; padding:10px 0 10px 0')
+																p.font1
+																	|<%= data.actiemail.tripolis[0].tekstartikel %>
+														tr
+															td
+																//<#if buttonurl?has_content>
+																table(width='100%', align='left', valign='middle', border='0', cellpadding='0', cellspacing='0')
+																	tbody
+																		tr
+																			td
+																				table(height='30', align='right', valign='middle', border='0', cellpadding='0', cellspacing='0')
+																					tbody
+																						tr
+																							td.devicewidth(width='auto', align='center', valign='middle', height='36', style='background-color:#57004e; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip:padding-box; font-size:13px; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center; color:#ffffff; padding:0 20px;')
+																								span(style='color:#ffffff;')
+																									//<#if buttontext?has_content>
+																									a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl %>', title!='<%= data.actiemail.tripolis[0].buttontext %>', target='_blank')
+																										|<%= data.actiemail.tripolis[0].buttontext %>
+																									//<#else>
+																									a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl %>', title='Lees verder', target='_blank')
+																										| Lees verder
+																									//</#if>
+																//</#if>
+	table.devicewidth(width='600', cellpadding='0', cellspacing='0' border='0', bgcolor='#ffffff', align='center')
+		tbody
+			tr
+				td(width='100%')
+					table.devicewidth(width='600', cellspacing='0', cellpadding='0', border='0', bgcolor='#cccccc', align='center')
+						tbody
+							tr
+								td(height='1', align='center', style='font-size:1px; line-height:1px;')

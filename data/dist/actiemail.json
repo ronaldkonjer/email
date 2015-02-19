@@ -3,6 +3,11 @@
     "snippet": "${snippet!}",
     "editie_datum": "${editie_datum}",
 
+    "banner_omschrijving": "${banner_omschrijving!}",
+    "banner_url": "${banner_url!}",
+    "banner_image": {
+      "url": "${banner_image.url!}"
+    },
     "titel_blok1": "${titel_blok1!}",
     "productinformatie_blok1": "${productinformatie_blok1!}",
     "url_blok1": "${url_blok1!}",
@@ -39,11 +44,26 @@
       "url": "${bannerimagereplace.url}",
       "inlinestyle": "background-image:url(${bannerimagereplace.url!}); height:${bannerimagereplace.height}px;",
       "height": "${bannerimagereplace.height}"
-    },
+    },    
     "bannerimage": {
       "url": "${bannerimage.url!}",
       "inlinestyle": "background-image:url(${bannerimage.url!}); height:${bannerimage.height}px;",
       "height": "${bannerimage.height}"
+    },
+    "tekstartikel1": "${tekstartikel1!}",
+    "tekstartikel2": "${tekstartikel2!}",
+    "buttonurl1": "${buttonurl1!}",
+    "buttonurl2": "${buttonurl2!}",
+    "buttontext1": "${buttontext1!}",
+    "buttontext2": "${buttontext2!}",
+    "tekstimage_rectangle1":{
+      "url": "${tekstimage_rectangle1!}"
+    },
+    "tekstimage_rectangle2":{
+      "url":"${tekstimage_rectangle2!}"
+    },
+    "tekstimage_square": {
+      "url": "${tekstimage_square.url!}"
     }
   }]
 }

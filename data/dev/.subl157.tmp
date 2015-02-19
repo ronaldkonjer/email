@@ -3,12 +3,6 @@
     "snippet": "HANOS Amsterdam presenteert u de voordeligste weekdeals ",
     "editie_datum": "12 december 2014",
 
-      "bannerimage": {
-      "url": "img/600.png",
-      "inlinestyle": "background-image:url(img/600.png); height:250px;",
-      "height": "250"
-    },
-
     "banner_omschrijving": "banner_omschrijving",
     "banner_url": "http://www.hanos.nl",
     "banner_image": {
@@ -18,6 +12,7 @@
     "titel_blok1": "Boerderij Hertenbiefstuk",
     "productinformatie_blok1": "Ruimte voor een subomschrijving van maximaal twee regels",
     "url_blok1": "http://www.hanos.nl",
+    
     "image_blok1": {
       "url": "img/blok-1-image-260x260.jpg"
     },
@@ -52,22 +47,11 @@
       "inlinestyle": "background-image:url(img/338.png); height:250px;",
       "height": "250"
     },
-    "tekstartikel1": "Ruimte voor een subomschrijving van maximaal twee regels",
-    "tekstartikel2": "Ruimte voor een subomschrijving van maximaal twee regels",
-    "url_blok1": "http://www.hanos.nl",
-    "url_blok2": "http://www.hanos.nl",
-    "buttonurl1": "http://www.hanos.nl",
-    "buttonurl2": "http://www.hanos.nl",
-    "buttontext1": "Lees verder",
-    "buttontext2": "Lees verder",
-    "tekstimage_rectangle1":{
-      "url": "img/272x170_test.png"
+    "bannerimage": {
+      "url": "img/600.png",
+      "inlinestyle": "background-image:url(img/600.png); height:250px;",
+      "height": "250"
     },
-    "tekstimage_rectangle2":{
-      "url": "img/272x170_test.png"
-    },
-    "tekstimage_square": {
-      "url": "img/tekstimage_square.jpg"
-    }
+
   }]
 }
