@@ -3,13 +3,15 @@
 table.devicewidth(width='600', align='center', cellpadding='0', cellspacing='0', border='0', style='border-collapse: collapse; background-color: #FFF;')
   tbody
     tr
-      td(style='padding: 14px 10px; background-color: #57004E;', valign='top', align='center')
+      //-- background-color: ${header_color} gebruiken in de template. Grunt build niet. 
+      td(style='padding: 14px 10px; background-color: #57004e;', valign='top', align='center')
         table(width='100%', style='border-collapse: collapse; width: 100%;')
           tr
             td.block_logo(style='padding: 0; width: 45%;', align='left', valign='top')
               a(target='_blank', href='${logo_url}', title='${logo_image_alt!}')
                 img(src='${logo_image.url!}', alt='${logo_image_alt!}', border='0', width='${logo_image.width}', height='${logo_image.height}', style='display: block; border: none; outline: none; text-decoration: none;')
-            td.block_right_header.font2(style='padding: 0 5px; font: 15px/1.4 \'Roboto\', Helvetica, Arial, sans-serif; color: #FFF; width: 45%;', align='right', valign='middle')
-              | <%= data.actiemail.tripolis[0].editie_datum %>
+            td.block_right_header(style='padding: 0 5px; font: 15px/1.4 \'Roboto\', Helvetica, Arial, sans-serif; color: #FFF; width: 45%;', align='right', valign='middle')
+              a.font2(href='#', style='color: #ffffff;')
+                | <%= data.actiemail.tripolis[0].editie_datum %>
 //
-   End header 
+   End header

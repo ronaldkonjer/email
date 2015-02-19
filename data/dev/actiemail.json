@@ -61,13 +61,13 @@
     "buttontext1": "Lees verder",
     "buttontext2": "Lees verder",
     "tekstimage_rectangle1":{
-      "url": "img/272x170_test.png"
+      "url": "img/rectangle.png"
     },
     "tekstimage_rectangle2":{
-      "url": "img/272x170_test.png"
+      "url": "img/rectangle.png"
     },
     "tekstimage_square": {
-      "url": "img/tekstimage_square.jpg"
+      "url": "img/square.png"
     }
   }]
 }

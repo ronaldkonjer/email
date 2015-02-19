@@ -1,11 +1,11 @@
-//groothandels 
-//<#noparse><#if contact.vestiging_oorsprong.label?contains("HANOS-Edes Ameland")> 
+//groothandels
+//<#noparse><#if contact.vestiging_oorsprong.label?contains("HANOS-Edes Ameland")>
 include Ameland
-//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Amsterdam")> 
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Amsterdam")>
 include Amsterdam
 //<#elseif contact.vestiging_oorsprong.label?contains("HGC-HANOS Antwerpen")>
 include Antwerpen
-//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Apeldoorn")> 
+//<#elseif contact.vestiging_oorsprong.label?contains("HANOS Apeldoorn")>
 include Apeldoorn
 //<#elseif contact.vestiging_oorsprong.label?contains("HANOS-ISPC Breda")>
 include Breda
@@ -36,7 +36,17 @@ include Venlo
 //<#elseif contact.vestiging_oorsprong.label?contains("HANOS Zwolle")>
 include Zwolle
 //</#if></#noparse>
- 
+
+//
+	Divider
+table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+	tbody
+		tr
+			td(width='100%')
+				table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+					tbody
+						tr
+							td(align='center', height='1', style='font-size: 1px; line-height: 1px;')
 
 //- table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
 //-   tbody
@@ -54,7 +64,7 @@ include Zwolle
 //-                           tbody
 //-                             tr
 //-                               td(align='left')
-//-                                 p.title(style='font: 17px/1.4 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;', st-title='store-title') 
+//-                                 p.title(style='font: 17px/1.4 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;', st-title='store-title')
 //-                                 | HANOS-Edes Ameland
 //-                             tr
 //-                               td(align='left', style='padding: 10px 0;', st-title='store-address')
@@ -67,7 +77,7 @@ include Zwolle
 //-                         table.colstorebutton(width='100%', cellpadding='0', cellspacing='0', border='0', st-title='store-button')
 //-                           tbody
 //-                             //
-//-                                Button 
+//-                                Button
 //-                             tr
 //-                               td(width='100%')
 //-                                 table.storebutton(height='34', align='left', valign='center', border='0', cellpadding='0', cellspacing='0')
@@ -90,4 +100,4 @@ include Zwolle
 //-         table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
 //-           tbody
 //-             tr
-//-               td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
+//-               td(align='center', height='1', style='font-size: 1px; line-height: 1px;')

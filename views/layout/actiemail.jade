@@ -1,23 +1,151 @@
+//
+	2015 actiemail
+
+//
+	<#setting locale="nl_NL" />
+	<#if (sections['header'].articles?size>0)>
+	<#assign snippet = "${sections['header'].articles[0].fields.snippet!}"/>
+	<#assign themakleur = "${sections['header'].articles[0].fields.themakleur!}"/>
+	<#assign typeMail = "${sections['header'].articles[0].fields.type_mail!}"/>
+		<#if typeMail = "1">
+			<#assign nameMail = "Voordeelmail"/>
+		<#elseif typeMail = "2">
+			<#assign nameMail = "Persoonlijke aanbiedingenmail"/>
+		<#elseif typeMail = "3">
+			<#assign nameMail = "Nieuwsbrief"/>
+		<#elseif typeMail = "4">
+			<#assign nameMail = "Vestigingsmail"/>
+		<#elseif typeMail = "5">
+			<#assign nameMail = "Activiteitenmail"/>
+		<#elseif typeMail = "6">
+			<#assign nameMail = "Zeitung"/>
+		<#elseif typeMail = "7">
+			<#assign nameMail = "Courant mail"/>
+		<#elseif typeMail = "8">
+			<#assign nameMail = "Outlet mail"/>
+		</#if>
+	</#if>
+
 doctype html
 html(xmlns='http://www.w3.org/1999/xhtml')
-  head
-    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-    //meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='viewport', content="width=600, user-scalable=yes, initial-scale=1.0")
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title HANOS Voordeelmail
-    //for testing only
-    link(rel="stylesheet", href="../css/actiemail.css") 
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+		//meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='viewport', content="width=600, user-scalable=yes, initial-scale=1.0")
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title HANOS Voordeelmail
+		//for testing only
+		link(rel="stylesheet", href="../css/actiemail.css") 
 
-    <!-- build:style inline actiemail --><!-- /build -->
-  body(style="background-color:#FAFAFA")
-    table.body(width="100%", style="background-color:#FAFAFA")
-      tr
-        td(style='padding: 0;', valign='top', align='center')
-          include ../partials/actiemail/header
-          include ../partials/actiemail/header
-          include ../partials/actiemail/articles
-          include ../partials/actiemail/footer
+	<!-- build:style inline actiemail --><!-- /build -->
+	body(style="background-color:#FAFAFA")
+		table.body(width="100%", style="background-color:#FAFAFA")
+			tr
+				td(style='padding: 0;', valign='top', align='center')
+					include ../partials/actiemail/header
+					include ../partials/actiemail/articles
+					//
+						Divider gmail fix
+					table.devicewidth.hide-for-all(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+						tbody
+							tr
+								td(width='100%')
+									table(cellpadding='0', cellspacing='0', border='0', align='center', width='600')
+										tr
+											td(cellpadding='0', cellspacing='0', border='0', style='background-color:#ffffff; line-height:1px;', height='1px; min-width: 600px;')
+												img.hide-for-all(src='http://td42.tripolis.com/public/image_BEB9+HNvXQrgT33fv1Vk1g.gif', height='1px', width='600px', alt='', style='max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;')
+					//
+						ALLEEN VOOR NIEUWSBRIEVEN
+							table.devicewidth(width='600', cellpadding='0', cellspacing='0' border='0', bgcolor='#ffffff', align='center')
+								tbody
+									tr
+										td(width='100%')
+											table.devicewidth(width='600', cellspacing='0', cellpadding='0', border='0', bgcolor='#cccccc', align='center')
+												tbody
+													tr
+														td(height='1', align='center', style='font-size:1px; line-height:1px;')
+					include ../partials/actiemail/stores/locations
+					//
+						Divider
+					table.devicewidth(cellpadding='0', cellspacing='0', border='0', align='center', width='600', bgcolor='#ffffff')
+						tbody
+							tr
+								td(width='100%')
+									table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+										tbody
+											tr
+												td(align='center' bgcolor='#cccccc', height='1', style='background-color:#cccccc; font-size:1px; line-height:1px;')
+					//
+						End of divider
 
-
-
+					//
+						Start of footer 
+					table.footer.devicewidth(width='600', align='center', cellspacing='0', cellpadding='0', border='0', style='border-collapse: collapse; background-color: #FFF;')
+						tr
+							td(width='600', align='center', cellspacing='0', cellpadding='0', border='0', style='padding: 20px 0;')
+								table(align='center', style='border-collapse: collapse; width: 80%;')
+									tbody
+										tr
+											td(style='padding: 0 0 10px;', valign='top')
+												table(align='center', style='border-collapse: collapse;')
+													tbody
+														tr
+															td(height='36', width='36', style='padding: 0 5px 0 5px;')
+																a(href='https://www.facebook.com/hanosgroothandel')
+																	img(height='36', width='36', src='http://td42.tripolis.com/public/image_LgofchjaVZl8+7+33tgYcQ.png', alt='')
+															td(height='36', width='36', style='padding: 0 5px 0 5px;')
+																a(href='https://www.twitter.com/HANOSISPC')
+																	img(height='36', width='36', src='http://td42.tripolis.com/public/image_PyBXckLbcSPd3lamYnOQ2w.png', alt='')
+															td(height='36', width='36' style='padding: 0 5px 0 5px;')
+																a(href='https://www.youtube.com/hanosnl')
+																	img(height='34', width='34', src='http://td42.tripolis.com/public/image_UvE1F6XqLxba6uOIZmkUYQ.png', alt='')
+										tr
+											td(style='padding: 0 0 10px;', valign='top')
+												table(align='center', style='border-collapse: collapse;')
+													tbody
+														tr
+															td(style='padding: 0 0 10px; font: 14px/20px \'Roboto\', Helvetica,arial,sans-serif; color: #333; text-align: center;', valign='top')
+																a.font2(href='http://ntd42.tripolis.com/public/r/j+vRCgU+ylCtv3B0IefLFg/hWim8WxqCMI1IZF+PdsKKA/TK1ET_mWKYTsfhGMZ8cs5w', target='_blank', title='website', style='text-decoration: none; padding: 0 5px; font: 13px/18px \'Roboto\', Helvetica,arial,sans-serif; color: #333;')
+																	span(style='color: #333;') Hanos.nl
+																		| |
+																a.font2(href='http://ntd42.tripolis.com/public/r/fFZCtsz5atfirjLtmG7r7Q/hWim8WxqCMI1IZF+PdsKKA/TK1ET_mWKYTsfhGMZ8cs5w', target='_blank', title='contact', style='text-decoration: none; padding: 0 5px; font: 13px/18px \'Roboto\', Helvetica,arial,sans-serif; color: #333;')
+																	span(style='color: #333;') Contact
+																		| |
+																a.font2(href='<#noparse>https://inform.contentpagina.nl/procedures/hanos/nieuwsbrief/get_profile?xid=${contact.encryptedContactId!}</#noparse>&m=typeMailSegment', target='_blank', title='Gegevens wijzigen', style='text-decoration: none; padding: 0 5px; font: 13px/18px \'Roboto\', Helvetica,arial,sans-serif; color: #333;')
+																	span(style='color: #333;') Afmelden
+										tr
+											td(style='padding: 0 0 10px;', valign='top')
+												table(align='center', style='border-collapse: collapse;')
+													tbody
+														tr
+															td.font2(style='padding: 0; font: 12px/17px \'Roboto\', Helvetica,arial,sans-serif; color: #999; text-align: center;', valign='top')
+																| U ontvangt deze nieuwsbrief op
+																a(href='<#noparse>https://inform.contentpagina.nl/procedures/hanos/nieuwsbrief/get_profile?xid=${contact.encryptedContactId!}</#noparse>&m=${typeMail!}', style='color: #666; text-decoration: none;')
+																	span(style='font-weight: normal;')
+																		| <#noparse>${contact.email!}</#noparse>
+																| omdat u klant bent van HANOS en ingeschreven staat voor onze
+																a(href='<#noparse>https://inform.contentpagina.nl/procedures/hanos/nieuwsbrief/get_profile?xid=${contact.encryptedContactId!}</#noparse>&m=${typeMail!}', target='_blank', title='Gegevens wijzigen', style='color: #666; font-weight: normal; text-decoration: none;') 
+																	| <#if typeMail == "7">
+																	| <#noparse>
+																	| <#if contact.land?has_content && contact.land == "BE">
+																	| Gazet mail
+																	| <#else>
+																	| Courant mail
+																	| </#if>
+																	| </#noparse>
+																	| <#else>
+																	| ${nameMail}
+																	| </#if>
+														//<#noparse><#if contact.land == "BE">
+														tr
+															td(style='padding: 20px 0 0;', valign='top', align='center')
+																a(target='_blank', href='http://www.hanos.nl/HGCHANOS-Internationale-Horeca-Groothandel.htm', title='HGC-HANOS Internationale Horeca Groothandel')
+																	img(src='http://td42.tripolis.com/public/image_erE9GUlp5XOX1wCpaoAHPA.png', alt='HGC-HANOS logo', border='0', width='236', height='46', style='display: block; border: none; outline: none; text-decoration: none; text-align: center;')
+														//<#else>
+														tr
+															td(style='padding: 20px 0 0;', valign='top', align='center')
+																a(target='_blank', href='http://www.hanos.nl', title='HANOS Internationale Horeca Groothandel')
+																	img(src='http://td42.tripolis.com/public/image_3veWwfORCOFf9dj83bY0sw.png', alt='HANOS logo', border='0', width='236', height='46', style='display: block; border: none; outline: none; text-decoration: none; text-align: center;')
+														//</#if>
+					//
+						End of footer
