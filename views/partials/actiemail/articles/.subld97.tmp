@@ -33,7 +33,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
 																		p.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
 																			|<%= data.actiemail.tripolis[0].titel_blok1 %>
 																tr
-																	td.col1subtitle(height='166', style='text-align: left;', valign='top')
+																	td.col1subtitle(height='176', style='text-align: left;', valign='top')
 																		p.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
 																			|<%= data.actiemail.tripolis[0].tekstartikel1 %>
 															//<#if buttonurl1?has_content>

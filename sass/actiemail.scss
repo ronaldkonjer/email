@@ -106,6 +106,10 @@ table[class=full] {
 .font2 {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
+.col1subtitle {
+    height: 166px!important;
+    padding: 0 0 10px 0!important;
+}
 .colimg2text{
   width:272px!important;
   height:170px!important;
@@ -183,10 +187,7 @@ table[class=full] {
   }
   .col1subtitle {
     height: 116px!important;
-    padding: 10px 0 0 0!important;
-  }
-  .tekstartikeltitel{
-    padding: 0 0 0 10px!important;
+    padding: 0 0 10px 0!important;
   }
   .col2, .col3 {
     width: 220px!important;
@@ -310,11 +311,8 @@ table[class=full] {
     background-color: #ffffff!important;
   }
   .col1subtitle {
-    height: 76px!important;
-    padding: 10px 0 10px!important;
-  }
-  .tekstartikeltitel{
-    padding: 0!important;
+    height: 66px!important;
+    padding: 0 0 10px 0!important;
   }
   .col2 {
     width: 338px!important;
@@ -419,7 +417,6 @@ table[class=full] {
   .subtitle, .col1subtitle p, .col2subtitle p, .colfullsubtitle p {
     font-size: 14px !important;
   }
-  .col1subtitle {padding:0!important;}
 }
 
 
