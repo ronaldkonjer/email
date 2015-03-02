@@ -1,5 +1,5 @@
 //
-   Start col 2 
+   Start tekstartikel 2 columns
 table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
   tr
     td(width='600')
@@ -21,7 +21,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                     //<#if url_blok1?has_content>
                                     a(href!='<%= data.actiemail.tripolis[0].url_blok1 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel_blok1 %>', style="display:block; border:none; outline:none; text-decoration:none;")
                                       //</#if>
-                                      img.colimg2text(src!='<%= data.actiemail.tripolis[0].tekstimage_rectangle1.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='318', height='199', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      img.colimg2text(src!='<%= data.actiemail.tripolis[0].tekstimage_rectangle1.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='272', height='170', style='display: block; border: none; outline: none; text-decoration: none;')
                                       //<#if url_blok1?has_content>
                                     //</#if>
                                 tr.mobilehide
@@ -30,7 +30,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                   td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')
                     tr
                       td(height='66')
-                        table.col2header(align='left', border='0', cellpadding='0', cellspacing='0', style='padding-bottom:10px;')
+                        table(align='left', border='0', cellpadding='0', cellspacing='0')
                           tr
                             td(style='font:17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;' valign='top', height='36')
                               |<%= data.actiemail.tripolis[0].titel_blok1 %>
@@ -71,7 +71,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                     //<#if url_blok2?has_content>
                                     a(href!='<%= data.actiemail.tripolis[0].url_blok2 %>', target="_blank", title!='<%= data.actiemail.tripolis[0].titel_blok2 %>', style="display:block; border:none; outline:none; text-decoration:none;")
                                       //</#if>
-                                      img.colimg2text(src!='<%= data.actiemail.tripolis[0].tekstimage_rectangle2.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok2 %>', border='0', width='318', height='199', style='display: block; border: none; outline: none; text-decoration: none;')
+                                      img.colimg2text(src!='<%= data.actiemail.tripolis[0].tekstimage_rectangle2.url %>', alt!='<%= data.actiemail.tripolis[0].titel_blok2 %>', border='0', width='272', height='170', style='display: block; border: none; outline: none; text-decoration: none;')
                                       //<#if url_blok2?has_content>
                                     //</#if>
                                 tr.mobilehide
@@ -80,7 +80,7 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                   td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
                     tr
                       td(height='66')
-                       table.col2header(align='left', border='0', cellpadding='0', cellspacing='0', style='padding-bottom:10px;')
+                       table(align='left', border='0', cellpadding='0', cellspacing='0')
                           tr
                             td(style='font:17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;' valign='top', height='36')
                               |<%= data.actiemail.tripolis[0].titel_blok2 %>
@@ -110,4 +110,4 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
         tr
           td(align='center', height='1', style='font-size: 1px; line-height: 1px;')  
 //
-   end col 2 
+   End tekstartikel 2 columns

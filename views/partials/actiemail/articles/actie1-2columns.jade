@@ -33,17 +33,17 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                                     //</#if>
                                 tr.mobileshow
                                   td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
-                            td.devicewidth(width='50%', align='center', valign='top')
+                            td.devicewidth(width='50%', align='center', valign='top', style='padding-left:10px;')
                               table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
                                 tr
                                   //<#if productinformatie_blok1?has_content>
-                                  td.col1subtitle(colspan='2', height='190', style='text-align: left; padding: 10px 0 0;', valign='top')
+                                  td.col1subtitle(colspan='2', height="166" style='text-align: left; padding: 10px 0 0;', valign='top')
                                     p.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
                                       |<%= data.actiemail.tripolis[0].productinformatie_blok1 %>
                                   //<#else>
-                                  td.col1subtitle(colspan='2', height='190', style='text-align: left; padding: 10px 0 0;', valign='top')
+                                  td.col1subtitle(colspan='2', height="166", style='text-align: left; padding: 10px 0 0;', valign='top')
                                     p.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;') &nbsp;
-                                  //</#if>
+                                  //</#if> 
                                 tr
                                   //<#if vanprijs_blok1?has_content>
                                   td.priceinfo(align='right')

@@ -134,14 +134,9 @@ table[class=full] {
       height: 89px!important;
     }
     &[class=imgleft-square] {
-      width: 200px!important;
-      height: 200px!important;
-      padding-right: 10px!important;
-    }
-    &[class=imgright-square] {
-      width: 200px!important;
-      height: 200px!important;
-      padding-left: 10px!important;
+      width: 210px!important;
+      height: 210px!important;
+      margin-right:10px!important;
     }
     &[class=colimgfullwidth] {
       width: 340px!important;
@@ -187,8 +182,11 @@ table[class=full] {
     height:25px!important;
   }
   .col1subtitle {
-    height: 140px!important;
-    padding: 10px 0 0 10px!important;
+    height: 116px!important;
+    padding: 10px 0 0 0!important;
+  }
+  .tekstartikeltitel{
+    padding: 0 0 0 10px!important;
   }
   .col2, .col3 {
     width: 220px!important;
@@ -276,12 +274,7 @@ table[class=full] {
     &[class=imgleft-square] {
       width: 149px!important;
       height: 149px!important;
-      padding-right: 10px!important;
-    }
-    &[class=imgright-square] {
-      width: 149px!important;
-      height: 149px!important;
-      padding-left: 10px!important;
+      margin-right:10px!important;
     }
     &[class=colimgfullwidth] {
       width: 320px!important;
@@ -317,8 +310,11 @@ table[class=full] {
     background-color: #ffffff!important;
   }
   .col1subtitle {
-    height: 100px!important;
-    padding: 10px 0 0!important;
+    height: 76px!important;
+    padding: 10px 0 10px!important;
+  }
+  .tekstartikeltitel{
+    padding: 0!important;
   }
   .col2 {
     width: 338px!important;
@@ -330,7 +326,7 @@ table[class=full] {
   }
   .col2header {
     height: auto!important;
-    margin: 0 0 10px!important;
+    margin: 0 !important;
   }
   .subtitle {
     display: block!important;

@@ -107,7 +107,7 @@
           </table>
           <!--End of banner
           -->
-          <!--Start tekst
+          <!--Start tekstartikel
           -->
           <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" align="center" class="devicewidth">
             <tbody>
@@ -120,7 +120,7 @@
                           <table width="600" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
                             <tbody>
                               <tr>
-                                <td width="579" style="padding:20px 10px">
+                                <td width="579" style="padding:15px 10px">
                                   <!--<#if titel_blok1?has_content>-->
                                   <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tbody>
@@ -186,96 +186,95 @@
               </tr>
             </tbody>
           </table>
-          <!--Start tekst
+          <!--End tekstartikel
           -->
-          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" align="center" class="devicewidth">
-            <tbody>
-              <tr>
-                <td width="100%">
-                  <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <table width="600" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
-                            <tbody>
+          <!--Start tekstartikel img left
+          -->
+          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+            <tr>
+              <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                  <tr>
+                    <td>
+                      <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                        <tr>
+                          <td width="579" style="padding:15px 10px;">
+                            <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td width="579" style="padding:10px">
-                                  <table width="50%" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
-                                            <!--</#if>--><img src="<%= data.actiemail.tripolis[0].tekstimage_square.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none; padding-right:30px;" class="imgleft-square">
-                                            <!--<#if url_blok1?has_content>--></a>
-                                          <!--</#if>-->
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                  <table width="50%" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tbody>
-                                      <tr>
-                                        <td style="font:17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;"><%= data.actiemail.tripolis[0].titel_blok1 %></td>
-                                      </tr>
-                                      <tr>
-                                        <td style="font:16px/1.5 'Lato', Helvetica, Arial, sans-serif; text-align:left; color:#333333; padding:10px 0 10px 0" class="subtitle">
-                                          <p class="font1"><%= data.actiemail.tripolis[0].tekstartikel1 %></p>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <!--<#if buttonurl1?has_content>-->
-                                          <table width="100%" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0">
-                                            <tbody>
-                                              <tr>
-                                                <td>
-                                                  <table height="30" align="right" valign="middle" border="0" cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                      <tr>
-                                                        <td width="auto" align="center" valign="middle" height="36" style="background-color:#57004e; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip:padding-box; font-size:13px; font-family:'Roboto', Helvetica, arial, sans-serif; text-align:center; color:#ffffff; padding:0 20px;" class="devicewidth"><span style="color:#ffffff;">
-                                                            <!--<#if buttontext1?has_content>--><a style="color:#ffffff; text-align:center; text-decoration:none; font-family:'Roboto', Helvetica, arial, sans-serif; text-align:center;" href="<%= data.actiemail.tripolis[0].buttonurl1 %>" title="<%= data.actiemail.tripolis[0].buttontext1 %>" target="_blank"><%= data.actiemail.tripolis[0].buttontext1 %></a>
-                                                            <!--<#else>--><a style="color:#ffffff; text-align:center; text-decoration:none; font-family:'Roboto', Helvetica, arial, sans-serif; text-align:center;" href="<%= data.actiemail.tripolis[0].buttonurl1 %>" title="Lees verder" target="_blank">Lees verder</a>
-                                                            <!--</#if>--></span></td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                          <!--</#if>-->
-                                        </td>
-                                      </tr>
-                                    </tbody>
+                                <td width="100%" align="center" class="devicewidth">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="50%" align="left" valign="top">
+                                        <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                                          <tr>
+                                            <td>
+                                              <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].tekstimage_square.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="260" height="260" style="display: block; border: none; outline: none; text-decoration: none; padding" class="colimg1">
+                                                <!--<#if url_blok1?has_content>--></a>
+                                              <!--</#if>-->
+                                            </td>
+                                          </tr>
+                                          <tr class="mobileshow">
+                                            <td width="100%" height="3" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;" class="mobileshow"> </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                      <td width="50%" align="right" valign="top" style="padding-left:10px;" class="devicewidth">
+                                        <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <td height="48" style="text-align: left;" valign="top" border="0" cellpadding="0" cellspacing="0">
+                                              <p style="font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;" class="font1"><%= data.actiemail.tripolis[0].titel_blok1 %></p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td height="176" style="text-align: left;" valign="top" class="col1subtitle">
+                                              <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].tekstartikel1 %></p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                        <!--<#if buttonurl1?has_content>-->
+                                        <table width="100%" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0">
+                                          <tbody>
+                                            <tr>
+                                              <td>
+                                                <table height="30" align="right" valign="middle" border="0" cellpadding="0" cellspacing="0">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="auto" align="center" valign="middle" height="36" style="background-color:#57004e; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip:padding-box; font-size:13px; font-family:'Roboto', Helvetica, arial, sans-serif; text-align:center; color:#ffffff; padding:0 20px;" class="devicewidth"><span style="color:#ffffff;">
+                                                          <!--<#if buttontext1?has_content>--><a style="color:#ffffff; text-align:center; text-decoration:none; font-family:'Roboto', Helvetica, arial, sans-serif; text-align:center;" href="<%= data.actiemail.tripolis[0].buttonurl1 %>" title="<%= data.actiemail.tripolis[0].buttontext1 %>" target="_blank"><%= data.actiemail.tripolis[0].buttontext1 %></a>
+                                                          <!--<#else>--><a style="color:#ffffff; text-align:center; text-decoration:none; font-family:'Roboto', Helvetica, arial, sans-serif; text-align:center;" href="<%= data.actiemail.tripolis[0].buttonurl1 %>" title="Lees verder" target="_blank">Lees verder</a>
+                                                          <!--</#if>--></span></td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <!--</#if>	-->
+                                      </td>
+                                    </tr>
                                   </table>
                                 </td>
                               </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-            <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" align="center" class="devicewidth">
-              <tbody>
-                <tr>
-                  <td width="100%">
-                    <table width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#cccccc" align="center" class="devicewidth">
-                      <tbody>
-                        <tr>
-                          <td height="1" align="center" style="font-size:1px; line-height:1px;"></td>
+                            </table>
+                          </td>
                         </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table width="600" bgcolor="#cccccc" align="center" cellspacing="0" cellpadding="0" border="0" class="divider">
+                  <tr>
+                    <td align="center" height="1" style="font-size: 1px; line-height: 1px;"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
           </table>
-          <!--Start col 2 
+          <!--End tekstartikel img left
+          -->
+          <!--Start tekstartikel 2 columns
           -->
           <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
             <tr>
@@ -296,7 +295,7 @@
                                           <tr>
                                             <td>
                                               <!--<#if url_blok1?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok1 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok1 %>" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].tekstimage_rectangle1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="318" height="199" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2text">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].tekstimage_rectangle1.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok1 %>" border="0" width="272" height="170" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2text">
                                                 <!--<#if url_blok1?has_content>--></a>
                                               <!--</#if>-->
                                             </td>
@@ -315,7 +314,7 @@
                               </tr>
                               <tr>
                                 <td height="66">
-                                  <table align="left" border="0" cellpadding="0" cellspacing="0" style="padding-bottom:10px;" class="col2header">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                       <td style="font:17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;" valign="top" height="36"><%= data.actiemail.tripolis[0].titel_blok1 %></td>
                                     </tr>
@@ -358,7 +357,7 @@
                                           <tr>
                                             <td>
                                               <!--<#if url_blok2?has_content>--><a href="<%= data.actiemail.tripolis[0].url_blok2 %>" target="_blank" title="<%= data.actiemail.tripolis[0].titel_blok2 %>" style="display:block; border:none; outline:none; text-decoration:none;">
-                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].tekstimage_rectangle2.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok2 %>" border="0" width="318" height="199" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2text">
+                                                <!--</#if>--><img src="<%= data.actiemail.tripolis[0].tekstimage_rectangle2.url %>" alt="<%= data.actiemail.tripolis[0].titel_blok2 %>" border="0" width="272" height="170" style="display: block; border: none; outline: none; text-decoration: none;" class="colimg2text">
                                                 <!--<#if url_blok2?has_content>--></a>
                                               <!--</#if>-->
                                             </td>
@@ -377,7 +376,7 @@
                               </tr>
                               <tr>
                                 <td height="66">
-                                  <table align="left" border="0" cellpadding="0" cellspacing="0" style="padding-bottom:10px;" class="col2header">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                       <td style="font:17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-weight:bold; text-align:left; color:#333333;" valign="top" height="36"><%= data.actiemail.tripolis[0].titel_blok2 %></td>
                                     </tr>
@@ -418,7 +417,7 @@
               </td>
             </tr>
           </table>
-          <!--end col 2 
+          <!--End tekstartikel 2 columns
           -->
           <!--Start col 2 
           -->
@@ -430,7 +429,7 @@
                     <td align="center">
                       <table width="292" align="left" border="0" cellpadding="0" cellspacing="0" class="col2">
                         <tr>
-                          <td width="272" style="padding: 10px;" class="col2inner">
+                          <td width="272" style="padding:15px 10px;" class="col2inner">
                             <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                               <tr>
                                 <td height="66">
@@ -907,18 +906,18 @@
                                           </tr>
                                         </table>
                                       </td>
-                                      <td width="50%" align="center" valign="top" class="devicewidth">
+                                      <td width="50%" align="center" valign="top" style="padding-left:10px;" class="devicewidth">
                                         <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
                                           <tr>
                                             <!--<#if productinformatie_blok1?has_content>-->
-                                            <td colspan="2" height="190" style="text-align: left; padding: 10px 0 0;" valign="top" class="col1subtitle">
+                                            <td colspan="2" height="166" style="text-align: left; padding: 10px 0 0;" valign="top" class="col1subtitle">
                                               <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1"><%= data.actiemail.tripolis[0].productinformatie_blok1 %></p>
                                             </td>
                                             <!--<#else>-->
-                                            <td colspan="2" height="190" style="text-align: left; padding: 10px 0 0;" valign="top" class="col1subtitle">
+                                            <td colspan="2" height="166" style="text-align: left; padding: 10px 0 0;" valign="top" class="col1subtitle">
                                               <p style="font: 16px/1.1 'Lato', Helvetica, Arial, sans-serif;" class="font1">&nbsp;</p>
                                             </td>
-                                            <!--</#if>-->
+                                            <!--</#if> -->
                                           </tr>
                                           <tr>
                                             <!--<#if vanprijs_blok1?has_content>-->
@@ -3780,11 +3779,11 @@
                             </tr>
                             <!--<#noparse><#if contact.land == "BE">-->
                             <tr>
-                              <td style="padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl/HGCHANOS-Internationale-Horeca-Groothandel.htm" title="HGC-HANOS Internationale Horeca Groothandel"><img src="http://td42.tripolis.com/public/image_erE9GUlp5XOX1wCpaoAHPA.png" alt="HGC-HANOS logo" border="0" width="236" height="46" style="display: block; border: none; outline: none; text-decoration: none; text-align: center;"></a></td>
+                              <td style="padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl/HGCHANOS-Internationale-Horeca-Groothandel.htm" title="HGC-HANOS Internationale Horeca Groothandel"><img src="http://td42.tripolis.com/public/image_erE9GUlp5XOX1wCpaoAHPA.png" alt="HGC-HANOS logo" border="0" width="262" height="56" style="display: block; border: none; outline: none; text-decoration: none; text-align: center;"></a></td>
                             </tr>
                             <!--<#else>-->
                             <tr>
-                              <td style="padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl" title="HANOS Internationale Horeca Groothandel"><img src="http://td42.tripolis.com/public/image_3veWwfORCOFf9dj83bY0sw.png" alt="HANOS logo" border="0" width="236" height="46" style="display: block; border: none; outline: none; text-decoration: none; text-align: center;"></a></td>
+                              <td style="padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl" title="HANOS Internationale Horeca Groothandel"><img src="http://td42.tripolis.com/public/image_3veWwfORCOFf9dj83bY0sw.png" alt="HANOS logo" border="0" width="262" height="56" style="display: block; border: none; outline: none; text-decoration: none; text-align: center;"></a></td>
                             </tr>
                             <!--</#if>-->
                           </tbody>
