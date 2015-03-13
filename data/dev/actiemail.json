@@ -68,6 +68,12 @@
     },
     "tekstimage_square": {
       "url": "img/square.png"
-    }
+    },
+    "titel": "Titel",
+    "artikelnummer": "000.00000",
+    "product": "Productnaam",
+    "informatie": "Informatie",
+    "prijs": "10,00",
+    "eenheid": "Pro Kilo"
   }]
 }

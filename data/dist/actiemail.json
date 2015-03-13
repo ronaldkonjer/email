@@ -64,6 +64,12 @@
     },
     "tekstimage_square": {
       "url": "${tekstimage_square.url!}"
-    }
+    },
+    "titel": "${titel!}",
+    "artikelnummer": "${artikelnummer!}",
+    "product": "${product!}",
+    "informatie": "${informatie!}",
+    "prijs": "${prijs!}",
+    "eenheid": "${eenheid!}"
   }]
 }
