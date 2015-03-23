@@ -1,0 +1,61 @@
+//
+	Start tekstartikel img left
+table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', border='0', align='center')
+	tr
+		td(width='100%')
+			table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+				tr
+					td
+						table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+							tr
+								td(width='579', style='padding:15px 10px;')
+									table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+										tr
+											td.devicewidth(width='100%', align='center')
+												table(width='100%', cellpadding='0', cellspacing='0', border='0')
+													tr
+														td(width='50%', align='left', valign="top")
+															table(width='100%', align='left', cellpadding='0', cellspacing='0', border='0')
+																tr
+																	td
+																		//<#if url_blok1?has_content>
+																		a(href!="<%= data.actiemail.tripolis[0].url_blok1 %>", target="_blank", title!="<%= data.actiemail.tripolis[0].titel_blok1 %>", style="display:block; border:none; outline:none; text-decoration:none;")
+																			//</#if>
+																			img.colimg1(src!="<%= data.actiemail.tripolis[0].tekstimage_square.url %>", alt!='<%= data.actiemail.tripolis[0].titel_blok1 %>', border='0', width='260', height='260', style='display: block; border: none; outline: none; text-decoration: none; padding')
+																			//<#if url_blok1?has_content>
+																		//</#if>
+																tr.mobileshow
+																	td.mobileshow(width='100%', height='3', style='font-size: 1px; line-height: 1px; mso-line-height-rule: exactly; display: none;')  
+														td.devicewidth(width='50%', align='right', valign='top', style='padding-left:10px;')
+															table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+																tr
+																	td(height='48', style='text-align: left;', valign='top', border='0', cellpadding='0', cellspacing='0')
+																		p.font1(style='font: 17px/1.1 \'Lato\', Helvetica, Arial, sans-serif; font-weight: 700; text-align: left;')
+																			|<%= data.actiemail.tripolis[0].titel_blok1 %>
+																tr
+																	td.col1subtitle(height='176', style='text-align: left;', valign='top')
+																		p.font1(style='font: 16px/1.1 \'Lato\', Helvetica, Arial, sans-serif;')
+																			|<%= data.actiemail.tripolis[0].tekstartikel1 %>
+															//<#if buttonurl1?has_content>
+															table(width='100%', align='left', valign='middle', border='0', cellpadding='0', cellspacing='0')
+																tbody
+																	tr
+																		td
+																			table(height='30', align='right', valign='middle', border='0', cellpadding='0', cellspacing='0')
+																				tbody
+																					tr
+																						td.devicewidth(width='auto', align='center', valign='middle', height='36', style='background-color:#57004e; border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip:padding-box; font-size:13px; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center; color:#ffffff; padding:0 20px;')
+																							span(style='color:#ffffff;')
+																								//<#if buttontext1?has_content>
+																								a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl1 %>', title!='<%= data.actiemail.tripolis[0].buttontext1 %>', target='_blank')
+																									|<%= data.actiemail.tripolis[0].buttontext1 %>
+																								//<#else>
+																								a(style='color:#ffffff; text-align:center; text-decoration:none; font-family:\'Roboto\', Helvetica, arial, sans-serif; text-align:center;', href!='<%= data.actiemail.tripolis[0].buttonurl1 %>', title='Lees verder', target='_blank')
+																									| Lees verder
+																								//</#if>
+															//</#if>	
+			table.divider(width='600', bgcolor='#cccccc', align='center', cellspacing='0', cellpadding='0', border='0')
+				tr
+					td(align='center', height='1', style='font-size: 1px; line-height: 1px;')
+//
+	End tekstartikel img left

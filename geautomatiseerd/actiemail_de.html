@@ -1,0 +1,326 @@
+<!--
+2015 angebote
+-->
+<!--
+<#setting locale="nl_NL" />
+<#assign feed = xmlImporter("http://www.hanos.nl/FeedXML-2/TripolisXMLFrischeMail.htm")/>
+<#if (sections['header'].articles?size>0)>
+<#assign snippet = "${sections['header'].articles[0].fields.snippet!}"/>
+<#assign themakleur = "${sections['header'].articles[0].fields.themakleur!}"/>
+<#assign typeMail = "${sections['header'].articles[0].fields.type_mail!}"/>
+<#if typeMail = "1">
+<#assign nameMail = "Voordeelmail"/>
+<#elseif typeMail = "2">
+<#assign nameMail = "Persoonlijke aanbiedingenmail"/>
+<#elseif typeMail = "3">
+<#assign nameMail = "Nieuwsbrief"/>
+<#elseif typeMail = "4">
+<#assign nameMail = "Vestigingsmail"/>
+<#elseif typeMail = "5">
+<#assign nameMail = "Activiteitenmail"/>
+<#elseif typeMail = "6">
+<#assign nameMail = "Zeitung"/>
+<#elseif typeMail = "7">
+<#assign nameMail = "Courant mail"/>
+<#elseif typeMail = "8">
+<#assign nameMail = "Outlet mail"/>
+</#if>
+</#if>
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- <meta name="viewport" content="width=600, user-scalable=yes" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>HANOS Mail-Angebot</title>
+    <!--for testing only-->
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Roboto);@import url(http://fonts.googleapis.com/css?family=Lato:400,700);#outlook a{padding:0}body{width:100% !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0;background-color:#FAFAFA}.ExternalClass{width:100%;line-height:100%}.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{line-height:100%}#backgroundTable{margin:0;padding:0;width:100% !important;line-height:100% !important}img{outline:none;text-decoration:none;border:none;height:auto;line-height:100%;-ms-interpolation-mode:bicubic}img[class=colimgfullwidth]{width:500px !important;height:250px !important}a img{border:none}.image_fix{display:block}table{border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}table td{border-collapse:collapse}p{margin:0 !important;padding:0 !important;font-family:'Lato', Helvetica, Arial, sans-serif;line-height:1.4em;color:#333}a{text-decoration:none;color:#333}a:link,a:visited{text-decoration:none;color:#333}#outlook a{padding:0}body{width:100% !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0;background-color:#FAFAFA}.ExternalClass{width:100%;line-height:100%}.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{line-height:100%}#backgroundTable{margin:0;padding:0;width:100% !important;line-height:100% !important}p.MsoNormal{display:none}p{margin:0 !important}img{outline:none;text-decoration:none;border:none;height:auto;line-height:100%;-ms-interpolation-mode:bicubic}img[class=colimgfullwidth]{width:500px !important;height:250px !important}.image_fix{display:block !important}.hide-for-all{display:none !important}table{border-spacing:0 !important;border-collapse:collapse !important;-mso-table-lspace:0pt !important;-mso-table-rspace:0pt !important}table td{border-collapse:collapse !important}p{margin:0 !important;padding:0 !important;font-family:"Lato",Helvetica,Arial,sans-serif !important;line-height:1.4em !important;color:#333}a{text-decoration:none !important;color:#333}a:link,a:visited{text-decoration:none !important;color:#333}table[class=full]{width:100%;clear:both}#editie{height:20px !important}.font1{font-family:'Lato', Helvetica, Arial, sans-serif}.font2{font-family:'Roboto', Helvetica, Arial, sans-serif}.col1subtitle{height:166px !important;padding:0 0 10px 0 !important}.colimg2text{width:272px !important;height:170px !important;padding-bottom:10px !important}}
+    </style>
+  </head>
+  <body style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #FAFAFA; margin: 0; padding: 0; width: 100%;">
+    <table width="100%" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; background-color: #FAFAFA; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" class="body">
+      <tr>
+        <td style="border-collapse: collapse; padding: 0;" valign="top" align="center">
+          <!--Start preheader
+          -->
+          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" class="preheader devicewidth" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+            <tbody>
+              <tr>
+                <td align="center" valign="middle" style="border-collapse: collapse; color: #333; font: 12px/17px 'Roboto', Helvetica, Arial, sans-serif; font-family: 'Roboto', Helvetica, Arial, sans-serif; padding: 10px 0;" class="font2">
+                  <!--<#if snippet?has_content>-->
+                  ${snippet!}
+                  <!--</#if>-->
+                  <!--<#noparse><#if !onlineViewer>-->
+                  | Konnen Sie diesen Newsletter nicht lesen, bitte <a href="http://td42.tripolis.com/public/preview?contactId=${contact.contactId}&amp;jobId=${contact.jobId}" target="_blank" style="color: #57004E; text-decoration: underline;">hier klicken</a>.
+                  <!--</#if></#noparse>-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--End preheader-->
+          
+          <!--Start header-->
+          <@getsection name="header"><#list section.articles as article>${article.content}</#list></@getsection>
+          <!--End header-->
+
+          <!--  Start of artikelen -->
+         <@getsection name="artikelen">
+         <#list section.articles as article>${article.content?replace("themakleuromteconverterennaarachtergrondkleur","${themakleur!}")}</#list>
+         </@getsection>
+        <!--End of artikelen -->
+          
+  <!--start duitse aanbiedingen
+          -->
+<tr>
+    <td width="100%" align="center" style="border-collapse: collapse;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr style="font: 14px/20px 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; text-align: left;" class="font1">
+          <td colspan="5" valign="top" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+ <!-- 
+ <#list feed.root.categories.category as category>
+  <#assign x = false> 
+  -->
+  <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+    <tr>
+      <td width="100%" style="border-collapse: collapse;">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <!--
+       <#list feed.root.actions.action as action>
+         <#list category.maincategory as maincategory>
+          <#list action.category as actioncategory>
+       -->
+       
+      <!--<#if actioncategory == maincategory>-->
+      <!--<#if x == false>-->
+      <!--
+      <#if actioncategory?contains("fisch")>
+        <#assign bgcolor = "#007576"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?contains("obst")>
+        <#assign bgcolor = "#1A311F"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?contains("wild")>
+        <#assign bgcolor = "#4B731D"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?contains("molkerei")>
+        <#assign bgcolor = "#FFA700"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?contains("fleish")>
+        <#assign bgcolor = "#57004E"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?contains("tiefk")>
+        <#assign bgcolor = "#71C6AD"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?starts_with("feinkost")>
+        <#assign bgcolor = "#a7001f"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#elseif actioncategory?starts_with("trocken")>
+        <#assign bgcolor = "#BB924B"/>
+        <#assign textcolor = "#FFFFFF"/>
+      <#else>
+        <#assign bgcolor = "#007576"/>
+        <#assign textcolor = "#FFFFFF"/>
+      </#if>-->
+        <tr>
+          <td bgcolor="${bgcolor}" style="border-collapse: collapse; padding: 10px;">
+            <table align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+              <tr>
+                <td valign="middle" height="30" class="col1title" style="border-collapse: collapse;">
+                  <p style="color:${textcolor}; font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight: 700; line-height: 1.4em; margin: 0; padding: 0; text-align: left;" class="font1">${maincategory?capitalize?replace("Und","und")!}</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <#assign x = true>
+        <#assign previous = "init">
+
+      <!--</#if>-->
+
+      <!-- <#list category.subcategory as subcategory>
+        <#list action.subcategory as actionsubcategory>
+       
+        -->
+
+          <!--<#if actionsubcategory == subcategory>-->
+             <!--<#if previous != actionsubcategory && actionsubcategory != "aktion">-->
+              <tr>
+              <td width="100%" align="center" style="border-collapse: collapse;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tr style="font: 14px/20px 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; text-align: left;" class="font1">
+                    <td colspan="5" valign="top" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+             <tr>
+              <td bgcolor="${bgcolor}" style="border-collapse: collapse; padding: 10px;">
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tr>
+                    <td valign="middle" height="20" class="col1title" style="border-collapse: collapse;">
+                      <p style="color: ${textcolor}; font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight: 700; line-height: 1.1em; margin: 0; padding: 0; text-align: left;" class="font1">${actionsubcategory?capitalize?replace("Und","und")!}</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!--</#if>-->
+            <#assign previous = actionsubcategory>
+  
+           <tr>
+              <td width="100%" align="center" style="border-collapse: collapse;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tr>
+                    <td style="border-collapse: collapse;">
+                      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        <tr style="font: 14px/20px 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; text-align: left;" class="font1">
+                          <td valign="top" width="10%" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">${action.articlenumber!}</td>
+                          <td valign="top" width="40%" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">${action.title!}</td>
+                          <td valign="top" width="30%" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">${action.description!}</td>
+                          <td valign="top" width="10%" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">${action.price!}</td>
+                          <td valign="top" width="10%" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">${action.amount!}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+        <!--</#if>-->
+
+<!--</#list></#list>-->
+
+<!--</#if>-->
+
+<!--</#list></#list></#list>-->
+ <tr>
+              <td width="100%" align="center" style="border-collapse: collapse;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tr style="font: 14px/20px 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; text-align: left;" class="font1">
+                    <td colspan="5" valign="top" style="border-collapse: collapse; padding: 0 5px 0 5px; text-align: left;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+</table>
+       
+      </td>
+    </tr>
+  </table>
+
+<!--</#list>-->
+
+          <!--end duitse aanbiedingen
+          -->
+          
+         
+          <!--Start of 1px divider fix-->
+          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth hide-for-all">
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+                    <tr>
+                      <td cellpadding="0" cellspacing="0" border="0" style="background-color:#fff; line-height:1px;" height="1px; min-width: 600px;">
+                        <img src="http://td42.tripolis.com/public/image_BEB9+HNvXQrgT33fv1Vk1g.gif" height="1px" width="600px" alt="" class="hide-for-all" style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--End of 1px divider fix-->
+          <!--Start of groothandels-->
+          <@getsection name="groothandels"><#list section.articles as article>${article.content}</#list></@getsection>
+          <!--End of groothandels-->
+          <!--Start of divider-->
+          <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+            <tbody>
+              <tr>
+                <td width="100%">
+                  <table width="600" bgcolor="#cccccc" align="center" cellspacing="0" cellpadding="0" border="0" class="divider">
+                    <tbody>
+                      <tr>
+                        <td align="center" bgcolor="#cccccc" height="1" style="background-color:#cccccc; font-size: 1px; line-height: 1px;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--End of divider-->
+          <!--Start of footer-->
+          <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; background-color: #FFF; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" class="footer devicewidth">
+            <tr>
+              <td width="600" align="center" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; padding: 20px 0;">
+                <table align="center" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 80%;">
+                  <tbody>
+                    <tr>
+                      <td style="border-collapse: collapse; padding: 0 0 10px;" valign="top">
+                        <table align="center" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                          <tbody>
+                            <tr>
+                              <td height="36" width="36" style="border-collapse: collapse; padding: 0 5px 0 5px;"><a href="https://www.facebook.com/hanosgroothandel" style="color: #333; text-decoration: none;"><img height="36" width="36" src="http://td42.tripolis.com/public/image_LgofchjaVZl8+7+33tgYcQ.png" alt="" style="-ms-interpolation-mode: bicubic; border: none; height: auto; line-height: 100%; outline: none; text-decoration: none;"></a></td>
+                              <td height="36" width="36" style="border-collapse: collapse; padding: 0 5px 0 5px;"><a href="https://www.twitter.com/HANOSISPC" style="color: #333; text-decoration: none;"><img height="36" width="36" src="http://td42.tripolis.com/public/image_PyBXckLbcSPd3lamYnOQ2w.png" alt="" style="-ms-interpolation-mode: bicubic; border: none; height: auto; line-height: 100%; outline: none; text-decoration: none;"></a></td>
+                              <td height="36" width="36" style="border-collapse: collapse; padding: 0 5px 0 5px;"><a href="https://www.youtube.com/hanosnl" style="color: #333; text-decoration: none;"><img height="34" width="34" src="http://td42.tripolis.com/public/image_UvE1F6XqLxba6uOIZmkUYQ.png" alt="" style="-ms-interpolation-mode: bicubic; border: none; height: auto; line-height: 100%; outline: none; text-decoration: none;"></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="border-collapse: collapse; padding: 0 0 10px;" valign="top">
+                        <table align="center" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 0 0 10px; font: 14px/20px 'Roboto', Helvetica,arial,sans-serif; color: #333; text-align: center;" valign="top">
+                                <a href="http://www.hanos.nl/HANOS-Kundenkarte.htm" target="_blank" title="website" style="text-decoration: none; padding: 0 5px; font: 13px/18px 'Roboto', Helvetica,arial,sans-serif; color: #333;" class="font2">
+                                  <span style="color: #333;">hanos.nl</span>
+                                </a>|
+                                <a href="http://www.hanos.nl/Kontaktformular.htm" target="_blank" title="kontakt" style="text-decoration: none; padding: 0 5px; font: 13px/18px 'Roboto', Helvetica,arial,sans-serif; color: #333;" class="font2">
+                                  <span style="color: #333;">Kontakt</span>
+                                </a>|
+                                <a href="<#noparse>https://hanos.contentpagina.nl/nieuwsbrief/andern.jsp?xid=${contact.encryptedContactId!}</#noparse>&m=1" target="_blank" title="Abbestellen" style="text-decoration: none; padding: 0 5px; font: 13px/18px 'Roboto', Helvetica,arial,sans-serif; color: #333;" class="font2">
+                                  <span style="color: #333;">Abbestellen</span>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="border-collapse: collapse; padding: 0 0 10px;" valign="top">
+                        <table align="center" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                          <tbody>
+
+                        <tr>
+                          <td style="padding: 0; font: 12px/17px 'Roboto', Helvetica,arial,sans-serif; color: #999; text-align: center;" valign="top" class="font2">Preisänderungen und Druckfehler vorbehalten.</td>
+                        </tr>
+                        <tr>
+                          <td style="border-collapse: collapse; padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl/HANOS-Kundenkarte.htm" title="HANOS Internationaler Gastronomiegrosshandel" style="color: #333; text-decoration: none;"><img src="http://td42.tripolis.com/public/image__mQziPJClUB9K2xIr9HGRA.png" alt="HANOS logo DE" border="0" width="262" height="49" style="-ms-interpolation-mode: bicubic; border: none; display: block; height: auto; line-height: 100%; outline: none; text-align: center; text-decoration: none;"></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--End of footer-->
+    </td>
+  </tr>
+</table>
+</body>
+</html>

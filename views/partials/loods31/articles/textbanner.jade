@@ -1,0 +1,39 @@
+//
+  Start tekstartikel
+table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='0', align='center')
+  tbody
+    tr
+      td(width='100%')
+        table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
+          tbody
+            tr
+              td
+                table.devicewidth(width='600', align='left', border='0', cellpadding='0', cellspacing='0')
+                  tbody
+                    tr
+                      td(width='579', style='padding:20px 10px')
+                        //<#if titel_blok1?has_content>
+                        table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                          tbody
+                            tr
+                              td(style='font:34px/1.2 \'Roboto Slab\', serif; font-weight:bold; text-align:center; color:#333333;')
+                                //|<%= data.actiemail.tripolis[0].titel_blok1 %>
+                                | Denk groots... Bezoek onze loods
+                        //</#if>
+                        table(width='100%', align='left', border='0', cellpadding='0', cellspacing='0')
+                          tbody
+                            tr
+                              td.colfullsubtitle(style='font:20px/1.2 \'Roboto Slab\', serif; text-align:center; color:#333333; padding:10px 0')
+                                //|<%= data.actiemail.tripolis[0].tekstartikel1 %>
+                                | Vanaf 1 april zit u goed bij Loods 31
+                        
+table.devicewidth(width='600', cellpadding='0', cellspacing='0' border='0', bgcolor='#ffffff', align='center')
+  tbody
+    tr
+      td(width='100%')
+        table.devicewidth(width='600', cellspacing='0', cellpadding='0', border='0', bgcolor='#cccccc', align='center')
+          tbody
+            tr
+              td(height='1', align='center', style='font-size:1px; line-height:1px;')
+//
+  End tekstartikel
