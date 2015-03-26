@@ -95,7 +95,9 @@ module.exports = function(grunt) {
             sidebar: ['<%= paths.css%>/sidebar.css', '<%= paths.css %>/mq.css'],
             sidebarHero: ['<%= paths.css%>/sidebar-hero.css', '<%= paths.css %>/mq.css'],
             actiemail: ['<%= paths.css%>/actiemail.css'],
-            outlookfooter: ['<%= paths.css%>/outlookfooter.css']
+            outlookfooter: ['<%= paths.css%>/outlookfooter.css'],
+            nieuwsbrief: ['<%= paths.css%>/nieuwsbrief.css'],
+            loods31: ['<%= paths.css%>/loods31.css']
           }
         }
       }
@@ -302,8 +304,8 @@ module.exports = function(grunt) {
         'jade',
         'copy',
         /*'responsive_images',*/
-        /*'copy:styles'*/
-        /*'copy:scss'*/
+       /* 'copy:styles',
+        'copy:scss'*/
       ],
       dist: [
         'compass',

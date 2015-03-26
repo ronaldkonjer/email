@@ -1,25 +1,25 @@
 //
    Start header 
-table.devicewidth(width='600', align='center', cellpadding='0', cellspacing='0', border='0', style='border-collapse: collapse; background-color: #FFF;')
+table.header.devicewidth(width='600', align='center', cellpadding='0', cellspacing='0', border='0', style='border-collapse: collapse; background-color: #FFF;')
   tbody
     tr
       //-- background-color: ${header_color} gebruiken in de template. Grunt build niet. 
-      td(style='padding: 0px 10px; background-color: #000000;', valign='top', align='center' height='70')
+      td(style='padding: 0; background-color: #000000;', valign='top', align='center' height='70')
         table(width='100%', style='border-collapse: collapse; width: 100%;')
           tr
-            td.block_logo(style='padding: 0px; width: 170px;', align='left', valign='top')
+            td.block_logo(style='padding: 0px 10px; width: 45%;', align='left', valign='top')
               a(target='_blank', href='${logo_url}', title='${logo_image_alt!}')
-                img(src='img/header-logo.jpg', alt='${logo_image_alt!}', border='0', width='180', height='68', style='display: block; border: none; outline: none; text-decoration: none;')
-            td.block_right_header(style='padding: 0; font: \'Roboto Slab\', Serif; color: #FAFAFA;', align='right', valign='middle')
+                img(src='img/header-logo.jpg', alt='${logo_image_alt!}', border='0', width='170', style='display: block; border: none; outline: none; text-decoration: none;')
+            td.block_right_header(style='width:45%; padding: 0 10px 0 0; font: \'Roboto Slab\', serif; color: #FAFAFA;', align='right', valign='middle')
               table(width='100%', style='border-collapse: collapse; width: 100%;')
                 tr
-                  td.font1(align='right', valign='top', style='padding: 5px 0 0; font: 15px/1 \'Roboto Slab\', serif;')
+                  td.payoff.font1.first(align='right', valign='top', style='padding: 5px 0 0;')
                     | PARTIJENHANDEL
                 tr   
-                  td.font1(align='right', valign='middle', style='padding: 5px 0 5px 0; font: 15px/1  \'Roboto Slab\', serif;')
+                  td.payoff.font1(align='right', valign='middle', style='padding: 5px 0;')
                     | HORECA APPARATUUR
                 tr
-                  td.font1(align='right', valign='middle', style='padding: 0px 0px 5px 0; font: 15px/1  \'Roboto Slab\', serif;')
+                  td.payoff.font1(align='right', valign='bottom', style='padding: 0 0 5px 0;')
                     | HORECA MEUBELEN
 //
    End header

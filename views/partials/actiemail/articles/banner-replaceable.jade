@@ -14,12 +14,17 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
                   <#if bannerimagereplace?has_content>
                   should be set on the anchor -- style='background-image:url(${bannerimagereplace.url!}); height:${bannerimagereplace.height}px;'
                 td.row.overflow(align='center')
+                   //
+                    <#if bannerurl?has_content>
                    a.overflow(href!='<%= data.actiemail.tripolis[0].bannerurl %>', target='_blank', title!='<%= data.actiemail.tripolis[0].banneromschrijving %>', style='')
+                    
                     img.mobilehide(src!='<%= data.actiemail.tripolis[0].bannerimage.url %>', height='100%', width='100%', style='display:block; border:0', alt!='<%= data.actiemail.tripolis[0].banneromschrijving %>')
                 //
                   <#else>
                   should be set on the anchor -- style='background-image:url(${bannerimage.url!}); height:${bannerimage.height}px;'
                 td.row.overflow(align='center')
+                  //
+                    <#if bannerurl?has_content>
                   a.overflow(href!='<%= data.actiemail.tripolis[0].bannerurl %>', target='_blank', title!='<%= data.actiemail.tripolis[0].banneromschrijving %>', style='')
                     img.mobilehide(src!='<%= data.actiemail.tripolis[0].bannerimage.url %>', height='100%', width='100%', style='display:block; border:0', alt!='<%= data.actiemail.tripolis[0].banneromschrijving %>')
                 //
@@ -29,7 +34,9 @@ table.devicewidth(width='600', bgcolor='#ffffff', cellpadding='0', cellspacing='
             table.devicewidth(width='600', cellpadding='0', cellspacing='0', border='0', align='center')
               tr
                 td.row(align='center')
-                   a(href!='<%= data.actiemail.tripolis[0].bannerurl %>', target='_blank', title!='<%= data.actiemail.tripolis[0].banneromschrijving %>')
+                  //
+                    <#if bannerurl?has_content>
+                  a(href!='<%= data.actiemail.tripolis[0].bannerurl %>', target='_blank', title!='<%= data.actiemail.tripolis[0].banneromschrijving %>')
                       img(src!='<%= data.actiemail.tripolis[0].bannerimage.url %>', height='100%', width='100%', style='display:block; border:0', alt!='<%= data.actiemail.tripolis[0].banneromschrijving %>')
             //
               </#if>
