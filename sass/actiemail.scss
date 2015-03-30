@@ -45,7 +45,7 @@ body {
 }
 
 /* Force Outlook to hide client-added class and remove the 1.35em extra margin. */
-p.MsoNormal{display:none;}
+p.MsoNormal{display:block;}
 p{margin:0 !important;} /* Zorgt ervoor dat Outlook (hotmail/msn) geen margin: 0 0 1.35em 0 toevoegd. */
 
 img {
