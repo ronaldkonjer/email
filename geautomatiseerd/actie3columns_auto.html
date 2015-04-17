@@ -1,0 +1,361 @@
+<!--start col 3-->
+<table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+  <tbody>
+    <tr>
+      <td width="100%" style="border-collapse: collapse;">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+          <tbody>
+            <tr>
+              <td align="center" style="border-collapse: collapse;">
+                <table width="196" align="left" border="0" cellpadding="0" cellspacing="0" class="col3" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tbody>
+                    <tr>
+                      <td width="175" style="border-collapse: collapse; padding: 10px;" class="col3inner">
+                        <!--
+                        <#list feed.root.actions.action as action>
+                        <#list action.positions.position as position>
+                        <#if position?substring(8)=="hor 1">
+                        -->
+                        <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                          <tbody>
+                            <tr>
+                              <td height="96" style="border-collapse: collapse;">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="col3header" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <td valign="top" height="48" class="col3title" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; line-height: 1.4em; margin: 0; padding: 0; text-align: left;" class="title font1">${action.title!}</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <#if action.description! !="unknown">
+                                      <td height="60" style="border-collapse: collapse; text-align: left;" valign="top" class="col3subtitle">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="subtitle font1">${action.description!}</p>
+                                      </td>
+                                      <#else>
+                                      <td height="60" style="border-collapse: collapse; text-align: left;" valign="top" class="col3subtitle">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="subtitle font1">&nbsp;</p>
+                                      </td>
+                                      </#if>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" align="center" class="col3" style="border-collapse: collapse;">
+                                <table cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="border-collapse: collapse;">
+                                        <#if action.landingpages.landingpage_nl! !="unknown">
+                                        <a href="${action.landingpages.landingpage_nl!}" target="_blank" title="${action.title!}" style="border: none; color: #333; display: block; outline: none; text-decoration: none;">
+                                        </#if>
+                                        <img src="${action.image!}" alt="${action.title!}" border="0" width="159" height="159" style="-ms-interpolation-mode: bicubic; border: none; display: block; height: auto; line-height: 100%; outline: none; text-decoration: none;" class="colimg3">
+                                        <#if action.landingpages.landingpage_nl! !="unknown">
+                                        </a>
+                                        </#if>
+                                      </td>
+                                    </tr>
+                                    <tr class="mobilehide">
+                                      <td width="100%" height="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
+                                    </tr>
+                                    <tr class="mobileshow">
+                                      <td width="100%" height="3" style="border-collapse: collapse; display: none; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;" class="mobileshow"> </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" align="center" class="col3" style="border-collapse: collapse;">
+                                <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <#if action.oldprice!?contains("nu") || action.oldprice!?contains("nu voor") || action.oldprice!?contains("vanaf")>
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.amount!}<br>${action.oldprice!}</p>
+                                      </td>
+                                      <#elseif action.oldprice! !="unknown" && action.amount! !="unknown">
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.amount!}<br><s color="#ff0000"><span color="#333333">${action.oldprice!}</span></s></p>
+                                      </td>
+                                      <#else>
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">&nbsp;<br>&nbsp;</p>
+                                      </td> 
+                                      </#if>
+
+                                      <#if action.price! !="unknown">
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.price!}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext!?contains("korting")>
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">-${action.promotionaltext!?replace(" korting","")}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext!?contains("gratis")>
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.promotionaltext!?replace(" gratis","")}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext! =="unknown">
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">&nbsp;</p>
+                                      </td>
+                                      </#if>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--
+                        <#/list>
+                        <#/list>
+                        <#/if>
+                        -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="196" align="left" border="0" cellpadding="0" cellspacing="0" class="col3" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tbody>
+                    <tr>
+                      <td width="175" style="border-collapse: collapse; border-left: 1px solid #ccc; padding: 10px;" class="col3inner">
+                        <!--
+                        <#list feed.root.actions.action as action>
+                        <#list action.positions.position as position>
+                        <#if position?substring(8)=="hor 2">
+                        -->
+                        <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                          <tbody>
+                            <tr>
+                              <td height="96" style="border-collapse: collapse;">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="col3header" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <td valign="top" height="48" class="col3title" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; line-height: 1.4em; margin: 0; padding: 0; text-align: left;" class="title font1">${action.title!}</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <#if action.description! !="unknown">
+                                      <td height="60" style="border-collapse: collapse; text-align: left;" valign="top" class="col3subtitle">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="subtitle font1">${action.description!}</p>
+                                      </td>
+                                      <#else>
+                                      <td height="60" style="border-collapse: collapse; text-align: left;" valign="top" class="col3subtitle">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="subtitle font1">&nbsp;</p>
+                                      </td>
+                                      </#if>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" align="center" class="col3" style="border-collapse: collapse;">
+                                <table cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="border-collapse: collapse;">
+                                        <#if action.landingpages.landingpage_nl! !="unknown" >
+                                        <a href="${action.landingpages.landingpage_nl!}" target="_blank" title="${action.title!}" style="border: none; color: #333; display: block; outline: none; text-decoration: none;">
+                                        </#if>
+                                        <img src="${action.image!}" alt="${action.title!}" border="0" width="159" height="159" style="-ms-interpolation-mode: bicubic; border: none; display: block; height: auto; line-height: 100%; outline: none; text-decoration: none;" class="colimg3">
+                                        <#if action.landingpages.landingpage_nl! !="unknown" >
+                                        </a>
+                                        </#if>
+                                      </td>
+                                    </tr>
+                                    <tr class="mobilehide">
+                                      <td width="100%" height="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
+                                    </tr>
+                                    <tr class="mobileshow">
+                                      <td width="100%" height="3" style="border-collapse: collapse; display: none; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;" class="mobileshow"> </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" align="center" class="col3" style="border-collapse: collapse;">
+                                <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <#if action.oldprice!?contains("nu") || action.oldprice!?contains("nu voor") || action.oldprice!?contains("vanaf")>
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.amount!}<br>${action.oldprice!}</p>
+                                      </td>
+                                      <#elseif action.oldprice! !="unknown" && action.amount! !="unknown">
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.amount!}<br><s color="#ff0000"><span color="#333333">${action.oldprice!}</span></s></p>
+                                      </td>
+                                      <#else>
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">&nbsp;<br>&nbsp;</p>
+                                      </td> 
+                                      </#if>
+
+                                      <#if action.price! !="unknown">
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.price!}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext!?contains("korting")>
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">-${action.promotionaltext!?replace(" korting","")}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext!?contains("gratis")>
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.promotionaltext!?replace(" gratis","")}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext! =="unknown">
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">&nbsp;</p>
+                                      </td>
+                                      </#if>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--
+                        <#/list>
+                        <#/list>
+                        <#/if>
+                        -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table align="right" border="0" cellpadding="0" cellspacing="0" class="col3 tablethide" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                  <tbody>
+                    <tr>
+                      <td width="170" style="border-collapse: collapse; border-left: 1px solid #ccc; padding: 10px;" class="col3inner">
+                        <!--
+                        <#list feed.root.actions.action as action>
+                        <#list action.positions.position as position>
+                        <#if position?substring(8)=="hor 3">
+                        -->
+                        <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                          <tbody>
+                            <tr>
+                              <td height="96" style="border-collapse: collapse;">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="col3header" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <td valign="top" height="48" class="col3title" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 17px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 700; line-height: 1.4em; margin: 0; padding: 0; text-align: left;" class="title font1">${action.title!}</p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <#if action.description! !="unknown">
+                                      <td height="60" style="border-collapse: collapse; text-align: left;" valign="top" class="col3subtitle">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="subtitle font1">${action.description!}</p>
+                                      </td>
+                                      <#else>
+                                      <td height="60" style="border-collapse: collapse; text-align: left;" valign="top" class="col3subtitle">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato', Helvetica, Arial, sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="subtitle font1">&nbsp;</p>
+                                      </td>
+                                      </#if>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" align="center" class="col3" style="border-collapse: collapse;">
+                                <table cellpadding="0" cellspacing="0" border="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="border-collapse: collapse;">
+                                        <#if action.landingpages.landingpage_nl! !="unknown">
+                                        <a href="${action.landingpages.landingpage_nl!}" target="_blank" title="${action.title!}" style="border: none; color: #333; display: block; outline: none; text-decoration: none;">
+                                        </#if>
+                                        <img src="${action.image!}" alt="${action.title!}" border="0" width="159" height="159" style="-ms-interpolation-mode: bicubic; border: none; display: block; height: auto; line-height: 100%; outline: none; text-decoration: none;" class="colimg3">
+                                        <#if action.landingpages.landingpage_nl! !="unknown">
+                                        </a>
+                                        </#if>
+                                      </td>
+                                    </tr>
+                                    <tr class="mobilehide">
+                                      <td width="100%" height="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;"> </td>
+                                    </tr>
+                                    <tr class="mobileshow">
+                                      <td width="100%" height="3" style="border-collapse: collapse; display: none; font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;" class="mobileshow"> </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" align="center" class="col3" style="border-collapse: collapse;">
+                                <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                  <tbody>
+                                    <tr>
+                                      <#if action.oldprice!?contains("nu") || action.oldprice!?contains("nu voor") || action.oldprice!?contains("vanaf")>
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.amount!}<br>${action.oldprice!}</p>
+                                      </td>
+                                      <#elseif action.oldprice! !="unknown" && action.amount! !="unknown">
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.amount!}<br><s color="#ff0000"><span color="#333333">${action.oldprice!}</span></s></p>
+                                      </td>
+                                      <#else>
+                                      <td align="left" class="priceinfo" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 14px/1.1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">&nbsp;<br>&nbsp;</p>
+                                      </td> 
+                                      </#if>
+
+                                      <#if action.price! !="unknown">
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.price!}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext!?contains("korting")>
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">-${action.promotionaltext!?replace(" korting","")}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext!?contains("gratis")>
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">${action.promotionaltext!?replace(" gratis","")}</p>
+                                      </td>
+                                      <#elseif action.price! =="unknown" && action.promotionaltext! =="unknown">
+                                      <td align="right" class="priceaction" style="border-collapse: collapse;">
+                                        <p style="color: #333; font: 32px/1 'Lato', Helvetica, Arial, sans-serif; font-family: 'Lato',Helvetica,Arial,sans-serif; line-height: 1.4em; margin: 0; padding: 0;" class="font1">&nbsp;</p>
+                                      </td>
+                                      </#if>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--
+                        <#/list>
+                        <#/list>
+                        <#/if>
+                        -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="600" bgcolor="#cccccc" align="center" cellspacing="0" cellpadding="0" border="0" class="divider" style="-mso-table-lspace: 0pt; -mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+          <tbody>
+            <tr>
+              <td align="center" height="1" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--start col 3-->

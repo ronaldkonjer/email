@@ -136,19 +136,32 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 																	| <#else>
 																	| ${nameMail}
 																	| </#if>
-														//<#noparse><#if contact.land == "BE">
-														tr
-															td.font2(style='padding: 0; font: 12px/17px \'Roboto\', Helvetica,arial,sans-serif; color: #999; text-align: center;', valign='top')
-																| Prijswijzigingen en typfouten voorbehouden.
+														//<#noparse><#if (contact.land)?? && contact.land?has_content && contact.land == "BE">
 														tr
 															td(style='padding: 20px 0 0;', valign='top', align='center')
 																a(target='_blank', href='http://www.hanos.nl/HGCHANOS-Internationale-Horeca-Groothandel.htm', title='HGC-HANOS Internationale Horeca Groothandel')
 																	img(src='http://td42.tripolis.com/public/image_erE9GUlp5XOX1wCpaoAHPA.png', alt='HGC-HANOS logo', border='0', width='262', height='56', style='display: block; border: none; outline: none; text-decoration: none; text-align: center;')
-														//<#else>
+														//<#elseif (contact.land)?? && contact.land?has_content>
 														tr
 															td(style='padding: 20px 0 0;', valign='top', align='center')
 																a(target='_blank', href='http://www.hanos.nl', title='HANOS Internationale Horeca Groothandel')
 																	img(src='http://td42.tripolis.com/public/image_3veWwfORCOFf9dj83bY0sw.png', alt='HANOS logo', border='0', width='262', height='56', style='display: block; border: none; outline: none; text-decoration: none; text-align: center;')
-														//</#if>
+														//</#if></#noparse>
 					//
 						End of footer
+					//
+						Start op postfooter
+					table.footer.devicewidth(width='600', align='center', cellspacing='0', cellpadding='0', border='0', style='border-collapse: collapse;')
+						tr
+							td(width='600', align='center', cellspacing='0', cellpadding='0', border='0', style='border-collapse: collapse; padding: 20px 0;')
+								table(align='center', style='border-collapse: collapse; width: 80%;')
+									tbody
+										tr
+											td(style='border-collapse: collapse; padding: 0 0 10px;', valign='top')
+												table(align='center', style='border-collapse: collapse;')
+													tbody
+														tr
+															td.font2(style='padding: 0; font: 12px/17px \'Roboto\', Helvetica,arial,sans-serif; color: #999; text-align: center;', valign='top')
+																| Prijswijzigingen en typfouten voorbehouden. Alle aanbiedingen zijn vrijblijvend en gelden zolang de voorraad strekt. Prijzen zijn exclusief BTW en statiegeld.
+					//
+						End of postfooter

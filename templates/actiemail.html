@@ -113,7 +113,7 @@
             <tr>
               <td width="100%">
                 <table width="600" cellpadding="0" cellspacing="0" border="0" align="center">
-                  <tr>${titelbackgroundcolor!}
+                  <tr>
                     <td style="padding:10px; background-color:#007576;">
                       <table align="left" border="0" cellpadding="0" cellspacing="0">
                         <tr>
@@ -1023,12 +1023,18 @@
                           <#if bannerimagereplace?has_content>
                           should be set on the anchor -- style='background-image:url(${bannerimagereplace.url!}); height:${bannerimagereplace.height}px;'
                           -->
-                          <td align="center" class="row overflow"><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>" style="" class="overflow"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>" class="mobilehide"></a></td>
+                          <td align="center" class="row overflow">
+                            <!--<#if bannerurl?has_content>
+                            --><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>" style="" class="overflow"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>" class="mobilehide"></a>
+                          </td>
                           <!--
                           <#else>
                           should be set on the anchor -- style='background-image:url(${bannerimage.url!}); height:${bannerimage.height}px;'
                           -->
-                          <td align="center" class="row overflow"><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>" style="" class="overflow"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>" class="mobilehide"></a></td>
+                          <td align="center" class="row overflow">
+                            <!--<#if bannerurl?has_content>
+                            --><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>" style="" class="overflow"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>" class="mobilehide"></a>
+                          </td>
                           <!--</#if>
                           -->
                         </tr>
@@ -1037,7 +1043,10 @@
                       -->
                       <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
                         <tr>
-                          <td align="center" class="row"><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>"></a></td>
+                          <td align="center" class="row">
+                            <!--<#if bannerurl?has_content>
+                            --><a href="<%= data.actiemail.tripolis[0].bannerurl %>" target="_blank" title="<%= data.actiemail.tripolis[0].banneromschrijving %>"><img src="<%= data.actiemail.tripolis[0].bannerimage.url %>" height="100%" width="100%" style="display:block; border:0" alt="<%= data.actiemail.tripolis[0].banneromschrijving %>"></a>
+                          </td>
                         </tr>
                       </table>
                       <!--</#if>
@@ -2545,18 +2554,15 @@
                                   ${nameMail}
                                   </#if></a></td>
                             </tr>
-                            <!--<#noparse><#if contact.land == "BE">-->
-                            <tr>
-                              <td style="padding: 0; font: 12px/17px 'Roboto', Helvetica,arial,sans-serif; color: #999; text-align: center;" valign="top" class="font2">Prijswijzigingen en typfouten voorbehouden.</td>
-                            </tr>
+                            <!--<#noparse><#if (contact.land)?? && contact.land?has_content && contact.land == "BE">-->
                             <tr>
                               <td style="padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl/HGCHANOS-Internationale-Horeca-Groothandel.htm" title="HGC-HANOS Internationale Horeca Groothandel"><img src="http://td42.tripolis.com/public/image_erE9GUlp5XOX1wCpaoAHPA.png" alt="HGC-HANOS logo" border="0" width="262" height="56" style="display: block; border: none; outline: none; text-decoration: none; text-align: center;"></a></td>
                             </tr>
-                            <!--<#else>-->
+                            <!--<#elseif (contact.land)?? && contact.land?has_content>-->
                             <tr>
                               <td style="padding: 20px 0 0;" valign="top" align="center"><a target="_blank" href="http://www.hanos.nl" title="HANOS Internationale Horeca Groothandel"><img src="http://td42.tripolis.com/public/image_3veWwfORCOFf9dj83bY0sw.png" alt="HANOS logo" border="0" width="262" height="56" style="display: block; border: none; outline: none; text-decoration: none; text-align: center;"></a></td>
                             </tr>
-                            <!--</#if>-->
+                            <!--</#if></#noparse>-->
                           </tbody>
                         </table>
                       </td>
@@ -2567,6 +2573,31 @@
             </tr>
           </table>
           <!--End of footer
+          -->
+          <!--Start op postfooter
+          -->
+          <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;" class="footer devicewidth">
+            <tr>
+              <td width="600" align="center" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; padding: 20px 0;">
+                <table align="center" style="border-collapse: collapse; width: 80%;">
+                  <tbody>
+                    <tr>
+                      <td style="border-collapse: collapse; padding: 0 0 10px;" valign="top">
+                        <table align="center" style="border-collapse: collapse;">
+                          <tbody>
+                            <tr>
+                              <td style="padding: 0; font: 12px/17px 'Roboto', Helvetica,arial,sans-serif; color: #999; text-align: center;" valign="top" class="font2">Prijswijzigingen en typfouten voorbehouden. Alle aanbiedingen zijn vrijblijvend en gelden zolang de voorraad strekt. Prijzen zijn exclusief BTW en statiegeld.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!--End of postfooter
           -->
         </td>
       </tr>
